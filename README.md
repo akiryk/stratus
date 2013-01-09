@@ -1,0 +1,4 @@
+stratus
+=======
+
+Responsive wordpress theme

@@ -2,6 +2,9 @@
 /**
  * @package stratus
  * @since stratus 1.0
+ * This page defines how each post or custom post type appears on an aggregation page like index, home, or archive pages.
+ * To customize how one of those pages displays this content, add the following to the appropriate page (e.g. archive.php):
+ * > get_template_part( 'content-__', get_post_format() ); // where 'content-__' says content-your-name-here
  */
 ?>
 
@@ -11,7 +14,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php stratus_posted_on(); ?>
+			<?php the_time( get_option( 'date_format' ) ); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -22,7 +25,13 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'stratus' ) ); ?>
+			<?php if (has_post_thumbnail()){ ?>
+			<div class="primary-image">
+				<a class="image-link" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+					<?php the_post_thumbnail('thumb'); ?>
+				</a>
+			</div>
+		<?php } ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'stratus' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

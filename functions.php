@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * stratus functions and definitions
  *
@@ -9,7 +9,6 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since stratus 1.0
  */
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
@@ -62,9 +61,10 @@ function stratus_setup() {
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'stratus' ),
-	) );
+	// register_nav_menus( array(
+	// 	'primary' => __( 'Primary Menu', 'stratus' ),
+	// ) );
+	register_nav_menu( 'primary', __( 'Primary Menu', 'stratus' ) );
 
 	/**
 	 * Enable support for Post Formats
@@ -113,3 +113,18 @@ add_action( 'wp_enqueue_scripts', 'stratus_scripts' );
  * Implement the Custom Header feature
  */
 //require( get_template_directory() . '/inc/custom-header.php' );
+
+/**
+ * Set which posts types appear on home page
+ * Important: You must check both if is_home() and if this is the main query.
+ * If you don't include is_main_query(), this will run for other items like
+ * sidebars, menus, admin functions, which will break menus and other things on the home page.
+ * http://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
+ */
+function set_home_post_types( $query ) {
+	if ( is_home() && $query->is_main_query() ) {
+		$query->set( 'post_type', array( 'portfolio') ); // array of all acceptable post types
+	}
+}
+
+add_filter( 'pre_get_posts', 'set_home_post_types' );

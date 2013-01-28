@@ -1,4 +1,4 @@
-	<?php
+<?php
 /**
  * stratus functions and definitions
  *
@@ -121,6 +121,7 @@ add_action( 'wp_enqueue_scripts', 'stratus_scripts' );
  * sidebars, menus, admin functions, which will break menus and other things on the home page.
  * http://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
  */
+
 function set_home_post_types( $query ) {
 	if ( is_home() && $query->is_main_query() ) {
 		$query->set( 'post_type', array( 'portfolio') ); // array of all acceptable post types

@@ -10,11 +10,11 @@
 
 get_header(); ?>
 
-		<section id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+<section id="primary" class="content-area">
+	<div id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>
-
+			<div class="grid one-whole">
 				<header class="page-header">
 					<h1 class="page-title">
 						<?php
@@ -66,6 +66,7 @@ get_header(); ?>
 						}
 					?>
 				</header><!-- .page-header -->
+			</div>
 
 				<?php stratus_content_nav( 'nav-above' ); ?>
 
@@ -77,7 +78,7 @@ get_header(); ?>
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'content', get_post_format() );
+						get_template_part( 'content-agg', get_post_format() );
 					?>
 
 				<?php endwhile; ?>
@@ -90,8 +91,4 @@ get_header(); ?>
 
 			<?php endif; ?>
 
-			</div><!-- #content .site-content -->
-		</section><!-- #primary .content-area -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -36,7 +36,7 @@ function stratus_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="assistive-text"><?php _e( 'Post navigation', 'stratus' ); ?></h1>
+		<h1 class="accessibility"><?php _e( 'Post navigation', 'stratus' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
@@ -123,7 +123,7 @@ if ( ! function_exists( 'stratus_posted_on' ) ) :
  * @since stratus 1.0
  */
 function stratus_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'stratus' ),
+	printf( __( 'Posted on <time class="entry-date" datetime="%3$s">%4$s</time>', 'stratus' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),

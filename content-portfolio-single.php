@@ -1,10 +1,12 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+<div class="grid one-whole">
 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<header class="entry-header">
+		<h1 class="entry-title tight"><?php the_title(); ?></h1>
 		<div class="entry-meta">
-			<?php stratus_posted_on(); ?>
-		</div><!-- .entry-meta -->
+			<span class="">Created on </span><?php echo esc_html( get_post_meta( get_the_ID(), 'date_project_completed', true ) ); ?>
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -50,3 +52,4 @@
 		<?php edit_post_link( __( 'Edit', 'stratus' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
+</div> <!-- end grid -->

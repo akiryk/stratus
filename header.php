@@ -12,6 +12,10 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
+
+<script type="text/javascript" src="//use.typekit.net/dng0kkm.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
 <!-- Required for working with adaptive images (http://adaptive-images.com/): -->
@@ -26,20 +30,41 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('hide-extras off-canvas'); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
+	<div class="masthead-wrapper cf">
 
-		<nav role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'stratus' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'stratus' ); ?>"><?php _e( 'Skip to content', 'stratus' ); ?></a></div>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- .site-navigation .main-navigation -->
-	</header><!-- #masthead .site-header -->
+		<header class="site-header" role="banner">
+			<div class="grid-wrapper">
+				<div class="grid one-whole">
+
+					<hgroup class="title-group tightest">
+						<h1 class="site-title tightest">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
+							<span class="site-description lap-up-inline"><?php bloginfo( 'description' ); ?></span>
+							</a>
+						</h1>
+					</hgroup>
+
+					<nav id="menu" role="navigation" class="site-navigation main-navigation hide-for-small">
+						<h1 class="accessibility"><?php _e( 'Menu', 'stratus' ); ?></h1>
+						<div class="accessibility skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'stratus' ); ?>"><?php _e( 'Skip to content', 'stratus' ); ?></a></div>
+						<?php wp_nav_menu( array( 
+							'theme_location' => 'primary', 
+							'menu_class' => 'nav tightest', ) 
+						); ?>
+					</nav><!-- .site-navigation .main-navigation -->
+
+					<p class="show-for-small tightest">
+					  <a class="sidebar-button button" id="sidebarButton" href="#sidebar">Menu</a>
+					</p>
+
+					</div><!-- .grid -->
+				</div><!-- .grid-wrapper -->
+			</header><!-- .site-header -->
+
+	</div><!-- .masthead-wrapper -->
 
 	<div id="main" class="site-main">
+		<div class="grid-wrapper">

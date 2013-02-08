@@ -1,26 +1,119 @@
-/*!
-Theme Name: stratus
-Theme URI: http://underscores.me/
-Author: Adam Kiryk
-Author URI: http://adamkiryk.com/
-Description: Description
-Version: 1.0
-License: GNU General Public License
-License URI: license.txt
-Tags:
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**http://dev.akiryk/wp-admin/profile.php
+ * 
+ * sass --watch style.scss:style.min.css --style compressed
+ * 
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
-*/
+/**
+ * Setup
+ */
+@import "vars";
+@import "inuit.css/inuit";
 
 @import "compass";
-@import "normalize";
+@import "UI/mixins.scss";
+@import "UI/headings.scss";
+@import "UI/links.scss";
+@import "UI/masthead.scss";
+@import "UI/offcanvas.scss";
+
+body {
+	font-family: $body-face;
+}
+
+.page-title {
+	font-weight: 700;
+}
+
+.lede {
+	font-family: $heading-face;
+}
+
+.hero {
+	@include font-size(30px);
+	line-height: 1.5em;
+	
+	@include media-query(lap) {
+		@include font-size(40px);	
+	}
+	@include media-query(desk) {
+		@include font-size(46px);
+		line-height:1.25em;	
+	}
+	font-family: $heading-face;
+}
+
+.site-main {
+	@extend %pagewidth;
+	overflow: hidden;
+	//padding: 0 $base-spacing-unit;
+
+	@include media-query(desk){
+		padding: 0;
+	}
+}
+
+.site-content {
+	padding: $base-spacing-unit;
+	@include media-query(desk) {
+		padding: $base-spacing-unit 0;
+	}
+}
 
 
 
+article {
+	clear: both;
+	margin-bottom: $base-spacing-unit;
+}
 
+.kicker {
+	font-weight: 700;
+	font-size: $h1-size;
+}
 
+.entry-meta {
+	color: $light-text;
+	font-size: $milli-size;
+}
 
+.lap-up {
+	display: none;
 
+	@include media-query(lap-and-up){
+		display: block;
+	}
+}
 
+.lap-up-inline {
+	display: none;
+
+	@include media-query(lap-and-up){
+		display: inline;
+	}
+}
+ 
+
+.main-navigation {
+	float: right;
+
+	.nav {
+		margin-bottom: 0;
+	}
+
+}
+
+// Responsive Styles
+
+img {
+	max-width: 100%;
+	height: auto; // ie8
+	width: 100%;
+}

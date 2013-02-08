@@ -9,19 +9,25 @@
  */
 ?>
 
-	</div><!-- #main .site-main -->
+<?php /* Wrap up the divs from document and insert off canvas nav */ ?>
+
+	</div><!-- #content .site-content -->
+	<?php get_template_part( 'off-canvas-nav' ); ?>
+</div><!-- #primary .content-area -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'stratus_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'stratus' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'stratus' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'stratus' ), 'stratus', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="grid one-whole">
+			<div class="site-info">
+					Footer Info
+			</div><!-- .site-info -->
+		</div><!-- grid -->
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
 
 <?php wp_footer(); ?>
+
+</div><!-- grid-wrapper -->
+</div><!-- #main .site-main -->
 
 </body>
 </html>

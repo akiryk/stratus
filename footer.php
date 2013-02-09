@@ -11,9 +11,7 @@
 
 <?php /* Wrap up the divs from document and insert off canvas nav */ ?>
 
-	</div><!-- #content .site-content -->
 	<?php get_template_part( 'off-canvas-nav' ); ?>
-</div><!-- #primary .content-area -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="grid one-whole">

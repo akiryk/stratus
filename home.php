@@ -40,36 +40,35 @@ get_header(); ?>
 <?php endif; ?>
 
 <div id="main" class="site-main">
-<div class="grid-wrapper">
-<div id="primary" class="content-area"> <!-- allows for main content and sidebar -->
-	<div id="content" class="site-content" role="main">
+	<div class="grid-wrapper">
+		<div id="content" class="site-content" role="main">
 	
-	<?php if ( !is_paged()) : ?>	
-		<h1 class="page-title grid one-whole">Some of My Work</h1>
-	<?php endif; ?>
+		<?php if ( !is_paged()) : ?>	
+			<h1 class="page-title grid one-whole">Some of My Work</h1>
+		<?php endif; ?>
 
-	<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php
-				/* Include the Post-Format-specific template for the content.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content-portfolio-agg', get_post_format() );
-			?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to overload this in a child theme then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content-portfolio-agg', get_post_format() );
+				?>
 
-		<?php endwhile; ?>
+			<?php endwhile; ?>
 
-		<div class="grid one-whole">
-			<?php stratus_content_nav( 'nav-below' ); ?>
-		</div>
+			<div class="grid one-whole">
+				<?php stratus_content_nav( 'nav-below' ); ?>
+			</div>
 
-	<?php else : ?>
+		<?php else : ?>
 
-		<?php get_template_part( 'no-results', 'index' ); ?>
+			<?php get_template_part( 'no-results', 'index' ); ?>
 
-	<?php endif; ?>
-
+		<?php endif; ?>
+	</div><!-- #content .site-content -->
 <?php get_footer(); ?>

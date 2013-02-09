@@ -36,6 +36,7 @@ body {
 	font-family: $heading-face;
 }
 
+
 /* ———————————————————————————————————————————————————————————————
  * 
  *  WELCOME WRAPPER
@@ -139,18 +140,38 @@ article {
 
 /* ———————————————————————————————————————————————————————————————
  * 
- *  SECTION
+ *  SECTION: POST PAGES
  *  
  * ——————————————————————————————————————————————————————————————— */
 
-.main-navigation {
-	float: right;
+@include media-query(desk){
+	
+	article h1 {
+		@include font-size(54px);
+		margin-top: $base-spacing-unit;
+	}	
+	// .entry-content p {
+	// 	max-width: 600px;
+	// 	margin: $base-spacing-unit auto;
+	// }
 
-	.nav {
-		margin-bottom: 0;
+	.single {
+
+		p {
+		 @include font-size(20px);
+		 line-height:1.5;
+		 font-family: Georgia;
+		}
+
+		.site-content {
+			width: 66.6666%;
+			margin: 0 auto;
+		}
+
 	}
 
 }
+
 
 /* ———————————————————————————————————————————————————————————————
  * 

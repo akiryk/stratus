@@ -8,15 +8,19 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<div id="content" class="site-content" role="main">
+<div id="main" class="site-main">
+	<div class="grid-wrapper">
+
+		<div id="content" class="site-content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', 'portfolio-single' ); ?>
 
-				<?php stratus_content_nav( 'nav-below' ); ?>
-
+				<div class="grid one-whole">
+					<?php stratus_content_nav( 'nav-below' ); ?>
+				</div>
+				
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || '0' != get_comments_number() )
@@ -24,5 +28,7 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; // end of the loop. ?>
+
+		</div><!-- #content .site-content -->
 
 <?php get_footer(); ?>

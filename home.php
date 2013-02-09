@@ -13,34 +13,41 @@
  */
 
 get_header(); ?>
-				
+
+<?php if ( !is_paged()) : ?>
+	<div class="welcome-wrapper cf">
+		<div class="site-main site-content">
+		<div class="gw">
+		<div class="grid one-whole">
+			<?php 
+				/* Display home page heading content only on the first page.
+				 * (That is, not on paginated pages) 
+				 */ 
+				$page =  get_page_by_title( "Home" );
+				$id =  $page->ID;
+				$page_query = new WP_Query( 'page_id=' . $id );
+				while ( $page_query->have_posts() ) :
+					$page_query->the_post();
+					?>
+					<div class="hero"> <?php	the_content(); ?> </div>	
+					<?php					
+				endwhile;
+				?>			
+			</div> <!-- grid -->
+		</div><!-- gw -->
+	</div><!-- site main-->
+	</div> <!-- welcome-wrapper -->
+<?php endif; ?>
+
+<div id="main" class="site-main">
+<div class="grid-wrapper">
 <div id="primary" class="content-area"> <!-- allows for main content and sidebar -->
 	<div id="content" class="site-content" role="main">
+	
+	<?php if ( !is_paged()) : ?>	
+		<h1 class="page-title grid one-whole">Some of My Work</h1>
+	<?php endif; ?>
 
-	<?php if ( !is_paged()) : ?>
-		<div class="welcome-wrapper cf">
-				<div class="grid one-whole">
-					<?php 
-						/* Display home page heading content only on the first page.
-						 * (That is, not on paginated pages) 
-						 */ 
-						$page =  get_page_by_title( "Home" );
-						$id =  $page->ID;
-						$page_query = new WP_Query( 'page_id=' . $id );
-						while ( $page_query->have_posts() ) :
-							$page_query->the_post();
-							?>
-							<div class="hero"> <?php	the_content(); ?> </div>	
-							<?php					
-						endwhile;
-						?>
-
-						<h1 class="page-title">Some of My Work</h1>
-					
-					</div> <!-- grid -->
-			</div> <!-- welcome-wrapper -->
-		<?php endif; ?>
-		
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>

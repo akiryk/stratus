@@ -925,9 +925,9 @@ h1, .alpha {
 
 /* line 14, sass/inuit.css/base/_headings.scss */
 h2, .beta {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: 1.6;
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333;
 }
 
 /* line 17, sass/inuit.css/base/_headings.scss */
@@ -2258,26 +2258,49 @@ h1 a, .alpha a {
   color: #333333;
 }
 
-/* line 24, sass/UI/_headings.scss */
+/* line 18, sass/UI/_headings.scss */
 .tightest {
   margin-bottom: 0;
 }
 
-/* line 28, sass/UI/_headings.scss */
+/* line 22, sass/UI/_headings.scss */
 .tight {
   margin-bottom: 12px;
 }
 
-/* line 32, sass/UI/_headings.scss */
+/* line 26, sass/UI/_headings.scss */
+.kicker {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* line 31, sass/UI/_headings.scss */
 .entry-header {
   margin-bottom: 24px;
 }
 
-/* line 36, sass/UI/_headings.scss */
+/* line 35, sass/UI/_headings.scss */
 .agg-title {
   font-family: "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
 }
 
+@media only screen and (min-width: 940px) {
+  /* line 40, sass/UI/_headings.scss */
+  .kicker {
+    color: #999;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  /* line 46, sass/UI/_headings.scss */
+  .agg-title {
+    font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.33333;
+    line-height: 1.25em;
+  }
+}
 /*------------------------------------*\
     AK LINKS
 \*------------------------------------*/
@@ -2329,8 +2352,16 @@ a:hover, a:active, a:focus {
  */
 /* line 8, sass/UI/_masthead.scss */
 .masthead-wrapper {
-  background: #333;
+  background: #0e2c49;
   padding: 0 0 0 24px;
+}
+/* line 12, sass/UI/_masthead.scss */
+.masthead-wrapper a {
+  color: #839fb9;
+}
+/* line 14, sass/UI/_masthead.scss */
+.masthead-wrapper a:hover {
+  color: #f2f8fd;
 }
 @media only screen and (min-width: 600px) and (max-width: 939px) {
   /* line 8, sass/UI/_masthead.scss */
@@ -2341,54 +2372,54 @@ a:hover, a:active, a:focus {
 @media only screen and (min-width: 940px) {
   /* line 8, sass/UI/_masthead.scss */
   .masthead-wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding: 12px 0;
   }
 }
 
-/* line 26, sass/UI/_masthead.scss */
+/* line 33, sass/UI/_masthead.scss */
 .title-group {
   float: left;
 }
 
-/* line 30, sass/UI/_masthead.scss */
+/* line 37, sass/UI/_masthead.scss */
 .site-title {
-  color: #ccc;
   line-height: 48px;
 }
-/* line 33, sass/UI/_masthead.scss */
-.site-title a {
-  color: #ccc;
-}
 @media only screen and (min-width: 600px) {
-  /* line 30, sass/UI/_masthead.scss */
+  /* line 37, sass/UI/_masthead.scss */
   .site-title {
     line-height: 24px;
   }
 }
 
-/* line 44, sass/UI/_masthead.scss */
+/* line 51, sass/UI/_masthead.scss */
 #menu-main-nav > li {
   float: left;
   display: block;
 }
-/* line 48, sass/UI/_masthead.scss */
+/* line 55, sass/UI/_masthead.scss */
 #menu-main-nav > li > a {
   padding: 0 24px;
-  color: #aaa;
-  border-right: 1px solid #494949;
-  border-left: 1px solid #292929;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-/* line 53, sass/UI/_masthead.scss */
-#menu-main-nav > li > a:hover {
-  color: #eee;
-}
-/* line 58, sass/UI/_masthead.scss */
+/* line 61, sass/UI/_masthead.scss */
 #menu-main-nav > li:last-of-type a {
   border-right: none;
 }
-/* line 62, sass/UI/_masthead.scss */
+/* line 65, sass/UI/_masthead.scss */
 #menu-main-nav > li:first-of-type a {
   border-left: none;
+}
+
+/* line 73, sass/UI/_masthead.scss */
+.sidebar-button {
+  color: #ccc;
+}
+/* line 75, sass/UI/_masthead.scss */
+.sidebar-button:hover {
+  color: #eee;
 }
 
 /* line 2, sass/UI/_offcanvas.scss */
@@ -2404,81 +2435,95 @@ a:hover, a:active, a:focus {
 
 /* line 8, sass/UI/_offcanvas.scss */
 [role="complementary"] {
-  background-color: #ddd;
+  background-color: #25546f;
+  font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
   margin-right: -100%;
-  padding-bottom: 100%;
-  width: 70%;
+  width: 80%;
   float: right;
 }
 
-/* line 18, sass/UI/_offcanvas.scss */
+/* line 17, sass/UI/_offcanvas.scss */
 [role="main"] {
   margin-right: 0;
   float: left;
 }
 
-/* line 25, sass/UI/_offcanvas.scss */
+/* line 24, sass/UI/_offcanvas.scss */
 .active [role="complementary"] {
-  margin-left: 10%;
   margin-right: 0;
 }
 
-/* line 32, sass/UI/_offcanvas.scss */
+/* line 31, sass/UI/_offcanvas.scss */
 .active [role="main"] {
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.25) inset;
+  background: -webkit-linear-gradient(left, white 96%, #dddddd 100%);
   margin-left: -80%;
 }
 
-/* line 39, sass/UI/_offcanvas.scss */
+/* line 38, sass/UI/_offcanvas.scss */
 .hide-extras [role="complementary"] {
   display: block;
 }
 
-/* line 43, sass/UI/_offcanvas.scss */
+/* line 42, sass/UI/_offcanvas.scss */
 #sidebarButton {
   float: right;
   padding: 12px 24px;
 }
 
-/* line 51, sass/UI/_offcanvas.scss */
+/* line 50, sass/UI/_offcanvas.scss */
 .nav--stacked > li > a {
-  background-color: #999;
-  border-bottom: 1px solid #aaa;
-  font-size: 1.5;
+  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1.5em 24px;
+  color: #fff;
+}
+/* line 56, sass/UI/_offcanvas.scss */
+.nav--stacked > li > a:hover {
+  background-color: #444;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (min-width: 600px) {
-  /* line 63, sass/UI/_offcanvas.scss */
+  /* line 67, sass/UI/_offcanvas.scss */
   #menu-button, .sidebar-button {
     display: none;
   }
 
-  /* line 67, sass/UI/_offcanvas.scss */
+  /* line 71, sass/UI/_offcanvas.scss */
   [role="complementary"] {
     width: 20%;
     margin-left: 0;
     float: left;
   }
 
-  /* line 73, sass/UI/_offcanvas.scss */
+  /* line 77, sass/UI/_offcanvas.scss */
   [role="main"] {
     width: 80%;
   }
 
-  /* line 77, sass/UI/_offcanvas.scss */
+  /* line 81, sass/UI/_offcanvas.scss */
   .hide-extras [role="main"] {
     width: 100%;
   }
 
-  /* line 79, sass/UI/_offcanvas.scss */
+  /* line 83, sass/UI/_offcanvas.scss */
   .hide-extras [role="complementary"] {
     display: none;
   }
 }
 @media only screen and (max-width: 599px) {
-  /* line 86, sass/UI/_offcanvas.scss */
+  /* line 90, sass/UI/_offcanvas.scss */
   .hide-for-small {
     display: none !important;
+  }
+
+  /* line 94, sass/UI/_offcanvas.scss */
+  .nav {
+    background-color: #3c8ab4;
   }
 }
 /* line 27, sass/style.scss */
@@ -2496,7 +2541,12 @@ body {
   font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
 }
 
-/* line 39, sass/style.scss */
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  WELCOME WRAPPER
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 45, sass/style.scss */
 .hero {
   font-size: 30px;
   font-size: 1.875rem;
@@ -2505,95 +2555,135 @@ body {
   font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
 }
 @media only screen and (min-width: 600px) and (max-width: 939px) {
-  /* line 39, sass/style.scss */
+  /* line 45, sass/style.scss */
   .hero {
     font-size: 40px;
     font-size: 2.5rem;
     line-height: 1.2;
   }
 }
+
 @media only screen and (min-width: 940px) {
-  /* line 39, sass/style.scss */
+  /* line 57, sass/style.scss */
+  .welcome-wrapper {
+    background-color: #1e5f9d;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 0 200px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.75) 0 0 200px inset;
+    box-shadow: rgba(0, 0, 0, 0.75) 0 0 200px inset;
+  }
+
+  /* line 62, sass/style.scss */
   .hero {
-    font-size: 46px;
-    font-size: 2.875rem;
-    line-height: 1.04348;
+    font-size: 54px;
+    font-size: 3.375rem;
+    line-height: 1.33333;
     line-height: 1.25em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  /* line 67, sass/style.scss */
+  .hero a {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  /* line 69, sass/style.scss */
+  .hero a:hover {
+    color: white;
   }
 }
-
-/* line 53, sass/style.scss */
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  SECTION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 82, sass/style.scss */
 .site-main {
   overflow: hidden;
 }
 @media only screen and (min-width: 940px) {
-  /* line 53, sass/style.scss */
+  /* line 82, sass/style.scss */
   .site-main {
     padding: 0;
   }
 }
 
-/* line 63, sass/style.scss */
+/* line 92, sass/style.scss */
 .site-content {
   padding: 24px;
 }
 @media only screen and (min-width: 940px) {
-  /* line 63, sass/style.scss */
+  /* line 92, sass/style.scss */
   .site-content {
     padding: 24px 0;
   }
 }
 
-/* line 72, sass/style.scss */
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  SECTION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 106, sass/style.scss */
+.agg-header a {
+  color: #111;
+}
+/* line 109, sass/style.scss */
+.agg-header a:hover {
+  color: #4a8ec2;
+}
+
+/* line 114, sass/style.scss */
 article {
   clear: both;
   margin-bottom: 24px;
 }
 
-/* line 77, sass/style.scss */
-.kicker {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-/* line 82, sass/style.scss */
+/* line 119, sass/style.scss */
 .entry-meta {
   color: #777777;
   font-size: 12px;
 }
 
-/* line 87, sass/style.scss */
+/* line 124, sass/style.scss */
 .lap-up {
   display: none;
 }
 @media only screen and (min-width: 600px) {
-  /* line 87, sass/style.scss */
+  /* line 124, sass/style.scss */
   .lap-up {
     display: block;
   }
 }
 
-/* line 95, sass/style.scss */
+/* line 132, sass/style.scss */
 .lap-up-inline {
   display: none;
 }
 @media only screen and (min-width: 600px) {
-  /* line 95, sass/style.scss */
+  /* line 132, sass/style.scss */
   .lap-up-inline {
     display: inline;
   }
 }
 
-/* line 104, sass/style.scss */
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  SECTION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 146, sass/style.scss */
 .main-navigation {
   float: right;
 }
-/* line 107, sass/style.scss */
+/* line 149, sass/style.scss */
 .main-navigation .nav {
   margin-bottom: 0;
 }
 
-/* line 115, sass/style.scss */
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  SECTION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 161, sass/style.scss */
 img {
   max-width: 100%;
   height: auto;

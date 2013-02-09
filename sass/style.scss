@@ -36,6 +36,12 @@ body {
 	font-family: $heading-face;
 }
 
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  WELCOME WRAPPER
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
 .hero {
 	@include font-size(30px);
 	line-height: 1.5em;
@@ -43,13 +49,36 @@ body {
 	@include media-query(lap) {
 		@include font-size(40px);	
 	}
-	@include media-query(desk) {
-		@include font-size(46px);
-		line-height:1.25em;	
-	}
 	font-family: $heading-face;
 }
 
+@include media-query(desk) {
+		
+	.welcome-wrapper {
+		background-color: $welcome-wrapper-color;
+		@include box-shadow(rgba(black, 0.75) 0 0 200px inset);
+	}
+
+	.hero {
+		@include font-size(54px);
+		line-height:1.25em;	
+		color: rgba(white, 0.8);
+
+		a {
+			color: rgba(white, 0.4);
+			&:hover {
+				color: white;
+			}
+		}
+	}
+
+}
+
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  SECTION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
 .site-main {
 	@extend %pagewidth;
 	overflow: hidden;
@@ -67,16 +96,24 @@ body {
 	}
 }
 
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  SECTION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
 
+.agg-header {
+	a {
+		color: #111;
 
+		&:hover {
+			color: $hover-color;
+		}
+	}
+}
 article {
 	clear: both;
 	margin-bottom: $base-spacing-unit;
-}
-
-.kicker {
-	font-weight: 700;
-	font-size: $h1-size;
 }
 
 .entry-meta {
@@ -99,7 +136,12 @@ article {
 		display: inline;
 	}
 }
- 
+
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  SECTION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
 
 .main-navigation {
 	float: right;
@@ -110,7 +152,11 @@ article {
 
 }
 
-// Responsive Styles
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  SECTION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
 
 img {
 	max-width: 100%;

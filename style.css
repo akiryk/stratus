@@ -918,9 +918,9 @@ html {
  */
 /* line 11, sass/inuit.css/base/_headings.scss */
 h1, .alpha {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.2;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
 }
 
 /* line 14, sass/inuit.css/base/_headings.scss */
@@ -1495,7 +1495,7 @@ hgroup .hN {
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
  */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 639px) {
   /**
   * Whole
   */
@@ -1643,7 +1643,7 @@ hgroup .hN {
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 939px) {
+@media only screen and (min-width: 640px) and (max-width: 939px) {
   /**
   * Whole
   */
@@ -2366,14 +2366,14 @@ hgroup .hN {
   left: -9999px;
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 639px) {
   /* line 97, sass/inuit.css/generic/_helper.scss */
   .hide--palm {
     position: absolute;
     left: -9999px;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 939px) {
+@media only screen and (min-width: 640px) and (max-width: 939px) {
   /* line 97, sass/inuit.css/generic/_helper.scss */
   .hide--lap {
     position: absolute;
@@ -2394,17 +2394,50 @@ hgroup .hN {
     left: -9999px;
   }
 }
+@font-face {
+  font-family: 'stratus';
+  src: url("fonts/stratus.eot");
+  src: url("fonts/stratus.eot?#iefix") format("embedded-opentype"), url("fonts/stratus.woff") format("woff"), url("fonts/stratus.ttf") format("truetype"), url("fonts/stratus.svg#stratus") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+/* line 18, sass/UI/_fonts.scss */
+.icon-reorder:before, .icon-angle-right:before, .icon-angle-left:before {
+  font-family: 'stratus';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 26, sass/UI/_fonts.scss */
+.icon-reorder:before {
+  content: "\e000";
+}
+
+/* line 29, sass/UI/_fonts.scss */
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+/* line 32, sass/UI/_fonts.scss */
+.icon-angle-left:before {
+  content: "\f104";
+}
+
 /* line 8, sass/UI/_mixins.scss */
 .site-header, .site-main {
   margin: 0 auto;
   width: 100%;
-  max-width: 940px;
-}
-@media only screen and (min-width: 940px) {
-  /* line 8, sass/UI/_mixins.scss */
-  .site-header, .site-main {
-    width: 90%;
-  }
+  max-width: 600px;
 }
 
 /*------------------------------------*\
@@ -2412,7 +2445,7 @@ hgroup .hN {
 \*------------------------------------*/
 /* line 5, sass/UI/_headings.scss */
 h1, .alpha {
-  font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
   font-weight: normal;
 }
 /* line 10, sass/UI/_headings.scss */
@@ -2433,7 +2466,7 @@ h1 a, .alpha a {
 /* line 26, sass/UI/_headings.scss */
 .kicker {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* line 31, sass/UI/_headings.scss */
@@ -2443,7 +2476,7 @@ h1 a, .alpha a {
 
 /* line 35, sass/UI/_headings.scss */
 .agg-title {
-  font-family: "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+  font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
 }
 
 @media only screen and (min-width: 940px) {
@@ -2456,7 +2489,7 @@ h1 a, .alpha a {
 
   /* line 46, sass/UI/_headings.scss */
   .agg-title {
-    font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+    font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 1.33333;
@@ -2514,18 +2547,11 @@ a:hover, a:active, a:focus {
  */
 /* line 8, sass/UI/_masthead.scss */
 .masthead-wrapper {
-  background: #0e2c49;
+  background: white;
   padding: 0 0 0 24px;
+  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
 }
-/* line 12, sass/UI/_masthead.scss */
-.masthead-wrapper a {
-  color: #839fb9;
-}
-/* line 14, sass/UI/_masthead.scss */
-.masthead-wrapper a:hover {
-  color: #f2f8fd;
-}
-@media only screen and (min-width: 600px) and (max-width: 939px) {
+@media only screen and (min-width: 640px) and (max-width: 939px) {
   /* line 8, sass/UI/_masthead.scss */
   .masthead-wrapper {
     padding: 12px 24px;
@@ -2539,50 +2565,51 @@ a:hover, a:active, a:focus {
   }
 }
 
-/* line 33, sass/UI/_masthead.scss */
+/* line 31, sass/UI/_masthead.scss */
 .title-group {
   float: left;
 }
 
-/* line 37, sass/UI/_masthead.scss */
+/* line 35, sass/UI/_masthead.scss */
+.site-description {
+  color: #444;
+}
+
+/* line 39, sass/UI/_masthead.scss */
 .site-title {
   line-height: 48px;
 }
-@media only screen and (min-width: 600px) {
-  /* line 37, sass/UI/_masthead.scss */
+@media only screen and (min-width: 640px) {
+  /* line 39, sass/UI/_masthead.scss */
   .site-title {
     line-height: 24px;
   }
 }
+/* line 46, sass/UI/_masthead.scss */
+.site-title a {
+  color: #a71c05;
+}
 
-/* line 50, sass/UI/_masthead.scss */
+/* line 56, sass/UI/_masthead.scss */
 .main-navigation {
   float: right;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
 }
-/* line 53, sass/UI/_masthead.scss */
-.main-navigation .nav {
-  margin-bottom: 0;
+/* line 60, sass/UI/_masthead.scss */
+.main-navigation a {
+  color: #d8d8d8;
+  padding: 0 12px;
+  font-weight: 100;
 }
-
-/* line 62, sass/UI/_masthead.scss */
-#menu-main-nav > li {
-  float: left;
-  display: block;
-}
-/* line 65, sass/UI/_masthead.scss */
-#menu-main-nav > li > a {
-  padding: 0 24px;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-}
-/* line 71, sass/UI/_masthead.scss */
-#menu-main-nav > li:last-of-type a {
-  border-right: none;
+/* line 64, sass/UI/_masthead.scss */
+.main-navigation a:last-of-type {
   padding-right: 0;
 }
-/* line 76, sass/UI/_masthead.scss */
-#menu-main-nav > li:first-of-type a {
-  border-left: none;
+/* line 69, sass/UI/_masthead.scss */
+.main-navigation .nav {
+  margin-bottom: 0;
 }
 
 /* line 84, sass/UI/_masthead.scss */
@@ -2608,7 +2635,7 @@ a:hover, a:active, a:focus {
 /* line 8, sass/UI/_offcanvas.scss */
 [role="complementary"] {
   background-color: #25546f;
-  font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
@@ -2653,7 +2680,7 @@ a:hover, a:active, a:focus {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 640px) {
   /* line 62, sass/UI/_offcanvas.scss */
   #menu-button, .sidebar-button {
     display: none;
@@ -2681,7 +2708,7 @@ a:hover, a:active, a:focus {
     display: none;
   }
 }
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 639px) {
   /* line 86, sass/UI/_offcanvas.scss */
   [role="main"] {
     margin-right: 0;
@@ -2698,19 +2725,46 @@ a:hover, a:active, a:focus {
     background-color: #3c8ab4;
   }
 }
-/* line 27, sass/style.scss */
+/* line 28, sass/style.scss */
 body {
-  font-family: "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+  font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
 }
 
-/* line 31, sass/style.scss */
+/* line 32, sass/style.scss */
 .page-title {
   font-weight: 700;
 }
 
-/* line 35, sass/style.scss */
+/* line 36, sass/style.scss */
 .lede {
-  font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
+}
+
+/* line 40, sass/style.scss */
+.next-last-link {
+  position: fixed;
+  top: 35%;
+  font-size: 122px;
+  line-height: 1;
+}
+/* line 45, sass/style.scss */
+.next-last-link a {
+  display: block;
+  color: #eee;
+}
+/* line 48, sass/style.scss */
+.next-last-link a:hover {
+  color: #0160a3;
+}
+
+/* line 53, sass/style.scss */
+.previous-fixed {
+  left: 12px;
+}
+
+/* line 56, sass/style.scss */
+.next-fixed {
+  right: 12px;
 }
 
 /* ———————————————————————————————————————————————————————————————
@@ -2718,16 +2772,16 @@ body {
  *  WELCOME WRAPPER
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 46, sass/style.scss */
+/* line 66, sass/style.scss */
 .hero {
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1.6;
   line-height: 1.5em;
-  font-family: "museo-slab", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
 }
-@media only screen and (min-width: 600px) and (max-width: 939px) {
-  /* line 46, sass/style.scss */
+@media only screen and (min-width: 640px) and (max-width: 939px) {
+  /* line 66, sass/style.scss */
   .hero {
     font-size: 40px;
     font-size: 2.5rem;
@@ -2735,30 +2789,13 @@ body {
   }
 }
 
-@media only screen and (min-width: 940px) {
-  /* line 58, sass/style.scss */
-  .welcome-wrapper {
-    background-color: #1e5f9d;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0 0 200px inset;
-    -moz-box-shadow: rgba(0, 0, 0, 0.75) 0 0 200px inset;
-    box-shadow: rgba(0, 0, 0, 0.75) 0 0 200px inset;
-  }
-
-  /* line 63, sass/style.scss */
+@media only screen and (min-width: 640px) {
+  /* line 78, sass/style.scss */
   .hero {
-    font-size: 54px;
-    font-size: 3.375rem;
-    line-height: 1.33333;
+    font-size: 34px;
+    font-size: 2.125rem;
+    line-height: 1.41176;
     line-height: 1.25em;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  /* line 68, sass/style.scss */
-  .hero a {
-    color: rgba(255, 255, 255, 0.4);
-  }
-  /* line 70, sass/style.scss */
-  .hero a:hover {
-    color: white;
   }
 }
 /* ———————————————————————————————————————————————————————————————
@@ -2766,23 +2803,23 @@ body {
  *  SECTION
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 83, sass/style.scss */
+/* line 96, sass/style.scss */
 .site-main {
   overflow: hidden;
 }
-@media only screen and (min-width: 940px) {
-  /* line 83, sass/style.scss */
+@media only screen and (min-width: 640px) {
+  /* line 96, sass/style.scss */
   .site-main {
     padding: 0;
   }
 }
 
-/* line 93, sass/style.scss */
+/* line 105, sass/style.scss */
 .site-content {
   padding: 24px;
 }
-@media only screen and (min-width: 940px) {
-  /* line 93, sass/style.scss */
+@media only screen and (min-width: 640px) {
+  /* line 105, sass/style.scss */
   .site-content {
     padding: 24px 0;
   }
@@ -2793,44 +2830,44 @@ body {
  *  SECTION
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 107, sass/style.scss */
+/* line 119, sass/style.scss */
 .agg-header a {
   color: #111;
 }
-/* line 110, sass/style.scss */
+/* line 122, sass/style.scss */
 .agg-header a:hover {
   color: #4a8ec2;
 }
 
-/* line 115, sass/style.scss */
+/* line 127, sass/style.scss */
 article {
   clear: both;
   margin-bottom: 24px;
 }
 
-/* line 120, sass/style.scss */
+/* line 132, sass/style.scss */
 .entry-meta {
   color: #777777;
   font-size: 12px;
 }
 
-/* line 125, sass/style.scss */
+/* line 137, sass/style.scss */
 .lap-up {
   display: none;
 }
-@media only screen and (min-width: 600px) {
-  /* line 125, sass/style.scss */
+@media only screen and (min-width: 640px) {
+  /* line 137, sass/style.scss */
   .lap-up {
     display: block;
   }
 }
 
-/* line 133, sass/style.scss */
+/* line 145, sass/style.scss */
 .lap-up-inline {
   display: none;
 }
-@media only screen and (min-width: 600px) {
-  /* line 133, sass/style.scss */
+@media only screen and (min-width: 640px) {
+  /* line 145, sass/style.scss */
   .lap-up-inline {
     display: inline;
   }
@@ -2841,8 +2878,8 @@ article {
  *  SECTION: POST PAGES
  *  
  * ——————————————————————————————————————————————————————————————— */
-@media only screen and (min-width: 940px) {
-  /* line 149, sass/style.scss */
+@media only screen and (min-width: 640px) {
+  /* line 161, sass/style.scss */
   article h1 {
     font-size: 54px;
     font-size: 3.375rem;
@@ -2850,18 +2887,12 @@ article {
     margin-top: 24px;
   }
 
-  /* line 160, sass/style.scss */
+  /* line 168, sass/style.scss */
   .single p {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.2;
     line-height: 1.5;
-    font-family: Georgia;
-  }
-  /* line 166, sass/style.scss */
-  .single .site-content {
-    width: 66.6666%;
-    margin: 0 auto;
   }
 }
 /* ———————————————————————————————————————————————————————————————
@@ -2869,7 +2900,7 @@ article {
  *  SECTION
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 182, sass/style.scss */
+/* line 184, sass/style.scss */
 img {
   max-width: 100%;
   height: auto;

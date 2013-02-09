@@ -13,7 +13,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 
-<script type="text/javascript" src="//use.typekit.net/dng0kkm.js"></script>
+<script type="text/javascript" src="//use.typekit.net/vdt8eam.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>

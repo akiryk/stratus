@@ -1,4 +1,4 @@
-<div class="">
+<div class="grid one-whole">
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -10,7 +10,7 @@
 	</header><!-- .entry-header -->
 </div> <!-- end grid one whole-->
 
-	<div class="">
+	<div class="grid one-whole">
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'stratus' ), 'after' => '</div>' ) ); ?>

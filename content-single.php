@@ -4,6 +4,7 @@
  * @since stratus 1.0
  */
 ?>
+<div class="grid one-whole">
 Hellos
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">

@@ -65,4 +65,8 @@
 			</header><!-- .site-header -->
 
 	</div><!-- .masthead-wrapper -->
-		
+</div>
+
+<div id="main" class="site-main">
+	<div class="grid-wrapper">
+		<div id="content" class="site-content" role="main">		

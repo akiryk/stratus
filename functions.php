@@ -150,55 +150,47 @@ add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 /**
  * Remove the inline width style from captions
  */
-// add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
-// add_shortcode('caption', 'fixed_img_caption_shortcode');
-// function fixed_img_caption_shortcode($attr, $content = null) {
-// 	// New-style shortcode with the caption inside the shortcode with the link and image tags.
-// 	if ( ! isset( $attr['caption'] ) ) {
-// 		if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
-// 			$content = $matches[1];
-// 			$attr['caption'] = trim( $matches[2] );
-// 		}
-// 	}
+add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
+add_shortcode('caption', 'fixed_img_caption_shortcode');
+function fixed_img_caption_shortcode($attr, $content = null) {
+	// New-style shortcode with the caption inside the shortcode with the link and image tags.
+	if ( ! isset( $attr['caption'] ) ) {
+		if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
+			$content = $matches[1];
+			$attr['caption'] = trim( $matches[2] );
+		}
+	}
 
-// 	// Allow plugins/themes to override the default caption template.
-// 	$output = apply_filters('img_caption_shortcode', '', $attr, $content);
-// 	if ( $output != '' )
-// 		return $output;
+	// Allow plugins/themes to override the default caption template.
+	$output = apply_filters('img_caption_shortcode', '', $attr, $content);
+	if ( $output != '' )
+		return $output;
 
-// 	extract(shortcode_atts(array(
-// 		'id'	=> '',
-// 		'align'	=> 'alignnone',
-// 		'width'	=> '',
-// 		'caption' => ''
-// 	), $attr));
+	extract(shortcode_atts(array(
+		'id'	=> '',
+		'align'	=> 'alignnone',
+		'width'	=> '',
+		'caption' => ''
+	), $attr));
 
-// 	if ( 1 > (int) $width || empty($caption) )
-// 		return $content;
+	if ( 1 > (int) $width || empty($caption) )
+		return $content;
 
-// 	if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+	if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
 
-// 	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '>'
-// 	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
-// }
+	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '>'
+	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+}
 
 /*
  * Enable archive pages to display custom post types
  */
-add_filter('pre_get_posts', 'query_post_type');
-function query_post_type($query) {
-	if ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
-		// the $$ empty part enables nav_menus to work per 
-		//http://wordpress.org/support/topic/custom-post-type-tagscategories-archive-page
-    $post_type = get_query_var('post_type');
-		if($post_type) {
-			$post_type = $post_type;
-		}
-		else {
-		  $post_type = array('post','portfolio'); // replace cpt to your custom post type
-		}
-    $query->set('post_type',$post_type);
-		return $query;
-   }
-}
+// add_action( 'pre_get_posts', 'add_my_custom_post_type' );
 
+// function add_my_custom_post_type( $query ) {
+// 	if ( is_archive() && $query->is_main_query() ) {
+// 		print "Hello";
+// 		$query->set( 'post_type', array( 'port') ); 
+// 	}
+// 	 return $query;
+// }

@@ -13,6 +13,11 @@
  */
 
 get_header(); ?>
+
+
+<div id="main" class="site-main">
+	<div class="grid-wrapper">
+		<div id="content" class="site-content" role="main">
 	
 		<?php if ( !is_paged()) : ?>
 
@@ -31,10 +36,15 @@ get_header(); ?>
 						<?php					
 					endwhile;
 					?>			
-			</div> <!-- grid -->
+				</div> <!-- grid -->
 				
+				<h1 class="page-title grid one-whole">Some of My Work</h1>
 
-			<?php endif; ?> 
+			<?php endif; ?>
+
+		<?php if ( !is_paged()) : ?>	
+			
+		<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
 

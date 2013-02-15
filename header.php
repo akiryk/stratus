@@ -33,8 +33,7 @@
 <body <?php body_class('hide-extras off-canvas'); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<div class="masthead-palm-wrapper cf">
-	<div class="masthead-wrapper">
+	<div class="masthead-wrapper cf">
 
 		<header class="site-header" role="banner">
 			<div class="grid-wrapper">
@@ -58,9 +57,7 @@
 					</nav><!-- .site-navigation .main-navigation -->
 
 					<p class="show-for-small tightest">
-					  <a class="sidebar-button button" id="sidebarButton" href="#sidebar" title="menu for small screens">
-					  	<span class="icon-reorder"></span>
-					  </a>
+					  <a class="sidebar-button button" id="sidebarButton" href="#sidebar">Menu</a>
 					</p>
 
 					</div><!-- .grid -->
@@ -68,8 +65,4 @@
 			</header><!-- .site-header -->
 
 	</div><!-- .masthead-wrapper -->
-</div>
-
-<div id="main" class="site-main">
-	<div class="grid-wrapper">
-		<div id="content" class="site-content" role="main">
+		

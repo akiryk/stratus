@@ -13,11 +13,6 @@
  */
 
 get_header(); ?>
-
-
-<div id="main" class="site-main">
-	<div class="grid-wrapper">
-		<div id="content" class="site-content" role="main">
 	
 		<?php if ( !is_paged()) : ?>
 

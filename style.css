@@ -3065,10 +3065,49 @@ you can use the generic selector below, but it's slower:
  *  BLOG
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 40, sass/style.scss */
+/* line 41, sass/style.scss */
 .blog-article,
 .page {
   margin-bottom: 30px;
+}
+/* line 44, sass/style.scss */
+.blog-article p,
+.page p {
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  line-height: 1.5;
+}
+
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  WELCOME WRAPPER
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 57, sass/style.scss */
+.hero {
+  font-size: 22px;
+  font-size: 1.1rem;
+  line-height: 1.36364;
+  line-height: 1.5;
+  font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+}
+@media only screen and (max-width: 679px) {
+  /* line 57, sass/style.scss */
+  .hero {
+    width: 85%;
+    margin: 30px auto 0;
+  }
+}
+@media only screen and (min-width: 680px) {
+  /* line 57, sass/style.scss */
+  .hero {
+    font-size: 38px;
+    font-size: 1.9rem;
+    line-height: 1.57895;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 /* ———————————————————————————————————————————————————————————————
@@ -3076,63 +3115,158 @@ you can use the generic selector below, but it's slower:
  *  MAIN CONTAINERS
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 51, sass/style.scss */
+/* line 88, sass/style.scss */
 .masthead-wrapper, .site-main {
   margin: 0 auto;
   width: 100%;
   max-width: 680px;
 }
 
-/* line 58, sass/style.scss */
+/* line 95, sass/style.scss */
 .site-main {
   overflow: hidden;
 }
 @media only screen and (min-width: 680px) {
-  /* line 58, sass/style.scss */
+  /* line 95, sass/style.scss */
   .site-main {
     padding: 0 30px;
   }
 }
 
 @media only screen and (min-width: 680px) {
-  /* line 67, sass/style.scss */
+  /* line 104, sass/style.scss */
   .site-content {
     padding: 20px 0;
   }
 }
 
 @media only screen and (max-width: 679px) {
-  /* line 75, sass/style.scss */
+  /* line 112, sass/style.scss */
   article {
     width: 85%;
     margin: 30px auto;
   }
 
-  /* line 79, sass/style.scss */
+  /* line 116, sass/style.scss */
   .hero {
     width: 85%;
   }
 }
 /* ———————————————————————————————————————————————————————————————
  * 
+ *  MASTHEAD
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+@media only screen and (max-width: 679px) {
+  /* line 131, sass/style.scss */
+  .masthead-palm-wrapper {
+    border-bottom: 1px solid #ddd;
+  }
+}
+/* line 137, sass/style.scss */
+.masthead-wrapper {
+  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
+}
+@media only screen and (min-width: 680px) {
+  /* line 137, sass/style.scss */
+  .masthead-wrapper {
+    padding: 60px 30px;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 679px) {
+  /* line 137, sass/style.scss */
+  .masthead-wrapper {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  /* line 152, sass/style.scss */
+  .site-header {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 15px;
+  }
+}
+
+/* line 160, sass/style.scss */
+.title-group {
+  float: left;
+}
+
+/* line 164, sass/style.scss */
+.site-description {
+  color: #444;
+}
+
+/* line 168, sass/style.scss */
+.site-title {
+  line-height: 60px;
+}
+@media only screen and (min-width: 680px) {
+  /* line 168, sass/style.scss */
+  .site-title {
+    line-height: 30px;
+  }
+}
+/* line 175, sass/style.scss */
+.site-title a {
+  color: #a71c05;
+}
+
+/* line 181, sass/style.scss */
+.main-navigation {
+  float: right;
+  font-size: 54px;
+  font-size: 2.7rem;
+  line-height: 1.11111;
+}
+/* line 185, sass/style.scss */
+.main-navigation a {
+  color: #d8d8d8;
+  padding: 0 15px;
+  font-weight: 100;
+}
+/* line 189, sass/style.scss */
+.main-navigation a:hover {
+  color: #0160a3;
+}
+/* line 192, sass/style.scss */
+.main-navigation a:last-of-type {
+  padding-right: 0;
+}
+/* line 197, sass/style.scss */
+.main-navigation .nav {
+  margin-bottom: 0;
+}
+
+/* ———————————————————————————————————————————————————————————————
+ * 
  *  AGG PAGES
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 96, sass/style.scss */
+/* line 212, sass/style.scss */
 .agg-header a {
   color: #111;
 }
-/* line 99, sass/style.scss */
+/* line 215, sass/style.scss */
 .agg-header a:hover {
   color: #0160a3;
 }
 
-/* line 105, sass/style.scss */
+/* line 221, sass/style.scss */
+.agg-title {
+  font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+  font-weight: normal;
+}
+
+/* line 226, sass/style.scss */
 .agg-article {
   margin-bottom: 30px;
 }
 
-/* line 109, sass/style.scss */
+/* line 230, sass/style.scss */
 .kicker {
   font-weight: bold;
   font-size: 54px;
@@ -3140,17 +3274,28 @@ you can use the generic selector below, but it's slower:
 }
 
 @media only screen and (min-width: 680px) {
-  /* line 116, sass/style.scss */
+  /* line 237, sass/style.scss */
   .agg-article {
     clear: both;
     margin-bottom: 60px;
   }
-  /* line 120, sass/style.scss */
+  /* line 241, sass/style.scss */
   .agg-article p {
     font-size: 18px;
     font-size: 0.9rem;
     line-height: 1.66667;
     color: #555;
+  }
+
+  /* line 247, sass/style.scss */
+  .agg-title {
+    font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+    font-size: 24px;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    line-height: 1.25em;
+    font-weight: 600;
+    margin-bottom: 4px;
   }
 }
 /* ———————————————————————————————————————————————————————————————
@@ -3159,24 +3304,39 @@ you can use the generic selector below, but it's slower:
  *  
  * ——————————————————————————————————————————————————————————————— */
 @media only screen and (max-width: 679px) {
-  /* line 134, sass/style.scss */
+  /* line 263, sass/style.scss */
   .entry-content {
     font-size: 18px;
   }
 }
 @media only screen and (min-width: 680px) {
-  /* line 140, sass/style.scss */
+  /* line 269, sass/style.scss */
   .kicker {
     display: none;
   }
+
+  /* line 273, sass/style.scss */
+  .entry-title {
+    font-size: 54px;
+    font-size: 2.7rem;
+    line-height: 1.11111;
+  }
+
+  /* line 277, sass/style.scss */
+  .single {
+    font-size: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    line-height: 1.5;
+  }
 }
-/* line 146, sass/style.scss */
+/* line 286, sass/style.scss */
 .next-last-link {
   display: none;
 }
 
 @media only screen and (min-width: 940px) {
-  /* line 151, sass/style.scss */
+  /* line 291, sass/style.scss */
   .next-last-link {
     display: block;
     position: fixed;
@@ -3184,48 +3344,48 @@ you can use the generic selector below, but it's slower:
     font-size: 122px;
     line-height: 1;
   }
-  /* line 157, sass/style.scss */
+  /* line 297, sass/style.scss */
   .next-last-link a {
     display: block;
     color: #ddd;
   }
-  /* line 160, sass/style.scss */
+  /* line 300, sass/style.scss */
   .next-last-link a:hover {
     color: #4a8ec2;
   }
-  /* line 162, sass/style.scss */
+  /* line 302, sass/style.scss */
   .next-last-link a:hover .hidden-title {
     display: block;
   }
 
-  /* line 169, sass/style.scss */
+  /* line 309, sass/style.scss */
   .icon-angle-left,
   .icon-angle-right {
     position: absolute;
     z-index: 500;
   }
 
-  /* line 173, sass/style.scss */
+  /* line 313, sass/style.scss */
   .icon-angle-right {
     right: 0;
   }
 
-  /* line 176, sass/style.scss */
+  /* line 316, sass/style.scss */
   .icon-angle-left {
     left: 0;
   }
 
-  /* line 179, sass/style.scss */
+  /* line 319, sass/style.scss */
   .previous-fixed {
     left: 15px;
   }
 
-  /* line 182, sass/style.scss */
+  /* line 322, sass/style.scss */
   .next-fixed {
     right: 15px;
   }
 
-  /* line 186, sass/style.scss */
+  /* line 326, sass/style.scss */
   .hidden-title {
     display: none;
     background: #fff;
@@ -3240,11 +3400,11 @@ you can use the generic selector below, but it's slower:
     text-overflow: ellipsis;
     font-size: 20px;
   }
-  /* line 201, sass/style.scss */
+  /* line 341, sass/style.scss */
   .hidden-title.right {
     left: -2em;
   }
-  /* line 204, sass/style.scss */
+  /* line 344, sass/style.scss */
   .hidden-title.left {
     right: -1em;
     padding-right: 4em;
@@ -3256,61 +3416,79 @@ you can use the generic selector below, but it's slower:
  *  SECTION
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 219, sass/style.scss */
+/* line 359, sass/style.scss */
 .blog-title {
   font-size: 36px;
   font-size: 1.8rem;
   line-height: 1.66667;
 }
 
-/* line 223, sass/style.scss */
+/* line 363, sass/style.scss */
 .post-date {
   margin-bottom: 15px;
 }
 
-/* line 227, sass/style.scss */
+/* line 367, sass/style.scss */
+.entry-meta {
+  color: #777777;
+  font-size: 14px;
+}
+
+/* line 372, sass/style.scss */
 .lap-up {
   display: none;
 }
 @media only screen and (min-width: 680px) {
-  /* line 227, sass/style.scss */
+  /* line 372, sass/style.scss */
   .lap-up {
     display: block;
   }
 }
 
-/* line 235, sass/style.scss */
+/* line 380, sass/style.scss */
 .lap-up-inline {
   display: none;
 }
 @media only screen and (min-width: 680px) {
-  /* line 235, sass/style.scss */
+  /* line 380, sass/style.scss */
   .lap-up-inline {
     display: inline;
   }
 }
 
-/* line 248, sass/style.scss */
+/* line 388, sass/style.scss */
+img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+/* line 395, sass/style.scss */
+h1, .alpha {
+  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
+  font-weight: normal;
+}
+/* line 400, sass/style.scss */
 h1 a, .alpha a {
   color: #333333;
 }
 
-/* line 256, sass/style.scss */
+/* line 408, sass/style.scss */
 .tightest {
   margin-bottom: 0;
 }
 
-/* line 260, sass/style.scss */
+/* line 412, sass/style.scss */
 .tight {
   margin-bottom: 15px;
 }
 
-/* line 264, sass/style.scss */
+/* line 416, sass/style.scss */
 .entry-header {
   margin-bottom: 15px;
 }
 
-/* line 268, sass/style.scss */
+/* line 420, sass/style.scss */
 .wp-caption-text {
   font-family: "Helvetica Neue", helvetica, sans-serif;
   font-size: 14px;
@@ -3319,7 +3497,7 @@ h1 a, .alpha a {
   color: #777;
 }
 
-/* line 274, sass/style.scss */
+/* line 426, sass/style.scss */
 pre {
   background: #111;
   color: #fff;
@@ -3328,7 +3506,7 @@ pre {
 }
 
 @media only screen and (max-width: 679px) {
-  /* line 282, sass/style.scss */
+  /* line 434, sass/style.scss */
   .paging-navigation,
   .page-header {
     width: 85%;
@@ -3337,7 +3515,7 @@ pre {
 }
 
 @media only screen and (min-width: 680px) {
-  /* line 291, sass/style.scss */
+  /* line 443, sass/style.scss */
   .alignright,
   .alignleft {
     float: left;
@@ -3345,7 +3523,7 @@ pre {
     margin-right: 30px;
   }
 }
-/* line 298, sass/style.scss */
+/* line 450, sass/style.scss */
 .tag-item a {
   display: inline-block;
   padding: 0.3em;
@@ -3354,12 +3532,12 @@ pre {
   background-color: #4a8ec2;
   margin-right: 15px;
 }
-/* line 305, sass/style.scss */
+/* line 457, sass/style.scss */
 .tag-item a:hover {
   background-color: #0160a3;
 }
 
-/* line 310, sass/style.scss */
+/* line 462, sass/style.scss */
 .post-edit-link {
   color: #e65c00;
   display: block;
@@ -3367,7 +3545,7 @@ pre {
   margin: 30px 0;
 }
 
-/* line 317, sass/style.scss */
+/* line 469, sass/style.scss */
 #nav-below {
   margin-bottom: 15px;
   overflow: hidden;
@@ -3375,12 +3553,12 @@ pre {
   font-size: 0.8rem;
   line-height: 1.875;
 }
-/* line 321, sass/style.scss */
+/* line 473, sass/style.scss */
 #nav-below .nav-previous {
   float: left;
   width: 304px;
 }
-/* line 325, sass/style.scss */
+/* line 477, sass/style.scss */
 #nav-below .nav-next {
   float: right;
   text-align: right;
@@ -3392,7 +3570,7 @@ pre {
  *  FOOTER
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 363, sass/style.scss */
+/* line 515, sass/style.scss */
 .site-footer {
   clear: both;
   margin: 15px 0;

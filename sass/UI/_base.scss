@@ -47,6 +47,12 @@ h3, h4, h5, h6 {
    @include font-size($h3-size);
 }
 
+.page-title {
+	@include font-size($h3-size);
+	font-weight: 700;
+	padding-bottom: $half-spacing-unit;
+}
+
 time {
 	color: $light-text;
 	font-size: $h5-size;

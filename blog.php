@@ -35,10 +35,9 @@ get_header(); ?>
 			</div>
 
 		<?php else : ?>
-
 			<?php get_template_part( 'no-results', 'index' ); ?>
-
 		<?php endif; ?>
+		
 	</div><!-- .grid .one-whole -->
 </div><!-- #content .site-content role=main -->
 <?php get_footer(); ?>

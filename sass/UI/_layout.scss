@@ -1,0 +1,19 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  Hero
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+%pagewidth {
+	margin: 0 auto;
+	width: 100%;
+	max-width: $lap-start;
+}
+
+.outer-wrapper {
+	@extend %pagewidth;
+	overflow: hidden;
+
+	@include media-query(lap-and-up){
+		padding: 0 $base-spacing-unit;
+	}
+}

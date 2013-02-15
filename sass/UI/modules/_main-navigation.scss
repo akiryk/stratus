@@ -1,0 +1,30 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  MAIN NAVIGATION
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
+ .main-navigation {
+    float: right;
+
+    a {
+        color: $nav-color;
+        padding-left: $half-spacing-unit;
+        font-weight: 100;  
+        &:hover {
+        	color: $hover-color;
+        } 
+    }
+
+    .nav {
+        margin-bottom: 0;
+    }
+}
+
+.current-menu-item a {
+	cursor: default;
+	color: #bbb;
+	&:hover {
+		color: #bbb;
+	}
+}

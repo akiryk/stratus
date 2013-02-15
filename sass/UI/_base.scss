@@ -28,23 +28,28 @@ img {
 	width: 100%;
 }
 
-// Headers
+article {
+	clear: both;
+	margin: $base-spacing-unit 0;
+}
+
+/*------------------------------------*\
+    Headers
+\*------------------------------------*/
 
 h1,h2 {
 	font-family: $heading-face;
   font-weight: normal;
+  line-height: 1.25;
 }
 
 h3, h4, h5, h6 {
 	font-family: $sans;
-}
-
-.site-title {
-	@include font-size($h4-size);
+	font-weight: normal;
 }
 
 .agg-title {
-   @include font-size($h3-size);
+   @include font-size($h4-size);
 }
 
 .page-title {
@@ -53,11 +58,23 @@ h3, h4, h5, h6 {
 	padding-bottom: $half-spacing-unit;
 }
 
+.blog-agg-title {
+	@include font-size($h3-size);
+}
+
+// ****************************************
+
 time {
 	color: $light-text;
-	font-size: $h5-size;
+	font-size: $h6-size;
 }
 
 .accessibility {
 	display: none;
 }
+
+.post-date {
+	margin-bottom: $half-spacing-unit;
+}
+
+

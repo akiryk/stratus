@@ -12,20 +12,16 @@
  */
 
 get_header(); ?>
+	
+	<div class="grid one-whole">
+		<?php while ( have_posts() ) : the_post(); ?>
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+			<?php get_template_part( 'content', 'page' ); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php comments_template( '', true ); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+		<?php endwhile; // end of the loop. ?>
+	</div>
+</div><!-- #content .site-content -->
 
-					<?php comments_template( '', true ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

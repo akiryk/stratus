@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    Agg Pages Module
+\*------------------------------------*/
+/**
+ * 
+ * Styles for portfolio aggregation content
+ */
+
+.agg-header {
+
+	a {
+		color: #111;
+
+		&:hover {
+			color: $hover-color;
+		}
+	}
+}
+
+.kicker {
+    font-weight: bold;
+    font-size: $h1-size;
+    color: #111;
+}
+
+@include media-query(lap-and-up){
+	.what {
+		p {
+			@include font-size(18px);
+			color: #555;
+		}
+	}
+}
+
+.portfolio-article {
+	font-size: pem(18px);
+	color: $light-text;
+}

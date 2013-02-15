@@ -30,4 +30,12 @@
 		}, 200 );
 	} );
 
+
+	/**
+	 * FIT VIDS
+	 * Handle videos in a responsive way
+	 *
+	 */
+	 $("#main-wrapper").fitVids();
+
 }(this, document, jQuery));

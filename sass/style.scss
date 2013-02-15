@@ -19,52 +19,16 @@
 @import "compass";
 @import "UI/mixins.scss";
 @import "UI/base.scss";
-@import "UI/modules.scss";
+@import "UI/layout.scss";
+@import "UI/modules/masthead.scss";
+@import "UI/modules/hero.scss";
+@import "UI/modules/agg-pages.scss";
+@import "UI/modules/post-pages.scss";
+@import "UI/modules/main-navigation.scss";
+@import "UI/modules/footer.scss";
+@import "UI/modules/tags.scss";
 @import "UI/fonts.scss";
-@import "UI/links.scss";
-@import "UI/offcanvas.scss";
-
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  BLOG
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-
-.blog-article,
-.page {
-	margin-bottom: $base-spacing-unit;
-
-}
-
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  MAIN CONTAINERS
- *  
- * ——————————————————————————————————————————————————————————————— */
- %pagewidth {
-	margin: 0 auto;
-	width: 100%;
-	max-width: $lap-start;
-}
-
-
-.site-main {
-	@extend %pagewidth;
-	overflow: hidden;
-
-	@include media-query(lap-and-up){
-		padding: 0 $base-spacing-unit;
-	}
-}
-
-.site-content {
-	@include media-query(lap-and-up) {
-		padding: $base-font-size 0;
-	}
-}
+@import "UI/modules/offcanvas.scss";
 
 
 @include media-query(palm){
@@ -77,134 +41,6 @@
 	}
 	
 }
-	
-
-
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  AGG PAGES
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-.agg-header {
-
-	a {
-		color: #111;
-
-		&:hover {
-			color: $hover-color;
-		}
-	}
-}
-
-.agg-article {
-	margin-bottom: $base-spacing-unit;
-}
-
-.kicker {
-    font-weight: bold;
-    font-size: $h1-size;
-    color: #111;
-}
-
-@include media-query(lap-and-up){
-	.agg-article {
-		clear: both;
-		margin-bottom: $base-spacing-unit * 2;
-
-		p {
-			@include font-size(18px);
-			color: #555;
-		}
-	}
-}
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  SECTION: POST PAGES
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-@include media-query(palm){
-	.entry-content {
-		font-size: 18px;
-	}
-}
-@include media-query(lap-and-up){
-
-	.kicker {
-		display: none;
-	}
-
-}
-
-.next-last-link {
-	display: none;
-}
-
-@include media-query(desk){
-	.next-last-link {
-		display: block;
-		position: fixed;
-		top: 35%;
-		font-size: 122px;
-		line-height: 1;
-		a {
-			display: block;
-			color: #ddd;
-			&:hover {
-				color: $link-color;
-				.hidden-title {
-					display: block;
-				}
-			}
-		}
-	}
-	.icon-angle-left,
-	.icon-angle-right {
-		position: absolute;
-		z-index: 500;
-	}
-	.icon-angle-right{
-		right:0;
-	}
-	.icon-angle-left{
-		left: 0;
-	}
-	.previous-fixed {
-		left: $half-spacing-unit;
-	}
-	.next-fixed {
-		right: $half-spacing-unit;
-	}
-
-	.hidden-title {
-		display: none;
-		background: #fff;
-		border-radius: 10px;
-		box-shadow: 0 0 6px rgba(0,0,0,0.2);
-		position: absolute;
-		
-		padding: 2em 1em 2em 5em;
-		top: 18px;
-		width: 500px;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		font-size: 20px;
-
-		&.right {
-			left: -2em;
-		}
-		&.left {
-			right: -1em;
-			padding-right: 4em;
-			padding-left: 1.5em;
-		}
-	}
-}
-
 
 
 /* ———————————————————————————————————————————————————————————————
@@ -212,13 +48,8 @@
  *  SECTION
  *  
  * ——————————————————————————————————————————————————————————————— */
-.blog-title {
-	@include font-size(36px);
-}
 
-.post-date {
-	margin-bottom: $half-spacing-unit;
-}
+
 
 .lap-up {
 	display: none;
@@ -237,20 +68,11 @@
 }
 
 
-
-h1,.alpha{
-   
-
-    a {
-      color: $text-color;
-    }
-}
-
 // Helpers to adjust standard heading styles
 
 
 .tightest {
-	margin-bottom: 0;
+	margin: 0;
 }
 
 .tight {
@@ -291,18 +113,6 @@ pre {
 	}
 }
 
-.tag-item a {
-	display: inline-block;
-	padding: pem(6px);
-	font-family: $sans;
-	color: #fff;
-	background-color: $link-color;
-	margin-right: $half-spacing-unit;
-	&:hover {
-		background-color: $hover-color;
-	}
-}
-
 .post-edit-link {
 	color: #e65c00;
 	display: block;
@@ -311,7 +121,7 @@ pre {
 }
 
 #nav-below {
-	margin-bottom: $half-spacing-unit;
+	margin: $base-spacing-unit 0;
 	overflow: hidden;
 	@include font-size(16px);
 	.nav-previous {
@@ -324,42 +134,4 @@ pre {
 		width: $half-width;
 	}
 }
-// .off-site {
-// 	// for image links the go off site
-// 	display: block;
-// 	overflow: hidden;
-// 	position: relative;
-// }
 
-// @include media-query(desk){
-// 	.off-site:hover:after {
-// 		content: 'Enlarge';
-// 		text-align: center;
-// 		padding-top: 83px;
-// 		top: 50%;
-// 		margin-top:-100px;
-// 		left: 50%;
-// 		color: #fff;
-// 		position: absolute;
-// 		width: 200px;
-// 		margin-left: -100px;
-// 		border-radius: 100px;
-// 		height: 200px;
-// 		background: rgba(0,0,0,0.6);
-// 	}
-
-// }
-
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  FOOTER
- *  
- * ——————————————————————————————————————————————————————————————— */
- .site-footer {
- 	clear: both;
- 	margin: $half-spacing-unit 0;
- 	padding:$half-spacing-unit 0;
- 	border-top: 1px solid #ddd;
- 	text-align: center;
- }

@@ -9,7 +9,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('cf agg-article'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('cf portfolio-article'); ?>>
 			
 	<?php $gridClass = "one-whole"; ?>
 			

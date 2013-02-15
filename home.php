@@ -32,8 +32,6 @@ get_header(); ?>
 					endwhile;
 				?>			
 			</div> <!-- grid -->
-				
-			<h1 class="page-title grid one-whole">Some of My Work</h1>
 
 		<?php endif; ?>
 
@@ -60,5 +58,5 @@ get_header(); ?>
 			<?php get_template_part( 'no-results', 'index' ); ?>
 
 		<?php endif; ?>
-	</div><!-- #content .site-content -->
+	</div><!-- .grid-wrapper -->
 <?php get_footer(); ?>

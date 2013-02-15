@@ -70,6 +70,6 @@
 	</div><!-- .masthead-wrapper -->
 </div>
 
-<div id="main" class="site-main">
-	<div class="grid-wrapper">
-		<div id="content" class="site-content" role="main">
+<div id="main-wrapper" class="outer-wrapper">
+	<div id="main" class="site-content" role="main">
+		<div class="grid-wrapper">

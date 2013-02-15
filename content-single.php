@@ -1,26 +1,22 @@
-<?php
-/**
- * @package stratus
- * @since stratus 1.0
- */
-?>
+<div class="grid one-whole">
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-
 		<div class="entry-meta">
-			<?php stratus_posted_on(); ?>
-		</div><!-- .entry-meta -->
+			<span class="">Created </span><?php echo esc_html( get_post_meta( get_the_ID(), 'date_project_completed', true ) ); ?>
+		</div>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'stratus' ), 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
+		<div class="entry-content">
+			<?php the_content(); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'stratus' ), 'after' => '</div>' ) ); ?>
+		</div><!-- .entry-content -->
 
-	<footer class="entry-meta">
-		<?php
+		<footer class="entry-meta">
+
+			<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', 'stratus' ) );
 
@@ -37,11 +33,13 @@
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'stratus' );
+				 the_tags( "<div class='tag-item'>", "", "</div>" ); 
+				/*if ( '' != $tag_list ) {
+					 $meta_text = __('%2$s');
+					// $meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'stratus' );
 				} else {
 					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'stratus' );
-				}
+				}*/
 
 			} // end check for categories on this blog
 
@@ -54,6 +52,8 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'stratus' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
+			<?php edit_post_link( __( 'Edit', 'stratus' ), '<span class="edit-link">', '</span>' ); ?>
+		</footer><!-- .entry-meta -->
+	</div><!-- grid two thirds-->
 </article><!-- #post-<?php the_ID(); ?> -->
+

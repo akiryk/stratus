@@ -4,16 +4,3 @@
 
 
 
-.article-link {
-  color: $text-color;
-  cursor: default;
-  &:hover,
-  &:active,
-  &:focus{
-      color: $text-color;
-  }
-  h1:hover {
-    color: $hover-color;
-    cursor: pointer;
-  }
-}

@@ -63,7 +63,7 @@ $responsive-pull:   false!default;
 /**
  * Tell inuit.css when breakpoints start.
  */
-$lap-start:         680px!default;
+$lap-start:         700px!default;
 $desk-start:        940px!default;
 $desk-wide-start: 	1200px!default;
 
@@ -75,14 +75,14 @@ $giga-size:         96px!default;
 $mega-size:         72px!default;
 $kilo-size:         60px!default;
 
-$h1-size:           54px!default; // .alpha
-$h2-size:           36px!default; // .beta
-$h3-size:           24px!default; // .gamma
-$h4-size:           20px!default; // .delta
-$h5-size:           16px!default; // .epsilon
+$h1-size:           60px!default; // .alpha
+$h2-size:           40px!default; // .beta
+$h3-size:           30px!default; // .gamma
+$h4-size:           24px!default; // .delta
+$h5-size:           20px!default; // .epsilon
 $h6-size:           14px!default; // .zeta
 
-$milli-size:        12px!default;
+$milli-size:        14px!default;
 $micro-size:        10px!default;
 
 
@@ -138,4 +138,5 @@ $text-color: 	#333;
 $link-color: 	#4a8ec2;
 $hover-color: #0160a3;
 $light-text: 	#777;
+$nav-color: #d8d8d8;
 $underline-color: #ddd;

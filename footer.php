@@ -13,13 +13,13 @@
 
 	<?php get_template_part( 'off-canvas-nav' ); ?>
 
-	<footer id="colophon" class="site-footer cf" role="contentinfo">
-		<div class="grid one-whole">
+	<div class="grid one-whole">
+		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
-					<div class="footer-title"><?php bloginfo( 'name' ); ?> <?php bloginfo( 'description' ); ?></div>
+					Footer Info
 			</div><!-- .site-info -->
-		</div><!-- grid -->
-	</footer><!-- #colophon .site-footer -->
+		</footer><!-- #colophon .site-footer -->
+	</div><!-- grid -->
 
 <?php wp_footer(); ?>
 

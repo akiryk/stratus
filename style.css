@@ -1,19 +1,56 @@
 /*
-Syntax error: File to import not found or unreadable: UI/headings.scss.
-              Load paths:
-                /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass
-                /Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/blueprint/stylesheets
-                /Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets
-                Compass::SpriteImporter
-        on line 23 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/style.scss
+Syntax error: Undefined mixin 'vendor'.
+        on line 21 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/generic/_reset.scss, in `vendor'
+        from line 21 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/generic/_reset.scss
+        from line 63 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/_inuit.scss
+        from line 18 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/style.scss
 
 Backtrace:
-/Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/style.scss:23
-/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/import_node.rb:45:in `import'
-/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:215:in `visit_import'
+/Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/generic/_reset.scss:21:in `vendor'
+/Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/generic/_reset.scss:21
+/Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/_inuit.scss:63
+/Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/style.scss:18
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:251:in `visit_mixin'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:203:in `visit_if'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:225:in `block in visit_import'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:225:in `map'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:225:in `block in visit_import'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:225:in `map'
+/Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
 /Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/perform.rb:98:in `visit'
 /Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.3/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -77,4 +114,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: UI/headings.scss.\A               Load paths:\A                 /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass\A                 /Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Users/akiryk/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 23 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/style.scss"; }
+  content: "Syntax error: Undefined mixin 'vendor'.\A         on line 21 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/generic/_reset.scss, in `vendor'\A         from line 21 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/generic/_reset.scss\A         from line 63 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/inuit.css/_inuit.scss\A         from line 18 of /Applications/MAMP/htdocs/akiryk/wp-content/themes/stratus/sass/style.scss"; }

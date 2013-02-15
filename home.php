@@ -30,25 +30,26 @@ get_header(); ?>
 						<div class="hero"> <?php	the_content(); ?> </div>	
 						<?php					
 					endwhile;
-					?>			
+				?>			
 			</div> <!-- grid -->
 				
+			<h1 class="page-title grid one-whole">Some of My Work</h1>
 
-			<?php endif; ?> 
+		<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
+				
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+						/* Include the Post-Format-specific template for the content.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'content-portfolio-agg', get_post_format() );
+					?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content-portfolio-agg', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
+				<?php endwhile; ?>
 
 			<div class="grid one-whole">
 				<?php stratus_content_nav( 'nav-below' ); ?>

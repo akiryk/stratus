@@ -13,8 +13,7 @@
  */
 
 get_header(); ?>
-
-
+	<div class="grid one-whole">
 		<?php query_posts('post_type=post&post_status=publish&posts_per_page=10&paged='. get_query_var('paged')); ?>
 
 		<?php if ( have_posts() ) : ?>
@@ -40,6 +39,6 @@ get_header(); ?>
 			<?php get_template_part( 'no-results', 'index' ); ?>
 
 		<?php endif; ?>
-	</div><!-- #content .site-content -->
-
+	</div><!-- .grid .one-whole -->
+</div><!-- #content .site-content role=main -->
 <?php get_footer(); ?>

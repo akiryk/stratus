@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    BASE
+    Site header
+		Site title
+		Site menu
+		body copy
+		links of all kinds
+		Call-out (island)
+		image styles
+		captions
+		footer
+		date
+
+\*------------------------------------*/
+
+
+body {
+	background-color: #fff;
+	font-family: $body-face;
+}
+
+a {
+	@include transition();
+	color: $link-color;
+
+	&:hover,
+  &:active,
+  &:focus{
+      color: $hover-color;
+  }
+}
+
+p {
+	color: #222;
+}
+
+img {
+	max-width: 100%;
+	height: auto; // ie8
+	width: 100%;
+}
+
+// Headers
+
+h1,h2 {
+	font-family: $heading-face;
+  font-weight: normal;
+}
+
+h3, h4, h5, h6 {
+	font-family: $sans;
+}
+
+.site-title {
+	@include font-size($h4-size);
+}
+
+.agg-title {
+   @include font-size($h3-size);
+}
+
+time {
+	color: $light-text;
+	font-size: $h5-size;
+}

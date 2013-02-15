@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('cf agg-article'); ?>>
-			
+
 	<?php $gridClass = "one-whole"; ?>
 			
 			<?php if (has_post_thumbnail()){ ?>
@@ -29,7 +29,7 @@
 						<span class="kicker"><?php echo esc_html( get_post_meta( get_the_ID(), 'micro_teaser', true ) ); ?></span>
 					</a>
 					
-					<h1 class="agg-title tight">
+					<h1 class="agg-title">
 						<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'stratus' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 							<?php the_title(); ?>
 						</a>

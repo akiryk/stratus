@@ -18,25 +18,19 @@
 @import "inuit.css/inuit";
 
 @import "compass";
-@import "UI/fonts.scss";
 @import "UI/mixins.scss";
-@import "UI/headings.scss";
+@import "UI/base.scss";
+@import "UI/modules.scss";
+@import "UI/fonts.scss";
 @import "UI/links.scss";
 @import "UI/masthead.scss";
 @import "UI/offcanvas.scss";
 
-body {
-	font-family: $body-face;
-}
 
-a {
-	@include transition();
-}
 
 .page-title {
 	font-weight: 700;
 	padding-bottom: $half-spacing-unit;
-
 }
 
 /* ———————————————————————————————————————————————————————————————
@@ -50,44 +44,8 @@ a {
 .page {
 	margin-bottom: $base-spacing-unit;
 
-	p {
-		@include font-size(20px);
-		line-height: 1.5;
-	}
 }
 
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  WELCOME WRAPPER
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-.hero {
-	@include font-size(22px);
-	line-height: 1.5;
-	font-family: $body-face;
-
-	@include media-query(palm){
-		width: $smallWidth;
-		margin: $base-spacing-unit auto 0;	
-	}
-	
-
-	@include media-query(lap-and-up) {
-
-		@include font-size(38px);
-		// line-height:1.25em;	
-		padding-bottom: $base-spacing-unit;
-		margin-bottom: $base-spacing-unit;
-		a {
-			// color: rgba(white, 0.4);
-			&:hover {
-			// color: white;
-			}
-		}
-	}
-}
 
 /* ———————————————————————————————————————————————————————————————
  * 
@@ -130,85 +88,6 @@ a {
 	
 
 
-/* ———————————————————————————————————————————————————————————————
- * 
- *  MASTHEAD
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-@include media-query(palm){
-	.masthead-palm-wrapper {
-		border-bottom: 1px solid #ddd;
-	}	
-}
-
-
-.masthead-wrapper {
-  font-family: $serif;
-  @extend %pagewidth;
-
-  @include media-query(lap-and-up){
-     padding: $base-spacing-unit*2 $base-spacing-unit;
-     margin-bottom: 0;
-  }
-
-  @include media-query(palm){
-  	width: $smallWidth;
-	  margin: 0 auto;
-  }
-}
-
-.site-header {
-  
-  @include media-query(lap-and-up){
-  	border-bottom: 1px solid $underline-color;
-  	padding-bottom: $half-spacing-unit;
-  }
-}
-
-.title-group {
-	float: left;
-}
-
-.site-description {
-    color: #444;
-}
-
-.site-title {
-    line-height: 2* $base-spacing-unit;
-
-    @include media-query(lap-and-up){
-        line-height: $base-spacing-unit;
-    }
-
-    a {
-        color: #a71c05;
-    }
-}
-
-// The nav element
-.main-navigation {
-    float: right;
-    @include font-size($h1-size);
-
-    a {
-        color: #d8d8d8;
-        padding: 0 $half-spacing-unit;
-        font-weight: 100;  
-        &:hover {
-        	color: $hover-color;
-        } 
-        &:last-of-type{
-            padding-right: 0;
-        }
-    }
-
-    .nav {
-        margin-bottom: 0;
-    }
-
-}
-
 
 /* ———————————————————————————————————————————————————————————————
  * 
@@ -225,11 +104,6 @@ a {
 			color: $hover-color;
 		}
 	}
-}
-
-.agg-title {
-	font-family: $body-face;
-	font-weight: normal;
 }
 
 .agg-article {
@@ -252,14 +126,6 @@ a {
 			color: #555;
 		}
 	}
-
-  .agg-title {
-      font-family: $body-face;
-      @include font-size($h3-size);
-      line-height: 1.25em;
-      font-weight: 600;
-      margin-bottom: 4px;
-  }
 }
 
 /* ———————————————————————————————————————————————————————————————
@@ -277,17 +143,6 @@ a {
 
 	.kicker {
 		display: none;
-	}
-
-	.entry-title {
-		@include font-size(54px);
-	}
-
-	.single {
-		
-			@include font-size(20px);
-			line-height:1.5;
-
 	}
 
 }
@@ -373,11 +228,6 @@ a {
 	margin-bottom: $half-spacing-unit;
 }
 
-.entry-meta {
-	color: $light-text;
-	font-size: $h6-size;
-}
-
 .lap-up {
 	display: none;
 
@@ -394,17 +244,10 @@ a {
 	}
 }
 
-img {
-	max-width: 100%;
-	height: auto; // ie8
-	width: 100%;
-}
 
 
 h1,.alpha{
-    
-    font-family: $heading-face;
-    font-weight: normal;
+   
 
     a {
       color: $text-color;

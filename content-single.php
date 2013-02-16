@@ -9,17 +9,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
-
-		<time class="entry-meta">
-			<?php if (get_post_type() == 'portfolio'): ?>
-				<span class="">Created </span><?php echo esc_html( get_post_meta( get_the_ID(), 'date_project_completed', true ) ); ?>
-			<?php else:  ?>
-				<?php stratus_posted_on(); ?>
-			<?php endif; ?>
-		</time>
-
 	</header><!-- .entry-header -->
 
+	<time class="entry-meta">
+		<?php if (get_post_type() == 'portfolio'): ?>
+			<span class="">Created </span><?php echo esc_html( get_post_meta( get_the_ID(), 'date_project_completed', true ) ); ?>
+		<?php else:  ?>
+			<?php stratus_posted_on(); ?>
+		<?php endif; ?>
+	</time>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'stratus' ), 'after' => '</div>' ) ); ?>

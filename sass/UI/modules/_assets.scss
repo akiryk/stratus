@@ -1,30 +1,23 @@
 /* ———————————————————————————————————————————————————————————————
  * 
- *  Hero
+ *  ASSETS
+ *
+ *  Use this for images, video, or other placed assets.
+ *  For example: captions, placement of assets...
  *  
  * ——————————————————————————————————————————————————————————————— */
 
-.hero {
- 	
- 	p {
-	 	color: $text-color;
-		
-		font-family: $body-face;
-		margin-bottom: 2*$base-spacing-unit;
+.wp-caption-text {
+	font-family: $sans;
+	@include font-size(14px);
+	color: #777;
+}
+
+@include media-query(lap-and-up){
+	.alignright,
+	.alignleft {
+		float: left;
+		width: $half-width;
+		margin-right: $base-spacing-unit;
 	}
-
-	a {
-		color: $cyan;
-		&:hover {
-			color: $text-color;
-		}
-	}
-
-	@include palm-width();
-
-	@include media-query(lap-and-up) {
-		font-size: pem(42px);
-		width: 100%;
-	}
-
 }

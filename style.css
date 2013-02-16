@@ -2754,11 +2754,11 @@ a {
   -moz-transition: 0.2s all linear;
   -o-transition: 0.2s all linear;
   transition: 0.2s all linear;
-  color: #4a8ec2;
+  color: #22a5dc;
 }
 /* line 16, sass/UI/_base.scss */
 a:hover, a:active, a:focus {
-  color: #0160a3;
+  color: #22a5dc;
 }
 
 /* line 21, sass/UI/_base.scss */
@@ -2779,81 +2779,123 @@ article {
   margin: 30px 0;
 }
 
+/* line 36, sass/UI/_base.scss */
+pre {
+  background: #111;
+  color: #fff;
+  padding: 30px;
+  font-size: 20px;
+}
+
 /*------------------------------------*\
     Headers
 \*------------------------------------*/
-/* line 40, sass/UI/_base.scss */
+/* line 48, sass/UI/_base.scss */
 h1, h2 {
   font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
   font-weight: normal;
   line-height: 1.25;
 }
 
-/* line 46, sass/UI/_base.scss */
+/* line 54, sass/UI/_base.scss */
 h3, h4, h5, h6 {
   font-family: "Helvetica Neue", helvetica, sans-serif;
   font-weight: normal;
 }
 
-/* line 51, sass/UI/_base.scss */
-.agg-title {
-  font-size: 24px;
-  font-size: 1.2rem;
-  line-height: 1.25;
-}
-
-/* line 55, sass/UI/_base.scss */
-.page-title {
-  font-size: 30px;
-  font-size: 1.5rem;
-  line-height: 1;
-  font-weight: 700;
-  padding-bottom: 15px;
-}
-
 /* line 61, sass/UI/_base.scss */
-.blog-agg-title {
-  font-size: 30px;
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-/* line 67, sass/UI/_base.scss */
 time {
   color: #777777;
   font-size: 14px;
 }
 
-/* line 72, sass/UI/_base.scss */
+/* line 66, sass/UI/_base.scss */
 .accessibility {
   display: none;
 }
 
-/* line 76, sass/UI/_base.scss */
+/* line 70, sass/UI/_base.scss */
 .post-date {
   margin-bottom: 15px;
 }
 
 /* ———————————————————————————————————————————————————————————————
  * 
- *  Hero
+ *  Layout
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 6, sass/UI/_layout.scss */
-.outer-wrapper, .masthead-wrapper {
+/* line 7, sass/UI/_layout.scss */
+.outer-wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 700px;
-}
-
-/* line 12, sass/UI/_layout.scss */
-.outer-wrapper {
   overflow: hidden;
 }
 @media only screen and (min-width: 700px) {
-  /* line 12, sass/UI/_layout.scss */
+  /* line 7, sass/UI/_layout.scss */
   .outer-wrapper {
     padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  /* line 18, sass/UI/_layout.scss */
+  .paging-navigation,
+  .page-header {
+    width: 85%;
+    margin: 30px auto;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  /* line 26, sass/UI/_layout.scss */
+  article {
+    width: 85%;
+    margin: 30px auto;
+  }
+
+  /* line 30, sass/UI/_layout.scss */
+  .hero {
+    width: 85%;
+  }
+}
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  HELPERS
+ *  
+ *  Use this for general purpose classes, for example, a class
+ *  that tightens margins or a class for hiding or showing something.
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 10, sass/UI/_helpers.scss */
+.tightest {
+  margin: 0;
+}
+
+/* line 14, sass/UI/_helpers.scss */
+.tight {
+  margin-bottom: 15px;
+}
+
+/* line 18, sass/UI/_helpers.scss */
+.lap-up {
+  display: none;
+}
+@media only screen and (min-width: 700px) {
+  /* line 18, sass/UI/_helpers.scss */
+  .lap-up {
+    display: block;
+  }
+}
+
+/* line 26, sass/UI/_helpers.scss */
+.lap-up-inline {
+  display: none;
+}
+@media only screen and (min-width: 700px) {
+  /* line 26, sass/UI/_helpers.scss */
+  .lap-up-inline {
+    display: inline;
   }
 }
 
@@ -2864,16 +2906,22 @@ time {
  * ——————————————————————————————————————————————————————————————— */
 /* line 7, sass/UI/modules/_masthead.scss */
 .masthead-wrapper {
-  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
 }
 /* line 11, sass/UI/modules/_masthead.scss */
 .masthead-wrapper header {
-  margin: 60px 0 30px;
+  margin: 1em 0;
 }
 @media only screen and (min-width: 700px) {
   /* line 7, sass/UI/modules/_masthead.scss */
   .masthead-wrapper {
     padding: 0 30px;
+  }
+  /* line 19, sass/UI/modules/_masthead.scss */
+  .masthead-wrapper header {
+    margin: 60px 0 30px;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -2884,19 +2932,19 @@ time {
 }
 
 @media only screen and (min-width: 700px) {
-  /* line 24, sass/UI/modules/_masthead.scss */
+  /* line 29, sass/UI/modules/_masthead.scss */
   .site-header {
     border-bottom: 1px solid #dddddd;
     padding-bottom: 15px;
   }
 }
 
-/* line 32, sass/UI/modules/_masthead.scss */
+/* line 37, sass/UI/modules/_masthead.scss */
 .title-group {
   float: left;
 }
 
-/* line 36, sass/UI/modules/_masthead.scss */
+/* line 41, sass/UI/modules/_masthead.scss */
 .site-title {
   line-height: 60px;
   font-size: 20px;
@@ -2904,16 +2952,16 @@ time {
   line-height: 1.5;
 }
 @media only screen and (min-width: 700px) {
-  /* line 36, sass/UI/modules/_masthead.scss */
+  /* line 41, sass/UI/modules/_masthead.scss */
   .site-title {
     line-height: 30px;
   }
 }
-/* line 44, sass/UI/modules/_masthead.scss */
+/* line 49, sass/UI/modules/_masthead.scss */
 .site-title a {
-  color: #a71c05;
+  color: #d12501;
 }
-/* line 48, sass/UI/modules/_masthead.scss */
+/* line 53, sass/UI/modules/_masthead.scss */
 .site-title .site-description {
   color: #333333;
 }
@@ -2925,9 +2973,29 @@ time {
  * ——————————————————————————————————————————————————————————————— */
 /* line 7, sass/UI/modules/_hero.scss */
 .hero {
-  font-size: 2em;
+  width: 85%;
+  margin: 0 auto;
+}
+/* line 9, sass/UI/modules/_hero.scss */
+.hero p {
+  color: #333333;
   font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
   margin-bottom: 60px;
+}
+/* line 16, sass/UI/modules/_hero.scss */
+.hero a {
+  color: #22a5dc;
+}
+/* line 18, sass/UI/modules/_hero.scss */
+.hero a:hover {
+  color: #333333;
+}
+@media only screen and (min-width: 700px) {
+  /* line 7, sass/UI/modules/_hero.scss */
+  .hero {
+    font-size: 2.1em;
+    width: 100%;
+  }
 }
 
 /*------------------------------------*\
@@ -2937,32 +3005,38 @@ time {
  * 
  * Styles for portfolio aggregation content
  */
-/* line 11, sass/UI/modules/_agg-pages.scss */
-.agg-header a {
-  color: #111;
+/* line 12, sass/UI/modules/_agg-pages.scss */
+.portfolio-agg-title a,
+.blog-agg-title a {
+  color: #333333;
 }
-/* line 14, sass/UI/modules/_agg-pages.scss */
-.agg-header a:hover {
-  color: #0160a3;
+/* line 15, sass/UI/modules/_agg-pages.scss */
+.portfolio-agg-title a:hover,
+.blog-agg-title a:hover {
+  color: #22a5dc;
 }
 
 /* line 20, sass/UI/modules/_agg-pages.scss */
+.portfolio-agg-title {
+  font-size: 24px;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+/* line 24, sass/UI/modules/_agg-pages.scss */
+.blog-agg-title {
+  font-size: 30px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* line 32, sass/UI/modules/_agg-pages.scss */
 .kicker {
   font-weight: bold;
-  font-size: 60px;
   color: #111;
 }
 
-@media only screen and (min-width: 700px) {
-  /* line 28, sass/UI/modules/_agg-pages.scss */
-  .what p {
-    font-size: 18px;
-    font-size: 0.9rem;
-    line-height: 1.66667;
-    color: #555;
-  }
-}
-/* line 35, sass/UI/modules/_agg-pages.scss */
+/* line 37, sass/UI/modules/_agg-pages.scss */
 .portfolio-article {
   font-size: 0.9em;
   color: #777777;
@@ -2975,23 +3049,38 @@ time {
  * ——————————————————————————————————————————————————————————————— */
 @media only screen and (max-width: 699px) {
   /* line 8, sass/UI/modules/_post-pages.scss */
+  .entry-title {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
+  /* line 12, sass/UI/modules/_post-pages.scss */
   .entry-content {
     font-size: 18px;
   }
 }
 @media only screen and (min-width: 700px) {
-  /* line 14, sass/UI/modules/_post-pages.scss */
+  /* line 18, sass/UI/modules/_post-pages.scss */
   .kicker {
     display: none;
   }
 }
-/* line 20, sass/UI/modules/_post-pages.scss */
+/* line 24, sass/UI/modules/_post-pages.scss */
+.page-title {
+  font-size: 30px;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+/* line 30, sass/UI/modules/_post-pages.scss */
 .next-last-link {
   display: none;
 }
 
 @media only screen and (min-width: 940px) {
-  /* line 25, sass/UI/modules/_post-pages.scss */
+  /* line 35, sass/UI/modules/_post-pages.scss */
   .next-last-link {
     display: block;
     position: fixed;
@@ -2999,48 +3088,48 @@ time {
     font-size: 122px;
     line-height: 1;
   }
-  /* line 31, sass/UI/modules/_post-pages.scss */
+  /* line 41, sass/UI/modules/_post-pages.scss */
   .next-last-link a {
     display: block;
     color: #ddd;
   }
-  /* line 34, sass/UI/modules/_post-pages.scss */
+  /* line 44, sass/UI/modules/_post-pages.scss */
   .next-last-link a:hover {
-    color: #4a8ec2;
+    color: #22a5dc;
   }
-  /* line 36, sass/UI/modules/_post-pages.scss */
+  /* line 46, sass/UI/modules/_post-pages.scss */
   .next-last-link a:hover .hidden-title {
     display: block;
   }
 
-  /* line 43, sass/UI/modules/_post-pages.scss */
+  /* line 53, sass/UI/modules/_post-pages.scss */
   .icon-angle-left,
   .icon-angle-right {
     position: absolute;
     z-index: 500;
   }
 
-  /* line 47, sass/UI/modules/_post-pages.scss */
+  /* line 57, sass/UI/modules/_post-pages.scss */
   .icon-angle-right {
     right: 0;
   }
 
-  /* line 50, sass/UI/modules/_post-pages.scss */
+  /* line 60, sass/UI/modules/_post-pages.scss */
   .icon-angle-left {
     left: 0;
   }
 
-  /* line 53, sass/UI/modules/_post-pages.scss */
+  /* line 63, sass/UI/modules/_post-pages.scss */
   .previous-fixed {
     left: 15px;
   }
 
-  /* line 56, sass/UI/modules/_post-pages.scss */
+  /* line 66, sass/UI/modules/_post-pages.scss */
   .next-fixed {
     right: 15px;
   }
 
-  /* line 60, sass/UI/modules/_post-pages.scss */
+  /* line 70, sass/UI/modules/_post-pages.scss */
   .hidden-title {
     display: none;
     background: #fff;
@@ -3055,11 +3144,11 @@ time {
     text-overflow: ellipsis;
     font-size: 20px;
   }
-  /* line 75, sass/UI/modules/_post-pages.scss */
+  /* line 85, sass/UI/modules/_post-pages.scss */
   .hidden-title.right {
     left: -2em;
   }
-  /* line 78, sass/UI/modules/_post-pages.scss */
+  /* line 88, sass/UI/modules/_post-pages.scss */
   .hidden-title.left {
     right: -1em;
     padding-right: 4em;
@@ -3068,36 +3157,54 @@ time {
 }
 /* ———————————————————————————————————————————————————————————————
  * 
- *  MAIN NAVIGATION
+ *  NAVIGATION
+ *
+ *  For the mobile off-canvas navigation, see offcanvas.scss
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 7, sass/UI/modules/_main-navigation.scss */
+/* line 9, sass/UI/modules/_main-navigation.scss */
 .main-navigation {
   float: right;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
 }
-/* line 10, sass/UI/modules/_main-navigation.scss */
+/* line 13, sass/UI/modules/_main-navigation.scss */
 .main-navigation a {
-  color: #d8d8d8;
+  color: #bbbbbb;
   padding-left: 15px;
   font-weight: 100;
 }
-/* line 14, sass/UI/modules/_main-navigation.scss */
+/* line 17, sass/UI/modules/_main-navigation.scss */
 .main-navigation a:hover {
-  color: #0160a3;
+  color: #22a5dc;
 }
-/* line 19, sass/UI/modules/_main-navigation.scss */
+/* line 22, sass/UI/modules/_main-navigation.scss */
 .main-navigation .nav {
   margin-bottom: 0;
 }
 
-/* line 24, sass/UI/modules/_main-navigation.scss */
+/* line 27, sass/UI/modules/_main-navigation.scss */
 .current-menu-item a {
   cursor: default;
-  color: #bbb;
 }
-/* line 27, sass/UI/modules/_main-navigation.scss */
-.current-menu-item a:hover {
-  color: #bbb;
+
+/* line 32, sass/UI/modules/_main-navigation.scss */
+#nav-below {
+  margin: 30px 0;
+  overflow: hidden;
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 1.875;
+}
+/* line 36, sass/UI/modules/_main-navigation.scss */
+#nav-below .nav-previous {
+  float: left;
+  width: 304px;
+}
+/* line 40, sass/UI/modules/_main-navigation.scss */
+#nav-below .nav-next {
+  float: right;
+  text-align: right;
+  width: 304px;
 }
 
 /* ———————————————————————————————————————————————————————————————
@@ -3128,12 +3235,12 @@ time {
   padding: 0.25em 0.75em;
   font-family: "Helvetica Neue", helvetica, sans-serif;
   color: #fff;
-  background-color: #4a8ec2;
+  background-color: #22a5dc;
   margin-right: 15px;
 }
 /* line 15, sass/UI/modules/_tags.scss */
 .tag-item a:hover {
-  background-color: #0160a3;
+  background-color: #22a5dc;
 }
 
 @font-face {
@@ -3222,7 +3329,7 @@ you can use the generic selector below, but it's slower:
   right: 0;
   font-size: 1em;
   color: #222;
-  padding: 0.4em 30px;
+  padding: 1em 1.5em;
 }
 
 /* line 49, sass/UI/modules/_offcanvas.scss */
@@ -3283,61 +3390,15 @@ you can use the generic selector below, but it's slower:
     background-color: #3c8ab4;
   }
 }
-@media only screen and (max-width: 699px) {
-  /* line 35, sass/style.scss */
-  article {
-    width: 85%;
-    margin: 30px auto;
-  }
-
-  /* line 39, sass/style.scss */
-  .hero {
-    width: 85%;
-  }
-}
 /* ———————————————————————————————————————————————————————————————
  * 
- *  SECTION
+ *  ASSETS
+ *
+ *  Use this for images, video, or other placed assets.
+ *  For example: captions, placement of assets...
  *  
  * ——————————————————————————————————————————————————————————————— */
-/* line 54, sass/style.scss */
-.lap-up {
-  display: none;
-}
-@media only screen and (min-width: 700px) {
-  /* line 54, sass/style.scss */
-  .lap-up {
-    display: block;
-  }
-}
-
-/* line 62, sass/style.scss */
-.lap-up-inline {
-  display: none;
-}
-@media only screen and (min-width: 700px) {
-  /* line 62, sass/style.scss */
-  .lap-up-inline {
-    display: inline;
-  }
-}
-
-/* line 74, sass/style.scss */
-.tightest {
-  margin: 0;
-}
-
-/* line 78, sass/style.scss */
-.tight {
-  margin-bottom: 15px;
-}
-
-/* line 82, sass/style.scss */
-.entry-header {
-  margin-bottom: 15px;
-}
-
-/* line 86, sass/style.scss */
+/* line 10, sass/UI/modules/_assets.scss */
 .wp-caption-text {
   font-family: "Helvetica Neue", helvetica, sans-serif;
   font-size: 14px;
@@ -3346,25 +3407,8 @@ you can use the generic selector below, but it's slower:
   color: #777;
 }
 
-/* line 92, sass/style.scss */
-pre {
-  background: #111;
-  color: #fff;
-  padding: 30px;
-  font-size: 20px;
-}
-
-@media only screen and (max-width: 699px) {
-  /* line 100, sass/style.scss */
-  .paging-navigation,
-  .page-header {
-    width: 85%;
-    margin: 30px auto;
-  }
-}
-
 @media only screen and (min-width: 700px) {
-  /* line 109, sass/style.scss */
+  /* line 18, sass/UI/modules/_assets.scss */
   .alignright,
   .alignleft {
     float: left;
@@ -3372,30 +3416,16 @@ pre {
     margin-right: 30px;
   }
 }
-/* line 116, sass/style.scss */
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  ADMIN
+ *  
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 9, sass/UI/modules/_admin.scss */
 .post-edit-link {
   color: #e65c00;
   display: block;
   font-family: monospace;
   margin: 30px 0;
-}
-
-/* line 123, sass/style.scss */
-#nav-below {
-  margin: 30px 0;
-  overflow: hidden;
-  font-size: 16px;
-  font-size: 0.8rem;
-  line-height: 1.875;
-}
-/* line 127, sass/style.scss */
-#nav-below .nav-previous {
-  float: left;
-  width: 304px;
-}
-/* line 131, sass/style.scss */
-#nav-below .nav-next {
-  float: right;
-  text-align: right;
-  width: 304px;
 }

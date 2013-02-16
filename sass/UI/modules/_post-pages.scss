@@ -5,6 +5,10 @@
  * ——————————————————————————————————————————————————————————————— */
 
 @include media-query(palm){
+	.entry-title {
+		font-size: pem(30px);
+		line-height: 1.25;
+	}
 	.entry-content {
 		font-size: 18px;
 	}
@@ -15,6 +19,12 @@
 		display: none;
 	}
 
+}
+
+.page-title {
+	@include font-size($h3-size);
+	font-weight: 700;
+	padding-bottom: $half-spacing-unit;
 }
 
 .next-last-link {

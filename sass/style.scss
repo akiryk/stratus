@@ -20,6 +20,8 @@
 @import "UI/mixins.scss";
 @import "UI/base.scss";
 @import "UI/layout.scss";
+@import "UI/helpers.scss";
+
 @import "UI/modules/masthead.scss";
 @import "UI/modules/hero.scss";
 @import "UI/modules/agg-pages.scss";
@@ -29,109 +31,12 @@
 @import "UI/modules/tags.scss";
 @import "UI/fonts.scss";
 @import "UI/modules/offcanvas.scss";
-
-
-@include media-query(palm){
-	article {
-		width: $smallWidth;
-		margin: $base-spacing-unit auto;	
-	}
-	.hero {
-		width: $smallWidth;
-	}
-	
-}
-
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  SECTION
- *  
- * ——————————————————————————————————————————————————————————————— */
+@import "UI/modules/assets.scss";
+@import "UI/modules/admin.scss";
 
 
 
-.lap-up {
-	display: none;
-
-	@include media-query(lap-and-up){
-		display: block;
-	}
-}
-
-.lap-up-inline {
-	display: none;
-
-	@include media-query(lap-and-up){
-		display: inline;
-	}
-}
 
 
-// Helpers to adjust standard heading styles
 
-
-.tightest {
-	margin: 0;
-}
-
-.tight {
-	margin-bottom: $half-spacing-unit;
-}
-
-.entry-header {
-	margin-bottom: $half-spacing-unit;	
-}
-
-.wp-caption-text {
-	font-family: $sans;
-	@include font-size(14px);
-	color: #777;
-}
-
-pre {
-	background: #111;
-	color: #fff;
-	padding: $base-spacing-unit;
-	font-size: $base-font-size;
-}
-
-.paging-navigation,
-.page-header {
-	@include media-query(palm){
-		width: 85%;
-		margin: $base-spacing-unit auto;
-	}
-}
-
-@include media-query(lap-and-up){
-	.alignright,
-	.alignleft {
-		float: left;
-		width: $half-width;
-		margin-right: $base-spacing-unit;
-	}
-}
-
-.post-edit-link {
-	color: #e65c00;
-	display: block;
-	font-family: monospace; 
-	margin: $base-spacing-unit 0;
-}
-
-#nav-below {
-	margin: $base-spacing-unit 0;
-	overflow: hidden;
-	@include font-size(16px);
-	.nav-previous {
-		float: left;
-		width: $half-width;
-	}
-	.nav-next {
-		float:right;
-		text-align: right;
-		width: $half-width;
-	}
-}
 

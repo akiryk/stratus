@@ -23,4 +23,5 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content .site-content -->
+	</div><!-- .grid-wrapper -->
 <?php get_footer(); ?>

@@ -1,11 +1,14 @@
 /* ———————————————————————————————————————————————————————————————
  * 
- *  MAIN NAVIGATION
+ *  NAVIGATION
+ *
+ *  For the mobile off-canvas navigation, see offcanvas.scss
  *  
  * ——————————————————————————————————————————————————————————————— */
 
  .main-navigation {
     float: right;
+    font-family: $sans;
 
     a {
         color: $nav-color;
@@ -23,8 +26,20 @@
 
 .current-menu-item a {
 	cursor: default;
-	color: #bbb;
-	&:hover {
-		color: #bbb;
-	}
+}
+
+
+#nav-below {
+    margin: $base-spacing-unit 0;
+    overflow: hidden;
+    @include font-size(16px);
+    .nav-previous {
+        float: left;
+        width: $half-width;
+    }
+    .nav-next {
+        float:right;
+        text-align: right;
+        width: $half-width;
+    }
 }

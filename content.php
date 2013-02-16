@@ -10,13 +10,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="blog-agg-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'stratus' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+	</header><!-- .entry-header -->
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+	<?php if ( 'post' == get_post_type() ) : ?>
 		<time class="entry-meta">
 			<?php the_time( get_option( 'date_format' ) ); ?>
 		</time><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<?php endif; ?>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">

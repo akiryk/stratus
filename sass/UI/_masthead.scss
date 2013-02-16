@@ -5,7 +5,6 @@
  * ——————————————————————————————————————————————————————————————— */
 
 .masthead-wrapper {
-  font-family: $serif;
   @extend %pagewidth;
   
   header {
@@ -17,7 +16,7 @@
   }
 
   @include media-query(palm){
-  	width: $smallWidth;
+  	width: $small-width;
   }
 }
 
@@ -37,17 +36,17 @@
   line-height: 2* $base-spacing-unit;
   @include font-size($h5-size);
 
-    @include media-query(lap-and-up){
-        line-height: $base-spacing-unit;
-    }
+  @include media-query(lap-and-up){
+      line-height: $base-spacing-unit;
+  }
 
-    a {
-        color: $brand-color;
-    }
+  a {
+      color: $brand-color;
+  }
 
-    .site-description { 
-    	color: $text-color;
-		}
+  .site-description { 
+  	color: $text-color;
+	}
 }
 
 

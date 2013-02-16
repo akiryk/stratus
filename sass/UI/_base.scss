@@ -14,7 +14,7 @@ a {
 	&:hover,
   &:active,
   &:focus{
-      color: $hover-color;
+    color: $hover-color;
   }
 }
 
@@ -33,6 +33,14 @@ article {
 	margin: $base-spacing-unit 0;
 }
 
+pre {
+	background: #111;
+	color: #fff;
+	padding: $base-spacing-unit;
+	font-size: $base-font-size;
+}
+
+
 /*------------------------------------*\
     Headers
 \*------------------------------------*/
@@ -46,20 +54,6 @@ h1,h2 {
 h3, h4, h5, h6 {
 	font-family: $sans;
 	font-weight: normal;
-}
-
-.agg-title {
-   @include font-size($h4-size);
-}
-
-.page-title {
-	@include font-size($h3-size);
-	font-weight: 700;
-	padding-bottom: $half-spacing-unit;
-}
-
-.blog-agg-title {
-	@include font-size($h3-size);
 }
 
 // ****************************************

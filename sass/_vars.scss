@@ -110,7 +110,7 @@ $close-quote:   null;
 /**
  * Brand stuff
  */
-$brand-color:       #a71c05!default;
+$brand-color:       #d12501!default;
 // $brand-face:        "Chaparral", "proxima-nova", "Helvetica Neue", helvetica, sans-serif!default;
 
 
@@ -123,7 +123,7 @@ $base-spacing-unit: $base-line-height!default;
 $half-spacing-unit: $base-spacing-unit / 2!default;
 $line-height-ratio: $base-line-height / $base-font-size;
 
-$smallWidth: 85%;
+$small-width: 85%;
 $half-width: 304px;
 
 /**
@@ -134,9 +134,10 @@ $heading-face: 			"adelle", "Helvetica Neue", helvetica, sans-serif;
 $serif:							$heading-face;
 $sans: 						  "Helvetica Neue", helvetica, sans-serif;
 
+$cyan: #22a5dc;
 $text-color: 	#333;
-$link-color: 	#4a8ec2;
-$hover-color: #0160a3;
+$link-color: 	$cyan;
+$hover-color: $cyan;
 $light-text: 	#777;
-$nav-color: #d8d8d8;
+$nav-color: #bbb;
 $underline-color: #ddd;

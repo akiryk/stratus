@@ -17,29 +17,22 @@
 @import "vars";
 @import "inuit.css/inuit";
 @import "compass";
-@import "UI/mixins.scss";
-@import "UI/base.scss";
-@import "UI/layout.scss";
-@import "UI/helpers.scss";
+@import "UI/mixins";
+@import "UI/base";
+@import "UI/layout";
+@import "UI/helpers";
 
-@import "UI/modules/masthead.scss";
-@import "UI/modules/hero.scss";
-@import "UI/modules/agg-pages.scss";
-@import "UI/modules/post-pages.scss";
-@import "UI/modules/main-navigation.scss";
-@import "UI/modules/footer.scss";
-@import "UI/modules/tags.scss";
-@import "UI/fonts.scss";
-@import "UI/modules/offcanvas.scss";
-@import "UI/modules/assets.scss";
-@import "UI/modules/admin.scss";
-@import "UI/modules/comments.scss";
-
-
-
-
-
-
-
-
-
+@import "UI/modules/masthead";
+@import "UI/modules/hero";
+@import "UI/modules/agg-pages";
+@import "UI/modules/post-pages";
+@import "UI/modules/main-navigation";
+@import "UI/modules/footer";
+@import "UI/modules/tags";
+@import "UI/modules/links";
+@import "UI/fonts";
+@import "UI/modules/offcanvas";
+@import "UI/modules/assets";
+@import "UI/modules/admin";
+@import "UI/modules/comments";
+@import "UI/modules/post-nav";

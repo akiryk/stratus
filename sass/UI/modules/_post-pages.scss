@@ -4,6 +4,23 @@
  *  
  * ——————————————————————————————————————————————————————————————— */
 
+.page-title {
+	text-transform: capitalize;
+	padding-bottom: $base-spacing-unit;
+}
+
+.post-date {
+	display: block;
+	margin-bottom: $half-spacing-unit;
+}
+
+@include media-query(lap-and-up){
+
+	.kicker {
+		display: none;
+	}
+
+}
 @include media-query(palm){
 	.entry-title {
 		font-size: pem(30px);
@@ -12,87 +29,8 @@
 	.entry-content {
 		font-size: 18px;
 	}
-}
-@include media-query(lap-and-up){
-
-	.kicker {
-		display: none;
-	}
-
-}
-
-.page-title {
-	@include font-size($h3-size);
-	font-weight: 700;
-	padding-bottom: $half-spacing-unit;
-}
-
-.post-date {
-	margin-bottom: $half-spacing-unit;
-}
-
-.next-last-link {
-	display: none;
-}
-
-@include media-query(desk){
-	.next-last-link {
-		display: block;
-		position: fixed;
-		top: 35%;
-		font-size: 122px;
-		line-height: 1;
-		a {
-			display: block;
-			color: #ddd;
-			&:hover {
-				color: $link-color;
-				.hidden-title {
-					display: block;
-				}
-			}
-		}
-	}
-	.icon-angle-left,
-	.icon-angle-right {
-		position: absolute;
-		z-index: 500;
-	}
-	.icon-angle-right{
-		right:0;
-	}
-	.icon-angle-left{
-		left: 0;
-	}
-	.previous-fixed {
-		left: $half-spacing-unit;
-	}
-	.next-fixed {
-		right: $half-spacing-unit;
-	}
-
-	.hidden-title {
-		display: none;
-		background: #fff;
-		border-radius: 10px;
-		box-shadow: 0 0 6px rgba(0,0,0,0.2);
-		position: absolute;
-		
-		padding: 2em 1em 2em 5em;
-		top: 18px;
-		width: 200px;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		font-size: 20px;
-
-		&.right {
-			left: -2em;
-		}
-		&.left {
-			right: -1em;
-			padding-right: 4em;
-			padding-left: 1.5em;
-		}
+	.page-title {
+		@include font-size($h2-size);
+		padding-bottom: 0;
 	}
 }

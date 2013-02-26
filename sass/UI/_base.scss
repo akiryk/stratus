@@ -4,22 +4,8 @@
 
 body {
 	background-color: #fff;
-	font-family: $body-face;
-}
-
-a {
-	@include transition();
-	color: $link-color;
-
-	&:hover,
-  &:active,
-  &:focus{
-    color: $hover-color;
-  }
-}
-
-p {
 	color: #222;
+	font-family: $body-face;
 }
 
 img {
@@ -40,18 +26,29 @@ pre {
 	font-size: $base-font-size;
 }
 
+blockquote p {
+	// wp puts a p tag inside blockquote
+	font-style: italic;
+
+	@include media-query(lap-and-up){
+		padding: 0 2em;	
+	}
+	
+}
+
 
 /*------------------------------------*\
-    Headers
+    Headers. 
+    Also see inuit/headers
 \*------------------------------------*/
 
-h1,h2 {
+h1,h2,h4 {
 	font-family: $heading-face;
   font-weight: normal;
   line-height: 1.25;
 }
 
-h3, h4, h5, h6 {
+h3, h5, h6 {
 	font-family: $sans;
 	font-weight: normal;
 }
@@ -67,5 +64,21 @@ time {
 	display: none;
 }
 
+/*------------------------------------*\
+    Media Queries for Base Rules
+\*------------------------------------*/
+@include media-query(palm){
 
+	code {
+		@include font-size(16px);
+	}
 
+	h3 {
+		@include font-size(24px);
+	}
+
+	ul, ol, dd {
+	  margin-left:$base-spacing-unit;
+    margin-left:($base-spacing-unit / $base-font-size)*1rem;
+	}
+}

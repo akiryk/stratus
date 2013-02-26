@@ -135,9 +135,10 @@ $serif:							$heading-face;
 $sans: 						  "Helvetica Neue", helvetica, sans-serif;
 
 $cyan: #22a5dc;
+$blue: #4075bf;
 $text-color: 	#333;
-$link-color: 	$cyan;
-$hover-color: $cyan;
+$link-color: 	$blue;
+$hover-color: darken($blue, 20%);
 $light-text: 	#777;
 $nav-color: #bbb;
 $underline-color: #ddd;

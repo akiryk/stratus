@@ -3429,3 +3429,22 @@ you can use the generic selector below, but it's slower:
   font-family: monospace;
   margin: 30px 0;
 }
+
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  COMMENTS
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+/* line 7, sass/UI/modules/_comments.scss */
+.comments-area {
+  width: 85%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 700px) {
+  /* line 7, sass/UI/modules/_comments.scss */
+  .comments-area {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+  }
+}

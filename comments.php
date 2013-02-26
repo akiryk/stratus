@@ -71,6 +71,11 @@
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'stratus' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php 
+		$args = array(
+			'title_reply' => __( 'Leave a Long Reply' ),
+			);
+	?>
+	<?php comment_form($args); ?>
 
 </div><!-- #comments .comments-area -->

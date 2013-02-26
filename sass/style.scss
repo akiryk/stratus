@@ -16,171 +16,23 @@
  */
 @import "vars";
 @import "inuit.css/inuit";
-
 @import "compass";
-@import "UI/mixins.scss";
-@import "UI/headings.scss";
-@import "UI/links.scss";
-@import "UI/masthead.scss";
-@import "UI/offcanvas.scss";
+@import "UI/mixins";
+@import "UI/base";
+@import "UI/layout";
+@import "UI/helpers";
 
-body {
-	font-family: $body-face;
-}
-
-.page-title {
-	font-weight: 700;
-}
-
-.lede {
-	font-family: $heading-face;
-}
-
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  WELCOME WRAPPER
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-.hero {
-	@include font-size(30px);
-	line-height: 1.5em;
-	
-	@include media-query(lap) {
-		@include font-size(40px);	
-	}
-	font-family: $heading-face;
-}
-
-@include media-query(desk) {
-		
-	.welcome-wrapper {
-		background-color: $welcome-wrapper-color;
-		@include box-shadow(rgba(black, 0.75) 0 0 200px inset);
-	}
-
-	.hero {
-		@include font-size(54px);
-		line-height:1.25em;	
-		color: rgba(white, 0.8);
-
-		a {
-			color: rgba(white, 0.4);
-			&:hover {
-				color: white;
-			}
-		}
-	}
-
-}
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  SECTION
- *  
- * ——————————————————————————————————————————————————————————————— */
-.site-main {
-	@extend %pagewidth;
-	overflow: hidden;
-	//padding: 0 $base-spacing-unit;
-
-	@include media-query(desk){
-		padding: 0;
-	}
-}
-
-.site-content {
-	padding: $base-spacing-unit;
-	@include media-query(desk) {
-		padding: $base-spacing-unit 0;
-	}
-}
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  SECTION
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-.agg-header {
-	a {
-		color: #111;
-
-		&:hover {
-			color: $hover-color;
-		}
-	}
-}
-article {
-	clear: both;
-	margin-bottom: $base-spacing-unit;
-}
-
-.entry-meta {
-	color: $light-text;
-	font-size: $milli-size;
-}
-
-.lap-up {
-	display: none;
-
-	@include media-query(lap-and-up){
-		display: block;
-	}
-}
-
-.lap-up-inline {
-	display: none;
-
-	@include media-query(lap-and-up){
-		display: inline;
-	}
-}
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  SECTION: POST PAGES
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-@include media-query(desk){
-	
-	article h1 {
-		@include font-size(54px);
-		margin-top: $base-spacing-unit;
-	}	
-	// .entry-content p {
-	// 	max-width: 600px;
-	// 	margin: $base-spacing-unit auto;
-	// }
-
-	.single {
-
-		p {
-		 @include font-size(20px);
-		 line-height:1.5;
-		 font-family: Georgia;
-		}
-
-		.site-content {
-			width: 66.6666%;
-			margin: 0 auto;
-		}
-
-	}
-
-}
-
-
-/* ———————————————————————————————————————————————————————————————
- * 
- *  SECTION
- *  
- * ——————————————————————————————————————————————————————————————— */
-
-img {
-	max-width: 100%;
-	height: auto; // ie8
-	width: 100%;
-}
+@import "UI/modules/masthead";
+@import "UI/modules/hero";
+@import "UI/modules/agg-pages";
+@import "UI/modules/post-pages";
+@import "UI/modules/main-navigation";
+@import "UI/modules/footer";
+@import "UI/modules/tags";
+@import "UI/modules/links";
+@import "UI/fonts";
+@import "UI/modules/offcanvas";
+@import "UI/modules/assets";
+@import "UI/modules/admin";
+@import "UI/modules/comments";
+@import "UI/modules/post-nav";

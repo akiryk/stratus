@@ -1,0 +1,36 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  POST PAGES MODULE
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
+.page-title {
+	text-transform: capitalize;
+	padding-bottom: $base-spacing-unit;
+}
+
+.post-date {
+	display: block;
+	margin-bottom: $half-spacing-unit;
+}
+
+@include media-query(lap-and-up){
+
+	.kicker {
+		display: none;
+	}
+
+}
+@include media-query(palm){
+	.entry-title {
+		font-size: pem(30px);
+		line-height: 1.25;
+	}
+	.entry-content {
+		font-size: 18px;
+	}
+	.page-title {
+		@include font-size($h2-size);
+		padding-bottom: 0;
+	}
+}

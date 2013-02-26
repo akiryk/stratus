@@ -39,13 +39,14 @@ function stratus_content_nav( $nav_id ) {
 		<h1 class="accessibility"><?php _e( 'Post navigation', 'stratus' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
-
+		<?php previous_post_link( '<div class="next-last-link previous-fixed">%link</div>', '<span class="icon-angle-left">' . _x( '', 'Previous post link', 'stratus' ) . '</span> <span class="hidden-title right">Older</span>' ); ?>
 		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'stratus' ) . '</span> %title' ); ?>
 		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'stratus' ) . '</span>' ); ?>
-
+		<?php next_post_link( '<div class="next-last-link next-fixed">%link</div>', '<span class="icon-angle-right">' . _x( '', 'Previous post link', 'stratus' ) . '</span><span class="hidden-title left">Newer</span>' ); ?>
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
+
 		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'stratus' ) ); ?></div>
 		<?php endif; ?>
 

@@ -1,0 +1,26 @@
+@mixin transition ( $time: .2s, $parameters: all, $func: linear) {
+	-webkit-transition: $time $parameters $func; 
+	-moz-transition: $time $parameters $func; 
+	-o-transition: $time $parameters $func; 
+	transition: $time $parameters $func; 
+}
+
+@function pem($px, $ctx: $base-font-size) {
+	@return #{($px/$ctx)*1em}; // interpolation
+}
+
+@mixin centeredContent (){
+	width: 90%;
+	margin: 0 auto;
+}
+
+@mixin palm-width($tb: 0, $lr: auto){
+	width: $small-width;
+	margin: $tb $lr;
+}
+
+@mixin desk-width(){
+	margin: 0 auto;
+	width: 100%;
+	max-width: $lap-start;
+}

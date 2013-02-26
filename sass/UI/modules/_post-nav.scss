@@ -1,0 +1,94 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  Post Nav module
+ *  For the next/previous navigation between posts
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
+#nav-below {
+	width: $small-width;
+	margin: 0 auto;
+}
+
+
+.nav-previous a {
+	// handle links inside of the next/previous container
+	&:hover {
+		color: darken($link-color, 25%);
+		text-decoration: none;
+	}
+}
+
+.next-last-link {
+	display: none;
+}
+
+
+@include media-query(desk){
+
+	#nav-below {
+		width: 100%;
+	}
+
+	.next-last-link {
+		display: block;
+		position: fixed;
+		top: 45%;
+		font-size: 122px;
+		line-height: 1;
+		a {
+			display: block;
+			color: #ddd;
+			&:hover {
+				color: $link-color;
+				.hidden-title {
+					display: block;
+				}
+			}
+		}
+	}
+	.icon-angle-left,
+	.icon-angle-right {
+		position: absolute;
+		z-index: 500;
+	}
+	.icon-angle-right{
+		right:0;
+		padding-left: 3*$base-spacing-unit;
+	}
+	.icon-angle-left{
+		left: 0;
+		padding-right: 3*$base-spacing-unit;
+	}
+	.previous-fixed {
+		left: $half-spacing-unit;
+	}
+	.next-fixed {
+		right: $half-spacing-unit;
+	}
+
+	.hidden-title {
+		display: none;
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0 0 6px rgba(0,0,0,0.2);
+		position: absolute;
+		
+		padding: 2em 1em 2em 5em;
+		top: 18px;
+		width: 200px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 20px;
+
+		&.right {
+			left: -2em;
+		}
+		&.left {
+			right: -1em;
+			padding-right: 4em;
+			padding-left: 1.5em;
+		}
+	}
+}

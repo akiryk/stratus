@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    Agg Pages Module
+\*------------------------------------*/
+/**
+ * 
+ * Styles for portfolio aggregation content
+ */
+
+.portfolio-agg-title {
+ @include font-size($h4-size);
+}
+
+.blog-agg-title {
+	@include font-size($h3-size);
+}	
+
+.portfolio-agg-title,
+.blog-agg-title {
+
+	@include media-query(palm){
+		@include font-size(16px);
+		line-height: 1.5;
+	}
+}
+
+
+
+.kicker {
+    font-weight: bold;
+    color: #111;
+}
+
+.portfolio-article {
+	font-size: pem(18px);
+}

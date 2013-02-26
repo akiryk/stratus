@@ -8,24 +8,23 @@
  * @since stratus 1.0
  */
 ?>
+	
+</div><!-- #main .site-content -->
 
-<?php /* Wrap up the divs from document and insert off canvas nav */ ?>
-
-	<?php get_template_part( 'off-canvas-nav' ); ?>
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="grid one-whole">
-			<div class="site-info">
-					Footer Info
+<?php get_template_part( 'off-canvas-nav' ); ?>
+<div class="grid-wrapper">
+	<div class="grid one-whole">
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info milli">
+				Adam Kiryk, Web Design and Development
 			</div><!-- .site-info -->
-		</div><!-- grid -->
-	</footer><!-- #colophon .site-footer -->
-</div><!-- #page .hfeed .site -->
-
+		</footer><!-- #colophon .site-footer -->
+	</div><!-- grid -->
+</div><!-- grid-wrapper -->
 <?php wp_footer(); ?>
 
-</div><!-- grid-wrapper -->
-</div><!-- #main .site-main -->
+</div><!-- #main-wrapper -->
+
 
 </body>
 </html>

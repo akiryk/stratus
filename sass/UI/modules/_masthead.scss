@@ -1,0 +1,58 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  MASTHEAD
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
+.masthead-wrapper {
+  
+  @include desk-width();
+  
+  header {
+    margin: pem(20px, 20px) 0;
+  }
+
+  @include media-query(lap-and-up){
+
+    padding: 0 $base-spacing-unit; // 0 30px
+
+    header {
+      margin: 2*$base-spacing-unit 0 $base-spacing-unit;
+    }
+  }
+
+  @include media-query(palm){
+  	width: $small-width;
+  }
+}
+
+.site-header {
+  
+  @include media-query(lap-and-up){
+  	border-bottom: 1px solid $underline-color;
+  	padding-bottom: $half-spacing-unit;
+  }
+}
+
+.title-group {
+	float: left;
+}
+
+.site-title {
+  line-height: 2* $base-spacing-unit;
+  @include font-size($h5-size);
+
+    @include media-query(lap-and-up){
+        line-height: $base-spacing-unit;
+    }
+
+    a {
+        color: $brand-color;
+    }
+
+    .site-description { 
+    	color: $text-color;
+		}
+}
+
+

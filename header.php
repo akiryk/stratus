@@ -13,7 +13,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 
-<script type="text/javascript" src="//use.typekit.net/dng0kkm.js"></script>
+<script type="text/javascript" src="//use.typekit.net/vdt8eam.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -33,7 +33,8 @@
 <body <?php body_class('hide-extras off-canvas'); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<div class="masthead-wrapper cf">
+	<div class="masthead-palm-wrapper cf">
+	<div class="masthead-wrapper">
 
 		<header class="site-header" role="banner">
 			<div class="grid-wrapper">
@@ -41,7 +42,7 @@
 
 					<hgroup class="title-group tightest">
 						<h1 class="site-title tightest">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="no-underline" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
 							<span class="site-description lap-up-inline"><?php bloginfo( 'description' ); ?></span>
 							</a>
 						</h1>
@@ -57,7 +58,9 @@
 					</nav><!-- .site-navigation .main-navigation -->
 
 					<p class="show-for-small tightest">
-					  <a class="sidebar-button button" id="sidebarButton" href="#sidebar">Menu</a>
+					  <a class="sidebar-button button" id="sidebarButton" href="#sidebar" title="menu for small screens">
+					  	<span class="icon-reorder"></span>
+					  </a>
 					</p>
 
 					</div><!-- .grid -->
@@ -65,4 +68,8 @@
 			</header><!-- .site-header -->
 
 	</div><!-- .masthead-wrapper -->
-		
+</div>
+
+<div id="main-wrapper" class="outer-wrapper">
+	<div id="main" class="site-content" role="main">
+		<div class="grid-wrapper">

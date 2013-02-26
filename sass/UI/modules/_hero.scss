@@ -1,0 +1,25 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  Hero
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
+.hero {
+	
+	font-size: 1.125em;
+	width: $small-width;
+	
+ 	p {
+	 	color: $text-color;
+		font-family: $body-face;
+	}
+
+	@include palm-width();
+
+	@include media-query(lap-and-up) {
+		font-size: pem(42px);
+		margin-bottom: 2*$base-spacing-unit;
+		width: 100%;
+	}
+
+}

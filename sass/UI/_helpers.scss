@@ -1,0 +1,32 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  HELPERS
+ *  
+ *  Use this for general purpose classes, for example, a class
+ *  that tightens margins or a class for hiding or showing something.
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
+.tightest {
+	margin: 0;
+}
+
+.tight {
+	margin-bottom: $half-spacing-unit;
+}
+
+.lap-up {
+	display: none;
+
+	@include media-query(lap-and-up){
+		display: block;
+	}
+}
+
+.lap-up-inline {
+	display: none;
+
+	@include media-query(lap-and-up){
+		display: inline;
+	}
+}

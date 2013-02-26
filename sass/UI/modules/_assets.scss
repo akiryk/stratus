@@ -1,0 +1,23 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  ASSETS
+ *
+ *  Use this for images, video, or other placed assets.
+ *  For example: captions, placement of assets...
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
+.wp-caption-text {
+	font-family: $sans;
+	@include font-size(14px);
+	color: #777;
+}
+
+@include media-query(lap-and-up){
+	.alignright,
+	.alignleft {
+		float: left;
+		width: $half-width;
+		margin-right: $base-spacing-unit;
+	}
+}

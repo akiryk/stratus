@@ -1,0 +1,45 @@
+/* ———————————————————————————————————————————————————————————————
+ * 
+ *  NAVIGATION
+ *
+ *  For the mobile off-canvas navigation, see offcanvas.scss
+ *  
+ * ——————————————————————————————————————————————————————————————— */
+
+ .main-navigation {
+    float: right;
+    font-family: $sans;
+
+    a {
+        color: $nav-color;
+        padding-left: $half-spacing-unit;
+        font-weight: 100;  
+        &:hover {
+        	color: $hover-color;
+        } 
+    }
+
+    .nav {
+        margin-bottom: 0;
+    }
+}
+
+.current-menu-item a {
+	cursor: default;
+}
+
+
+#nav-below {
+    margin: $base-spacing-unit 0;
+    overflow: hidden;
+    @include font-size(16px);
+    .nav-previous {
+        float: left;
+        width: $half-width;
+    }
+    .nav-next {
+        float:right;
+        text-align: right;
+        width: $half-width;
+    }
+}

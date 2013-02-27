@@ -18,11 +18,9 @@
 	margin: $base-spacing-unit 0;
 }
 
-@include media-query(lap-and-up){
-	.alignright,
-	.alignleft {
+.alignright,
+.alignleft {
 		float: left;
 		width: $half-width;
 		margin-right: $base-spacing-unit;
 	}
-}

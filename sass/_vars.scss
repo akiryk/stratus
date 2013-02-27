@@ -124,7 +124,7 @@ $half-spacing-unit: $base-spacing-unit / 2!default;
 $line-height-ratio: $base-line-height / $base-font-size;
 
 $small-width: 85%;
-$half-width: 304px;
+$half-width: percentage(304/640);
 
 /**
  * Fonts

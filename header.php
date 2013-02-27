@@ -42,7 +42,7 @@
 
 					<hgroup class="title-group tightest">
 						<h1 class="site-title tightest">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="no-underline" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
 							<span class="site-description lap-up-inline"><?php bloginfo( 'description' ); ?></span>
 							</a>
 						</h1>

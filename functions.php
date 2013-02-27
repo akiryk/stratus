@@ -140,6 +140,23 @@ function set_home_post_types( $query ) {
 add_filter( 'pre_get_posts', 'set_home_post_types' );
 
 /**
+ * Set post types on archive pages
+ */
+function set_archive_post_types( $query ) {
+	global $pagenow;
+
+	if ($pagenow != 'edit.php'){
+		if ( is_archive() && $query->is_main_query() ) {
+			$query->set( 'post_type', array( 'portfolio', 'post') ); // array of all acceptable post types
+		}
+	}	
+	
+}
+
+add_filter( 'pre_get_posts', 'set_archive_post_types' );
+
+
+/**
  * Remove the width attr from images so they can behave responsively
  */ 
 function remove_width_attribute( $html ) {
@@ -184,6 +201,14 @@ function fixed_img_caption_shortcode($attr, $content = null) {
 	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '>'
 	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
+
+/*
+ * Remove the [...] from automatically generated excerpts
+ */
+function new_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /*
  * Enable archive pages to display custom post types

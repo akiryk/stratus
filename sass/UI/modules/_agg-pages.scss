@@ -6,33 +6,30 @@
  * Styles for portfolio aggregation content
  */
 
-.agg-header {
+.portfolio-agg-title {
+ @include font-size($h4-size);
+}
 
-	a {
-		color: #111;
+.blog-agg-title {
+	@include font-size($h3-size);
+}	
 
-		&:hover {
-			color: $hover-color;
-		}
+.portfolio-agg-title,
+.blog-agg-title {
+
+	@include media-query(palm){
+		@include font-size(16px);
+		line-height: 1.5;
 	}
 }
+
+
 
 .kicker {
     font-weight: bold;
-    font-size: $h1-size;
     color: #111;
-}
-
-@include media-query(lap-and-up){
-	.what {
-		p {
-			@include font-size(18px);
-			color: #555;
-		}
-	}
 }
 
 .portfolio-article {
 	font-size: pem(18px);
-	color: $light-text;
 }

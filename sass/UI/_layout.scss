@@ -1,19 +1,31 @@
 /* ———————————————————————————————————————————————————————————————
  * 
- *  Hero
+ *  Layout
  *  
  * ——————————————————————————————————————————————————————————————— */
-%pagewidth {
-	margin: 0 auto;
-	width: 100%;
-	max-width: $lap-start;
-}
 
 .outer-wrapper {
-	@extend %pagewidth;
+	@include desk-width();
 	overflow: hidden;
 
 	@include media-query(lap-and-up){
 		padding: 0 $base-spacing-unit;
 	}
+}
+
+
+.paging-navigation,
+.page-header {
+	@include media-query(palm){
+		width: 85%;
+		margin: $base-spacing-unit auto;
+	}
+}
+
+@include media-query(palm){
+	article {
+		width: $small-width;
+		margin: $base-spacing-unit auto;	
+	}
+	
 }

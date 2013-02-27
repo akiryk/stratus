@@ -1,24 +1,23 @@
 /* ———————————————————————————————————————————————————————————————
  * 
- *  TAGS MODULE
+ *  ASSETS
+ *
+ *  Use this for images, video, or other placed assets.
+ *  For example: captions, placement of assets...
  *  
  * ——————————————————————————————————————————————————————————————— */
 
-.tag-item a {
-	@include font-size(16px);
-	border-radius: pem(3px, 16px);
-	display: inline-block;
-	padding: pem(3px, 16px) pem(10px, 16px);
+.wp-caption-text {
 	font-family: $sans;
-	color: #fff;
-	background-color: $link-color;
-	margin-right: $half-spacing-unit;
-	&:hover {
-		background-color: $hover-color;
-		text-decoration: none;
-	}
+	@include font-size(14px);
+	color: #777;
 }
 
-.tags-links {
-	color: $light-text;
+@include media-query(lap-and-up){
+	.alignright,
+	.alignleft {
+		float: left;
+		width: $half-width;
+		margin-right: $base-spacing-unit;
+	}
 }

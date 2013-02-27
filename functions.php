@@ -62,7 +62,7 @@ function stratus_setup() {
 	}
 
 	if ( function_exists( 'add_image_size' ) ) { 
-		add_image_size( 'agg-image', 300, 300 ); //300, 9999 pixels wide (and unlimited height)
+		add_image_size( 'agg-image', 200, 200 ); //300, 9999 pixels wide (and unlimited height)
 	}
 	/**
 	 * This theme uses wp_nav_menu() in one location.

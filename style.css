@@ -1,3220 +1,1100 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    STYLE.CSS
+/*------------------------------------*\ STYLE.CSS
 \*------------------------------------*/
-/**http://dev.akiryk/wp-admin/profile.php
- * 
- * sass --watch style.scss:style.min.css --style compressed
- * 
- * Here we pull in some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
-/**
- * Setup
- */
-/*------------------------------------*\
-    $VARS
+/**http://dev.akiryk/wp-admin/profile.php  sass --watch style.scss:style.min.css --style compressed  Here we pull in some variables, include the inuit.css framework, then add our project-specific components afterwards. */
+/** Setup */
+/*------------------------------------*\ $VARS
 \*------------------------------------*/
-/**
- * Set up project-specific variables here which are then used throughout your
- * build. These variables are automatically picked up by inuit.css so you should
- * never need to modify any framework code.
- */
-/**
- * Debug mode will visually highlight any potential markup/accessibility quirks
- * in the browser. Set to `true` or `false`.
- */
-/**
- * Do you want all elements to adopt `box-sizing:border-box;` as per
- * paulirish.com/2012/box-sizing-border-box-ftw ?
- */
-/**
- * Would you like to use Adam Whitcroft’s Batch icon font, as per:
- * adamwhitcroft.com/batch ?
- */
-/**
- * Base stuff
- */
-/**
- * How big would you like round corners to be by default?
- */
-/**
- * Responsiveness?
- */
-/**
- * Responsiveness for widescreen/high resolution desktop monitors and beyond?
- * Note: $responsive parameter above must be enabled before enabling this.
- */
-/**
- * Responsive push and pull produce a LOT of code, only turn them on if you
- * definitely need them.
- */
-/**
- * Tell inuit.css when breakpoints start.
- */
-/**
- * Font-sizes (in pixels). Refer to relevant sections for their implementations.
- */
-/**
- * English quote marks?
- */
-/**
- * If you want English quotes then please do not edit these; they’re only here
- * because Sass needs them.
- */
-/**
- * If you need non-English quotes, please alter the following values accordingly:
- */
-/**
- * Brand stuff
- */
-/**
- * inuit.css will work these next ones out for you.
- *
- * Assign our `$base-line-height` to a new spacing var for more transparency.
- */
-/**
- * Fonts
- */
-/*------------------------------------*\
-    INUIT.CSS
+/** Set up project-specific variables here which are then used throughout your build. These variables are automatically picked up by inuit.css so you should never need to modify any framework code. */
+/** Debug mode will visually highlight any potential markup/accessibility quirks in the browser. Set to `true` or `false`. */
+/** Do you want all elements to adopt `box-sizing:border-box;` as per paulirish.com/2012/box-sizing-border-box-ftw ? */
+/** Would you like to use Adam Whitcroft’s Batch icon font, as per: adamwhitcroft.com/batch ? */
+/** Base stuff */
+/** How big would you like round corners to be by default? */
+/** Responsiveness? */
+/** Responsiveness for widescreen/high resolution desktop monitors and beyond? Note: $responsive parameter above must be enabled before enabling this. */
+/** Responsive push and pull produce a LOT of code, only turn them on if you definitely need them. */
+/** Tell inuit.css when breakpoints start. */
+/** Font-sizes (in pixels). Refer to relevant sections for their implementations. */
+/** English quote marks? */
+/** If you want English quotes then please do not edit these; they’re only here because Sass needs them. */
+/** If you need non-English quotes, please alter the following values accordingly: */
+/** Brand stuff */
+/** inuit.css will work these next ones out for you.  Assign our `$base-line-height` to a new spacing var for more transparency. */
+/** Fonts */
+/*------------------------------------*\ INUIT.CSS
 \*------------------------------------*/
 /**
  *
  * inuitcss.com -- @inuitcss -- @csswizardry
  *
  */
-/**
- * inuit.css acts as a base stylesheet which you should extend with your own
- * theme stylesheet.
- *
- * inuit.css aims to do the heavy lifting; sorting objects and abstractions,
- * design patterns and fiddly bits of CSS, whilst leaving as much design as
- * possible to you. inuit.css is the scaffolding to your decorator.
- *
- * This stylesheet is heavily documented and contains lots of comments, please
- * take care to read and refer to them as you build. For further support please
- * tweet at @inuitcss.
- *
- * Owing to the amount of comments please only ever use minified CSS in
- * production. This file is purely a dev document.
- *
- * The table of contents below maps to section titles of the same name, to jump
- * to any section simply run a find for $[SECTION-TITLE].
- *
- * Most objects and abstractions come with a chunk of markup that you should be
- * able to paste into any view to quickly see how the CSS works in conjunction
- * with the correct HTML.
- *
- * inuit.css is written to this standard: github.com/csswizardry/CSS-Guidelines
- *
- * LICENSE
- *
- * Copyright 2012 Harry Roberts
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * Thank you for choosing inuit.css. May your floats remain cleared.
- */
-/*------------------------------------*\
-    $CONTENTS
+/** inuit.css acts as a base stylesheet which you should extend with your own theme stylesheet.
+  inuit.css aims to do the heavy lifting; sorting objects and abstractions, design patterns and fiddly bits of CSS, whilst leaving as much design as possible to you. inuit.css is the scaffolding to your decorator.  This stylesheet is heavily documented and contains lots of comments, please take care to read and refer to them as you build. For further support please tweet at @inuitcss.  Owing to the amount of comments please only ever use minified CSS in production. This file is purely a dev document.  The table of contents below maps to section titles of the same name, to jump to any section simply run a find for $[SECTION-TITLE].  Most objects and abstractions come with a chunk of markup that you should be able to paste into any view to quickly see how the CSS works in conjunction with the correct HTML.  inuit.css is written to this standard: github.com/csswizardry/CSS-Guidelines  LICENSE  Copyright 2012 Harry Roberts  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at  http://apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.  Thank you for choosing inuit.css. May your floats remain cleared. */
+/*------------------------------------*\ $IMPORTS
 \*------------------------------------*/
-/**
- * CONTENTS............You’re reading it!
- * WARNING.............Here be dragons!
- * IMPORTS.............Begin importing the sections below
- *
- * MIXINS..............Super-simple Sass stuff
- * NORMALIZE...........normalize.css
- * RESET...............Set some defaults
- * CLEARFIX............
- * SHARED..............Shared declarations
- *
- * MAIN................High-level elements like `html`, `body`, etc.
- * HEADINGS............Double-stranded heading hierarchy
- * PARAGRAPHS..........
- * SMALLPRINT..........Smaller text elements like `small`
- * QUOTES..............
- * CODE................
- * LINKS...............
- * LISTS...............
- * IMAGES..............
- * TABLES..............
- * FORMS...............
- *
- * GRIDS...............Fluid, proportional and nestable grids
- * FLEXBOX.............Crudely emulate flexbox
- * COLUMNS.............CSS3 columns
- * NAV.................A simple abstraction to put a list in horizontal nav mode
- * OPTIONS.............Grouped nav items
- * PAGINATION..........Very stripped back, basic paginator
- * BREADCRUMB..........Simple breadcrumb trail object
- * MEDIA...............Media object
- * MARGINALIA..........Simple marginalia content
- * ISLAND..............Boxed off content
- * BLOCK-LIST..........Blocky lists of content
- * MATRIX..............Gridded lists
- * SPLIT...............A simple split-in-two object
- * THIS-OR-THIS........Options object
- * LINK-COMPLEX........
- * FLYOUT..............Flyout-on-hover object
- * ARROWS..............CSS arrows
- * SPRITE..............Generic spriting element
- * ICON-TEXT...........Icon and text couplings
- * BUTTONS.............
- * LOZENGES............Basic lozenge styles
- * RULES...............Horizontal rules
- * STATS...............Simple stats object
- * GREYBOX.............Wireframing styles
- * BATCH...............Batch icon font
- *
- * WIDTHS..............Width classes for use alongside the grid system etc.
- * PUSH................Push classes for manipulating grids
- * PULL................Pull classes for manipulating grids
- * BRAND...............Helper class to apply brand treatment to elements
- * HELPER..............A series of helper classes to use arbitrarily
- * DEBUG...............Enable to add visual flags for debugging purposes
- */
-/*------------------------------------*\
-    $WARNING
+/** Generic utility styles etc. */
+/*------------------------------------*\ $MIXINS
 \*------------------------------------*/
-/*
- * inuit.css, being an OO framework, works in keeping with the open/closed
- * principle. The variables you set previously are now being used throughout
- * inuit.css to style everything we need for a base. Any custom styles SHOULD
- * NOT be added or modified in inuit.css directly, but added via your theme
- * stylesheet as per the open/closed principle:
- *
- * csswizardry.com/2012/06/the-open-closed-principle-applied-to-css
- *
- * Try not to edit any CSS beyond this point; if you find you need to do so
- * it is a failing of the framework so please tweet at @inuitcss.
- */
-/*------------------------------------*\
-    $IMPORTS
-\*------------------------------------*/
-/**
- * Generic utility styles etc.
- */
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/**
- * Create a fully formed type style (sizing and vertical rhythm) by passing in a
- * single value, e.g.:
- *
-   `@include font-size(10px);`
- *
- * Thanks to @redclov3r for the `line-height` Sass:
- * twitter.com/redclov3r/status/250301539321798657
- */
-/**
- * Create vendor-prefixed CSS in one go, e.g.
- *
-   `@include vendor(border-radius, 4px);`
- *
- */
-/**
- * Create CSS keyframe animations for all vendors in one go, e.g.:
- *
-   .foo{
-       @include vendor(animation, shrink 3s);
-   }
-
-   @include keyframe(shrink){
-       from{
-           font-size:5em;
-       }
-   }
- *
- * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
- */
-/**
- * Force overly long spans of text to truncate, e.g.:
- *
-   `@include truncate(100%);`
- *
- * Where `$truncation-boundary` is a united measurement.
- */
-/**
- * CSS arrows!!! But... before you read on, you might want to grab a coffee...
- *
- * This mixin creates a CSS arrow on a given element. We can have the arrow
- * appear in one of 12 locations, thus:
- *
- *       01    02    03
- *    +------------------+
- * 12 |                  | 04
- *    |                  |
- * 11 |                  | 05
- *    |                  |
- * 10 |                  | 06
- *    +------------------+
- *       09    08    07
- *
- * You pass this position in along with a desired arrow color and optional
- * border color, for example:
- *
- * `@include arrow(top, left, red)`
- *
- * for just a single, red arrow, or:
- *
- * `@include arrow(bottom, center, red, black)`
- *
- * which will create a red triangle with a black border which sits at the bottom
- * center of the element. Call the mixin thus:
- *
-   .foo{
-       background-color:#BADA55;
-       border:1px solid #ACE;
-       @include arrow(top, left, #BADA55, #ACE);
-   }
- *
- */
-/**
- * Media query mixin.
- *
- * It’s not great practice to define solid breakpoints up-front, preferring to
- * modify your design when it needs it, rather than assuming you’ll want a
- * change at ‘mobile’. However, as inuit.css is required to take a hands off
- * approach to design decisions, this is the closest we can get to baked-in
- * responsiveness. It’s flexible enough to allow you to set your own breakpoints
- * but solid enough to be frameworkified.
- *
- * We define some broad breakpoints in our vars file that are picked up here
- * for use in a simple media query mixin. Our options are:
- *
- * palm
- * lap
- * lap-and-up
- * portable
- * desk
- * desk-wide
- *
- * Not using a media query will, naturally, serve styles to all devices.
- *
- * `@include media-query(palm){ [styles here] }`
- *
- * We work out your end points for you:
- */
+/** Create a fully formed type style (sizing and vertical rhythm) by passing in a single value, e.g.:  `@include font-size(10px);`  Thanks to @redclov3r for the `line-height` Sass: twitter.com/redclov3r/status/250301539321798657 */
+/** Create vendor-prefixed CSS in one go, e.g.  `@include vendor(border-radius, 4px);`  */
+/** Create CSS keyframe animations for all vendors in one go, e.g.:  .foo{ @include vendor(animation, shrink 3s); }
+ @include keyframe(shrink){ from{ font-size:5em; } }  Courtesy of @integralist: twitter.com/integralist/status/260484115315437569 */
+/** Force overly long spans of text to truncate, e.g.:  `@include truncate(100%);`  Where `$truncation-boundary` is a united measurement. */
+/** CSS arrows!!! But... before you read on, you might want to grab a coffee...  This mixin creates a CSS arrow on a given element. We can have the arrow appear in one of 12 locations, thus:  01    02    03 +------------------+ 12 |                  | 04 |                  | 11 |                  | 05 |                  | 10 |                  | 06 +------------------+ 09    08    07  You pass this position in along with a desired arrow color and optional border color, for example:  `@include arrow(top, left, red)`  for just a single, red arrow, or:  `@include arrow(bottom, center, red, black)`  which will create a red triangle with a black border which sits at the bottom center of the element. Call the mixin thus:  .foo{ background-color:#BADA55; border:1px solid #ACE; @include arrow(top, left, #BADA55, #ACE); }  */
+/** Media query mixin.  It’s not great practice to define solid breakpoints up-front, preferring to modify your design when it needs it, rather than assuming you’ll want a change at ‘mobile’. However, as inuit.css is required to take a hands off approach to design decisions, this is the closest we can get to baked-in responsiveness. It’s flexible enough to allow you to set your own breakpoints but solid enough to be frameworkified.  We define some broad breakpoints in our vars file that are picked up here for use in a simple media query mixin. Our options are:  palm lap lap-and-up portable desk desk-wide  Not using a media query will, naturally, serve styles to all devices.  `@include media-query(palm){ [styles here] }`  We work out your end points for you: */
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/*
- * Correct `block` display not defined in IE 8/9.
- */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/* Correct `block` display not defined in IE 8/9. */
 /* line 22, sass/inuit.css/generic/_normalize.scss */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
-/*
- * Correct `inline-block` display not defined in IE 8/9.
- */
+/* Correct `inline-block` display not defined in IE 8/9. */
 /* line 32, sass/inuit.css/generic/_normalize.scss */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
+audio, canvas, video { display: inline-block; }
 
-/*
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
+/* Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
 /* line 41, sass/inuit.css/generic/_normalize.scss */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
+audio:not([controls]) { display: none; height: 0; }
 
-/*
- * Address styling not present in IE 8/9.
- */
+/* Address styling not present in IE 8/9. */
 /* line 50, sass/inuit.css/generic/_normalize.scss */
-[hidden] {
-  display: none;
-}
+[hidden] { display: none; }
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/*
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
+/* ========================================================================== Base ========================================================================== */
+/* 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
 /* line 64, sass/inuit.css/generic/_normalize.scss */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-}
+html { font-family: sans-serif; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ -ms-text-size-adjust: 100%; /* 2 */ }
 
-/*
- * Remove default margin.
- */
+/* Remove default margin. */
 /* line 74, sass/inuit.css/generic/_normalize.scss */
-body {
-  margin: 0;
-}
+body { margin: 0; }
 
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/*
- * Address `outline` inconsistency between Chrome and other browsers.
- */
+/* ========================================================================== Links ========================================================================== */
+/* Address `outline` inconsistency between Chrome and other browsers. */
 /* line 86, sass/inuit.css/generic/_normalize.scss */
-a:focus {
-  outline: thin dotted;
-}
+a:focus { outline: thin dotted; }
 
-/*
- * Improve readability when focused and also mouse hovered in all browsers.
- */
+/* Improve readability when focused and also mouse hovered in all browsers. */
 /* line 95, sass/inuit.css/generic/_normalize.scss */
-a:active,
-a:hover {
-  outline: 0;
-}
+a:active, a:hover { outline: 0; }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/*
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
+/* ========================================================================== Typography ========================================================================== */
+/* Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
 /* line 108, sass/inuit.css/generic/_normalize.scss */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+h1 { font-size: 2em; margin: 0.67em 0; }
 
-/*
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
+/* Address styling not present in IE 8/9, Safari 5, and Chrome. */
 /* line 117, sass/inuit.css/generic/_normalize.scss */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
+abbr[title] { border-bottom: 1px dotted; }
 
-/*
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
+/* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
 /* line 126, sass/inuit.css/generic/_normalize.scss */
-b,
-strong {
-  font-weight: bold;
-}
+b, strong { font-weight: bold; }
 
-/*
- * Address styling not present in Safari 5 and Chrome.
- */
+/* Address styling not present in Safari 5 and Chrome. */
 /* line 134, sass/inuit.css/generic/_normalize.scss */
-dfn {
-  font-style: italic;
-}
+dfn { font-style: italic; }
 
-/*
- * Address differences between Firefox and other browsers.
- */
+/* Address differences between Firefox and other browsers. */
 /* line 142, sass/inuit.css/generic/_normalize.scss */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
 
-/*
- * Address styling not present in IE 8/9.
- */
+/* Address styling not present in IE 8/9. */
 /* line 152, sass/inuit.css/generic/_normalize.scss */
-mark {
-  background: #ff0;
-  color: #000;
-}
+mark { background: #ff0; color: #000; }
 
-/*
- * Correct font family set oddly in Safari 5 and Chrome.
- */
+/* Correct font family set oddly in Safari 5 and Chrome. */
 /* line 164, sass/inuit.css/generic/_normalize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
 
-/*
- * Improve readability of pre-formatted text in all browsers.
- */
+/* Improve readability of pre-formatted text in all browsers. */
 /* line 173, sass/inuit.css/generic/_normalize.scss */
-pre {
-  white-space: pre-wrap;
-}
+pre { white-space: pre-wrap; }
 
-/*
- * Set consistent quote types.
- */
+/* Set consistent quote types. */
 /* line 181, sass/inuit.css/generic/_normalize.scss */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 
-/*
- * Address inconsistent and variable font size in all browsers.
- */
+/* Address inconsistent and variable font size in all browsers. */
 /* line 189, sass/inuit.css/generic/_normalize.scss */
-small {
-  font-size: 80%;
-}
+small { font-size: 80%; }
 
-/*
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
+/* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
 /* line 198, sass/inuit.css/generic/_normalize.scss */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 
 /* line 205, sass/inuit.css/generic/_normalize.scss */
-sup {
-  top: -0.5em;
-}
+sup { top: -0.5em; }
 
 /* line 209, sass/inuit.css/generic/_normalize.scss */
-sub {
-  bottom: -0.25em;
-}
+sub { bottom: -0.25em; }
 
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/*
- * Remove border when inside `a` element in IE 8/9.
- */
+/* ========================================================================== Embedded content ========================================================================== */
+/* Remove border when inside `a` element in IE 8/9. */
 /* line 221, sass/inuit.css/generic/_normalize.scss */
-img {
-  border: 0;
-}
+img { border: 0; }
 
-/*
- * Correct overflow displayed oddly in IE 9.
- */
+/* Correct overflow displayed oddly in IE 9. */
 /* line 229, sass/inuit.css/generic/_normalize.scss */
-svg:not(:root) {
-  overflow: hidden;
-}
+svg:not(:root) { overflow: hidden; }
 
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/*
- * Address margin not present in IE 8/9 and Safari 5.
- */
+/* ========================================================================== Figures ========================================================================== */
+/* Address margin not present in IE 8/9 and Safari 5. */
 /* line 241, sass/inuit.css/generic/_normalize.scss */
-figure {
-  margin: 0;
-}
+figure { margin: 0; }
 
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/*
- * Define consistent border, margin, and padding.
- */
+/* ========================================================================== Forms ========================================================================== */
+/* Define consistent border, margin, and padding. */
 /* line 253, sass/inuit.css/generic/_normalize.scss */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
 
-/*
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
+/* 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
 /* line 264, sass/inuit.css/generic/_normalize.scss */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
 
-/*
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
+/* 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
 /* line 278, sass/inuit.css/generic/_normalize.scss */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
 
-/*
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
+/* Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
 /* line 290, sass/inuit.css/generic/_normalize.scss */
-button,
-input {
-  line-height: normal;
-}
+button, input { line-height: normal; }
 
-/*
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
+/* Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
 /* line 302, sass/inuit.css/generic/_normalize.scss */
-button,
-select {
-  text-transform: none;
-}
+button, select { text-transform: none; }
 
-/*
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
+/* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
 /* line 317, sass/inuit.css/generic/_normalize.scss */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
 
-/*
- * Re-set default cursor for disabled elements.
- */
+/* Re-set default cursor for disabled elements. */
 /* line 327, sass/inuit.css/generic/_normalize.scss */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
+button[disabled], html input[disabled] { cursor: default; }
 
-/*
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- */
+/* 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
 /* line 337, sass/inuit.css/generic/_normalize.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
 
-/*
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
+/* 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
 /* line 348, sass/inuit.css/generic/_normalize.scss */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-}
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
 
-/*
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
+/* Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
 /* line 361, sass/inuit.css/generic/_normalize.scss */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 
-/*
- * Remove inner padding and border in Firefox 4+.
- */
+/* Remove inner padding and border in Firefox 4+. */
 /* line 370, sass/inuit.css/generic/_normalize.scss */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
-/*
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
+/* 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
 /* line 380, sass/inuit.css/generic/_normalize.scss */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
-}
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
 
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/*
- * Remove most spacing between table cells.
- */
+/* ========================================================================== Tables ========================================================================== */
+/* Remove most spacing between table cells. */
 /* line 393, sass/inuit.css/generic/_normalize.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+table { border-collapse: collapse; border-spacing: 0; }
 
-/*------------------------------------*\
-    $RESET
+/*------------------------------------*\ $RESET
 \*------------------------------------*/
-/**
- * A more considered reset; more of a restart...
- * As per: csswizardry.com/2011/10/reset-restarted
- */
+/** A more considered reset; more of a restart...
+ As per: csswizardry.com/2011/10/reset-restarted */
 /**
 * Let’s make the box model all nice, shall we…?
 */
-/* line 16, sass/inuit.css/generic/_reset.scss */
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
+/* line 17, sass/inuit.css/generic/_reset.scss */
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
 
-/**
- * The usual...
- */
-/* line 30, sass/inuit.css/generic/_reset.scss */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-dl, dd, ol, ul,
-form, fieldset, legend,
-table, th, td, caption,
-hr {
-  margin: 0;
-  padding: 0;
-}
+/** The usual... */
+/* line 31, sass/inuit.css/generic/_reset.scss */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, form, fieldset, legend, table, th, td, caption, hr { margin: 0; padding: 0; }
 
-/**
- * Give a help cursor to elements that give extra info on `:hover`.
- */
-/* line 38, sass/inuit.css/generic/_reset.scss */
-abbr[title], dfn[title] {
-  cursor: help;
-}
+/** Give a help cursor to elements that give extra info on `:hover`. */
+/* line 39, sass/inuit.css/generic/_reset.scss */
+abbr[title], dfn[title] { cursor: help; }
 
-/**
- * Remove underlines from potentially troublesome elements.
- */
-/* line 45, sass/inuit.css/generic/_reset.scss */
-a, u, ins {
-  text-decoration: none;
-}
+/** Remove underlines from potentially troublesome elements. */
+/* line 46, sass/inuit.css/generic/_reset.scss */
+a, u, ins { text-decoration: none; }
 
-/**
- * Apply faux underline via `border-bottom`.
- */
-/* line 52, sass/inuit.css/generic/_reset.scss */
-ins {
-  border-bottom: 1px solid;
-}
+/** Apply faux underline via `border-bottom`. */
+/* line 53, sass/inuit.css/generic/_reset.scss */
+ins { border-bottom: 1px solid; }
 
-/**
- * So that `alt` text is visually offset if images don’t load.
- */
-/* line 59, sass/inuit.css/generic/_reset.scss */
-img {
-  font-style: italic;
-}
+/** So that `alt` text is visually offset if images don’t load. */
+/* line 60, sass/inuit.css/generic/_reset.scss */
+img { font-style: italic; }
 
-/**
- * Give form elements some cursor interactions...
- */
-/* line 71, sass/inuit.css/generic/_reset.scss */
-label,
-input,
-textarea,
-button,
-select,
-option {
-  cursor: pointer;
-}
+/** Give form elements some cursor interactions... */
+/* line 72, sass/inuit.css/generic/_reset.scss */
+label, input, textarea, button, select, option { cursor: pointer; }
 
-/* line 77, sass/inuit.css/generic/_reset.scss */
-.text-input:active,
-.text-input:focus,
-textarea:active,
-textarea:focus {
-  cursor: text;
-  outline: none;
-}
+/* line 78, sass/inuit.css/generic/_reset.scss */
+.text-input:active, .text-input:focus, textarea:active, textarea:focus { cursor: text; outline: none; }
 
-/*------------------------------------*\
-    $CLEARFIX
+/*------------------------------------*\ $CLEARFIX
 \*------------------------------------*/
-/**
- * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
- * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
- * and over in your markup.
- */
+/** Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php Extend the clearfix class with Sass to avoid the `.cf` class appearing over and over in your markup. */
 /* line 10, sass/inuit.css/generic/_clearfix.scss */
-.cf:after, .gw:after,
-.grid-wrapper:after, .nav:after, .media:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+.cf:after, .gw:after, .grid-wrapper:after, .nav:after, .media:after { content: ""; display: table; clear: both; }
 
-/*------------------------------------*\
-    $SHARED
+/*------------------------------------*\ $SHARED
 \*------------------------------------*/
-/**
- * Where `margin-bottom` is concerned, this value will be the same as the
- * base line-height. This allows us to keep a consistent vertical rhythm.
- * As per: csswizardry.com/2012/06/single-direction-margin-declarations
- */
-/**
- * Base elements
- */
+/** Where `margin-bottom` is concerned, this value will be the same as the base line-height. This allows us to keep a consistent vertical rhythm. As per: csswizardry.com/2012/06/single-direction-margin-declarations */
+/** Base elements */
 /* line 24, sass/inuit.css/generic/_shared.scss */
-h1, h2, h3, h4, h5, h6, hgroup,
-ul, ol, dl,
-blockquote, p, address,
-table,
-fieldset, figure,
-pre,
-.form-fields > li,
-.media,
-.island,
-.islet {
-  margin-bottom: 30px;
-  margin-bottom: 1.5rem;
-}
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .form-fields > li, .media, .island, .islet { margin-bottom: 30px; margin-bottom: 1.5rem; }
 /* line 28, sass/inuit.css/generic/_shared.scss */
-.islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
-ul, .islet ol, .islet dl, .islet
-blockquote, .islet p, .islet address, .islet
-table, .islet
-fieldset, .islet figure, .islet
-pre, .islet .form-fields > li, .islet
-.media, .islet
-.island, .islet
-.islet {
-  margin-bottom: 15px;
-  margin-bottom: 0.75rem;
-}
+.islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet ul, .islet ol, .islet dl, .islet blockquote, .islet p, .islet address, .islet table, .islet fieldset, .islet figure, .islet pre, .islet .form-fields > li, .islet .media, .islet .island, .islet .islet { margin-bottom: 15px; margin-bottom: 0.75rem; }
 
-/**
- * Doubled up `margin-bottom` helper class.
- */
+/** Doubled up `margin-bottom` helper class. */
 /* line 38, sass/inuit.css/generic/_shared.scss */
-.landmark {
-  margin-bottom: 60px;
-  margin-bottom: 3rem;
-}
+.landmark { margin-bottom: 60px; margin-bottom: 3rem; }
 
-/**
- * `hr` elements only take up a few pixels, so we need to give them special
- * treatment regarding vertical rhythm.
- */
+/** `hr` elements only take up a few pixels, so we need to give them special treatment regarding vertical rhythm. */
 /* line 48, sass/inuit.css/generic/_shared.scss */
-hr {
-  margin-bottom: 28px;
-  margin-bottom: 1.4rem;
-}
+hr { margin-bottom: 28px; margin-bottom: 1.4rem; }
 
-/**
- * Where `margin-left` is concerned we want to try and indent certain elements
- * by a consistent amount. Define that amount once, here.
- */
+/** Where `margin-left` is concerned we want to try and indent certain elements by a consistent amount. Define that amount once, here. */
 /* line 58, sass/inuit.css/generic/_shared.scss */
-ul, ol, dd {
-  margin-left: 60px;
-  margin-left: 3rem;
-}
+ul, ol, dd { margin-left: 60px; margin-left: 3rem; }
 
-/**
- * Base styles; unclassed HTML elements etc.
- */
-/*------------------------------------*\
-    $MAIN
+/*------------------------------------*\ $MAIN
 \*------------------------------------*/
 /* line 4, sass/inuit.css/base/_main.scss */
-html {
-  font: 1.25em/1.5 serif;
-  overflow-y: scroll;
-  min-height: 100%;
-}
+html { font: 1.25em/1.5 serif; overflow-y: scroll; min-height: 100%; }
 
-/*------------------------------------*\
-    $HEADINGS
+/*------------------------------------*\ $HEADINGS
 \*------------------------------------*/
-/**
- * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
- *
- * When we define a heading we also define a corresponding class to go with it.
- * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
- * heading hierarchy.
- */
+/** As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css  When we define a heading we also define a corresponding class to go with it. This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded heading hierarchy. */
 /* line 11, sass/inuit.css/base/_headings.scss */
-h1, .alpha {
-  font-size: 60px;
-  font-size: 3rem;
-  line-height: 1;
-}
+h1, .alpha { font-size: 60px; font-size: 3rem; line-height: 1; }
 
 /* line 14, sass/inuit.css/base/_headings.scss */
-h2, .beta {
-  font-size: 40px;
-  font-size: 2rem;
-  line-height: 1.5;
-}
+h2, .beta { font-size: 40px; font-size: 2rem; line-height: 1.5; }
 
 /* line 17, sass/inuit.css/base/_headings.scss */
-h3, .gamma {
-  font-size: 30px;
-  font-size: 1.5rem;
-  line-height: 1;
-}
+h3, .gamma { font-size: 30px; font-size: 1.5rem; line-height: 1; }
 
 /* line 20, sass/inuit.css/base/_headings.scss */
-h4, .delta {
-  font-size: 24px;
-  font-size: 1.2rem;
-  line-height: 1.25;
-}
+h4, .delta { font-size: 24px; font-size: 1.2rem; line-height: 1.25; }
 
 /* line 23, sass/inuit.css/base/_headings.scss */
-h5, .epsilon {
-  font-size: 20px;
-  font-size: 1rem;
-  line-height: 1.5;
-}
+h5, .epsilon { font-size: 20px; font-size: 1rem; line-height: 1.5; }
 
 /* line 26, sass/inuit.css/base/_headings.scss */
-h6, .zeta {
-  font-size: 14px;
-  font-size: 0.7rem;
-  line-height: 2.14286;
-}
+h6, .zeta { font-size: 14px; font-size: 0.7rem; line-height: 2.14286; }
 
-/**
- * Heading groups and generic any-heading class.
- * To target any heading of any level simply apply a class of `.hN`, e.g.:
- *
-   <hgroup>
-       <h1 class=hN>inuit.css</h1>
-       <h2 class=hN>Best. Framework. Ever!</h2>
-   </hgroup>
- *
- */
+/** Heading groups and generic any-heading class. To target any heading of any level simply apply a class of `.hN`, e.g.:  <hgroup> <h1 class=hN>inuit.css</h1> <h2 class=hN>Best. Framework. Ever!</h2> </hgroup>  */
 /* line 43, sass/inuit.css/base/_headings.scss */
-hgroup .hN {
-  margin-bottom: 0;
-}
+hgroup .hN { margin-bottom: 0; }
 
-/**
- * A series of classes for setting massive type; for use in heroes, mastheads,
- * promos, etc.
- */
+/** A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
 /* line 52, sass/inuit.css/base/_headings.scss */
-.giga {
-  font-size: 96px;
-  font-size: 4.8rem;
-  line-height: 1.25;
-}
+.giga { font-size: 96px; font-size: 4.8rem; line-height: 1.25; }
 
 /* line 55, sass/inuit.css/base/_headings.scss */
-.mega {
-  font-size: 72px;
-  font-size: 3.6rem;
-  line-height: 1.25;
-}
+.mega { font-size: 72px; font-size: 3.6rem; line-height: 1.25; }
 
 /* line 58, sass/inuit.css/base/_headings.scss */
-.kilo {
-  font-size: 60px;
-  font-size: 3rem;
-  line-height: 1;
-}
+.kilo { font-size: 60px; font-size: 3rem; line-height: 1; }
 
-/*------------------------------------*\
-    $PARAGRAPHS
+/*------------------------------------*\ $PARAGRAPHS
 \*------------------------------------*/
-/**
- * The `.lede` class is used to make the introductory text (usually a paragraph)
- * of a document slightly larger.
- */
+/** The `.lede` class is used to make the introductory text (usually a paragraph) of a document slightly larger. */
 /* line 9, sass/inuit.css/base/_paragraphs.scss */
-.lede,
-.lead {
-  font-size: 22.5px;
-  font-size: 1.125rem;
-  line-height: 1.33333;
-}
+.lede, .lead { font-size: 22.5px; font-size: 1.125rem; line-height: 1.33333; }
 
-/*------------------------------------*\
-    $SMALLPRINT
+/*------------------------------------*\ $CODE
 \*------------------------------------*/
-/**
- * A series of classes for setting tiny type; for use in smallprint etc.
- */
-/* line 8, sass/inuit.css/base/_smallprint.scss */
-.smallprint,
-.milli {
-  font-size: 14px;
-  font-size: 0.7rem;
-  line-height: 2.14286;
-}
-
-/* line 11, sass/inuit.css/base/_smallprint.scss */
-.micro {
-  font-size: 10px;
-  font-size: 0.5rem;
-  line-height: 3;
-}
-
-/*------------------------------------*\
-    $CODE
-\*------------------------------------*/
-/**
- * Use an explicit font stack to ensure browsers render correct `line-height`.
- */
+/** Use an explicit font stack to ensure browsers render correct `line-height`. */
 /* line 7, sass/inuit.css/base/_code.scss */
-pre {
-  overflow: auto;
-}
+pre { overflow: auto; }
 
 /* line 10, sass/inuit.css/base/_code.scss */
-pre mark {
-  background: none;
-  border-bottom: 1px solid;
-  color: inherit;
-}
+pre mark { background: none; border-bottom: 1px solid; color: inherit; }
 
-/**
- * Add comments to your code examples, e.g.:
- *
-   <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
- *
- */
+/** Add comments to your code examples, e.g.:  <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>  */
 /* line 23, sass/inuit.css/base/_code.scss */
-.code-comment {
-  /**
-   * Override this setting in your theme stylesheet
-   */
-  opacity: 0.75;
-  filter: alpha(opacity=75);
-}
+.code-comment { /** Override this setting in your theme stylesheet */ opacity: 0.75; filter: alpha(opacity=75); }
 
-/**
- * You can add line numbers to your code examples but be warned, it requires
- * some pretty funky looking markup, e.g.:
- *
-   <ol class=line-numbers>
-       <li><code>.nav{</code></li>
-       <li><code>    list-style:none;</code></li>
-       <li><code>    margin-left:0;</code></li>
-       <li><code>}</code></li>
-       <li><code>    .nav > li,</code></li>
-       <li><code>        .nav > li > a{</code></li>
-       <li><code>            display:inline-block;</code></li>
-       <li><code>           *display:inline-block;</code></li>
-       <li><code>            zoom:1;</code></li>
-       <li><code>        }</code></li>
-   </ol>
- *
- * 1. Make the list look like code.
- * 2. Give the list flush numbers with a leading zero.
- * 3. Make sure lines of code don’t wrap.
- * 4. Give the code form by forcing the `code` to honour white-space.
- */
+/** You can add line numbers to your code examples but be warned, it requires some pretty funky looking markup, e.g.:  <ol class=line-numbers> <li><code>.nav{</code></li> <li><code>    list-style:none;</code></li> <li><code>    margin-left:0;</code></li> <li><code>}</code></li> <li><code>    .nav > li,</code></li> <li><code>        .nav > li > a{</code></li> <li><code>            display:inline-block;</code></li> <li><code>           *display:inline-block;</code></li> <li><code>            zoom:1;</code></li> <li><code>        }</code></li> </ol>  1. Make the list look like code. 2. Give the list flush numbers with a leading zero. 3. Make sure lines of code don’t wrap. 4. Give the code form by forcing the `code` to honour white-space. */
 /* line 54, sass/inuit.css/base/_code.scss */
-.line-numbers {
-  font-family: monospace, serif;
-  /* [1] */
-  list-style: decimal-leading-zero inside;
-  /* [2] */
-  white-space: nowrap;
-  /* [3] */
-  overflow: auto;
-  /* [3] */
-  margin-left: 0;
-}
+.line-numbers { font-family: monospace, serif; /* [1] */ list-style: decimal-leading-zero inside; /* [2] */ white-space: nowrap; /* [3] */ overflow: auto; /* [3] */ margin-left: 0; }
 
 /* line 61, sass/inuit.css/base/_code.scss */
-.line-numbers code {
-  white-space: pre;
-  /* [4] */
-}
+.line-numbers code { white-space: pre; /* [4] */ }
 
-/*------------------------------------*\
-    $TABLES
+/*------------------------------------*\ $FORMS
 \*------------------------------------*/
-/**
- * We have a lot at our disposal for making very complex table constructs, e.g.:
- *
-   <table class="table--bordered  table--striped  table--data">
-       <colgroup>
-           <col class=t10>
-           <col class=t10>
-           <col class=t10>
-           <col>
-       </colgroup>
-       <thead>
-           <tr>
-               <th colspan=3>Foo</th>
-               <th>Bar</th>
-           </tr>
-           <tr>
-               <th>Lorem</th>
-               <th>Ipsum</th>
-               <th class=numerical>Dolor</th>
-               <th>Sit</th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr>
-               <th rowspan=3>Sit</th>
-               <td>Dolor</td>
-               <td class=numerical>03.788</td>
-               <td>Lorem</td>
-           </tr>
-           <tr>
-               <td>Dolor</td>
-               <td class=numerical>32.210</td>
-               <td>Lorem</td>
-           </tr>
-           <tr>
-               <td>Dolor</td>
-               <td class=numerical>47.797</td>
-               <td>Lorem</td>
-           </tr>
-           <tr>
-               <th rowspan=2>Sit</th>
-               <td>Dolor</td>
-               <td class=numerical>09.640</td>
-               <td>Lorem</td>
-           </tr>
-           <tr>
-               <td>Dolor</td>
-               <td class=numerical>12.117</td>
-               <td>Lorem</td>
-           </tr>
-       </tbody>
-   </table>
- *
- */
-/* line 58, sass/inuit.css/base/_tables.scss */
-table {
-  width: 100%;
-}
-
-/* line 62, sass/inuit.css/base/_tables.scss */
-th,
-td {
-  padding: 7.5px;
-  text-align: left;
-}
-@media screen and (min-width: 480px) {
-  /* line 62, sass/inuit.css/base/_tables.scss */
-  th,
-  td {
-    padding: 15px;
-  }
-}
-
-/**
- * Cell alignments
- */
-/* line 74, sass/inuit.css/base/_tables.scss */
-[colspan] {
-  text-align: center;
-}
-
-/* line 77, sass/inuit.css/base/_tables.scss */
-[colspan="1"] {
-  text-align: left;
-}
-
-/* line 80, sass/inuit.css/base/_tables.scss */
-[rowspan] {
-  vertical-align: middle;
-}
-
-/* line 83, sass/inuit.css/base/_tables.scss */
-[rowspan="1"] {
-  vertical-align: top;
-}
-
-/* line 86, sass/inuit.css/base/_tables.scss */
-.numerical {
-  text-align: right;
-}
-
-/**
- * In the HTML above we see several `col` elements with classes whose numbers
- * represent a percentage width for that column. We leave one column free of a
- * class so that column can soak up the effects of any accidental breakage in
- * the table.
- */
-/* line 96, sass/inuit.css/base/_tables.scss */
-.t5 {
-  width: 5%;
-}
-
-/* line 97, sass/inuit.css/base/_tables.scss */
-.t10 {
-  width: 10%;
-}
-
-/* line 98, sass/inuit.css/base/_tables.scss */
-.t12 {
-  width: 12.5%;
-}
-
-/* 1/8 */
-/* line 99, sass/inuit.css/base/_tables.scss */
-.t15 {
-  width: 15%;
-}
-
-/* line 100, sass/inuit.css/base/_tables.scss */
-.t20 {
-  width: 20%;
-}
-
-/* line 101, sass/inuit.css/base/_tables.scss */
-.t25 {
-  width: 25%;
-}
-
-/* 1/4 */
-/* line 102, sass/inuit.css/base/_tables.scss */
-.t30 {
-  width: 30%;
-}
-
-/* line 103, sass/inuit.css/base/_tables.scss */
-.t33 {
-  width: 33.333%;
-}
-
-/* 1/3 */
-/* line 104, sass/inuit.css/base/_tables.scss */
-.t35 {
-  width: 35%;
-}
-
-/* line 105, sass/inuit.css/base/_tables.scss */
-.t37 {
-  width: 37.5%;
-}
-
-/* 3/8 */
-/* line 106, sass/inuit.css/base/_tables.scss */
-.t40 {
-  width: 40%;
-}
-
-/* line 107, sass/inuit.css/base/_tables.scss */
-.t45 {
-  width: 45%;
-}
-
-/* line 108, sass/inuit.css/base/_tables.scss */
-.t50 {
-  width: 50%;
-}
-
-/* 1/2 */
-/* line 109, sass/inuit.css/base/_tables.scss */
-.t55 {
-  width: 55%;
-}
-
-/* line 110, sass/inuit.css/base/_tables.scss */
-.t60 {
-  width: 60%;
-}
-
-/* line 111, sass/inuit.css/base/_tables.scss */
-.t62 {
-  width: 62.5%;
-}
-
-/* 5/8 */
-/* line 112, sass/inuit.css/base/_tables.scss */
-.t65 {
-  width: 65%;
-}
-
-/* line 113, sass/inuit.css/base/_tables.scss */
-.t66 {
-  width: 66.666%;
-}
-
-/* 2/3 */
-/* line 114, sass/inuit.css/base/_tables.scss */
-.t70 {
-  width: 70%;
-}
-
-/* line 115, sass/inuit.css/base/_tables.scss */
-.t75 {
-  width: 75%;
-}
-
-/* 3/4*/
-/* line 116, sass/inuit.css/base/_tables.scss */
-.t80 {
-  width: 80%;
-}
-
-/* line 117, sass/inuit.css/base/_tables.scss */
-.t85 {
-  width: 85%;
-}
-
-/* line 118, sass/inuit.css/base/_tables.scss */
-.t87 {
-  width: 87.5%;
-}
-
-/* 7/8 */
-/* line 119, sass/inuit.css/base/_tables.scss */
-.t90 {
-  width: 90%;
-}
-
-/* line 120, sass/inuit.css/base/_tables.scss */
-.t95 {
-  width: 95%;
-}
-
-/**
- * Bordered tables
- */
-/* line 129, sass/inuit.css/base/_tables.scss */
-.table--bordered th,
-.table--bordered td {
-  border: 1px solid #ccc;
-  /* Override this color in your theme stylesheet */
-}
-/* line 132, sass/inuit.css/base/_tables.scss */
-.table--bordered th:empty,
-.table--bordered td:empty {
-  border: none;
-}
-/* line 137, sass/inuit.css/base/_tables.scss */
-.table--bordered thead tr:last-child th {
-  border-bottom-width: 2px;
-}
-/* line 141, sass/inuit.css/base/_tables.scss */
-.table--bordered tbody tr th:last-of-type {
-  border-right-width: 2px;
-}
-
-/**
- * Striped tables
- */
-/* line 152, sass/inuit.css/base/_tables.scss */
-.table--striped tbody tr:nth-of-type(odd) {
-  background-color: #ffc;
-  /* Override this color in your theme stylesheet */
-}
-
-/**
- * Data table
- */
-/* line 161, sass/inuit.css/base/_tables.scss */
-.table--data {
-  font: 12px/1.5 sans-serif;
-}
-
-/*------------------------------------*\
-    $FORMS
-\*------------------------------------*/
-/**
- *
- * Demo: jsfiddle.net/inuitcss/MhHHU
- *
- */
+/**  Demo: jsfiddle.net/inuitcss/MhHHU  */
 /* line 9, sass/inuit.css/base/_forms.scss */
-fieldset {
-  padding: 30px;
-}
+fieldset { padding: 30px; }
 
-/**
- * Text inputs
- *
- * Instead of a `[type]` selector for each kind of form input, we just use a
- * class to target any/every one, e.g.:
-   <input type=text class=text-input>
-   <input type=email class=text-input>
-   <input type=password class=text-input>
- *
- */
+/** Text inputs  Instead of a `[type]` selector for each kind of form input, we just use a class to target any/every one, e.g.: <input type=text class=text-input> <input type=email class=text-input> <input type=password class=text-input>  */
 /* line 25, sass/inuit.css/base/_forms.scss */
-.text-input,
-textarea {
-  /**
-   * Style these via your theme stylesheet.
-   */
-}
+.text-input, textarea { /** Style these via your theme stylesheet. */ }
 
-/**
- * Group sets of form fields in a list, e.g.:
- *
-   <ul class=form-fields>
-       <li>
-           <label />
-           <input />
-       </li>
-       <li>
-           <label />
-           <select />
-       </li>
-       <li>
-           <label />
-           <input />
-       </li>
-   </ul>
- *
- */
+/** Group sets of form fields in a list, e.g.:  <ul class=form-fields> <li> <label /> <input /> </li> <li> <label /> <select /> </li> <li> <label /> <input /> </li> </ul>  */
 /* line 51, sass/inuit.css/base/_forms.scss */
-.form-fields {
-  list-style: none;
-  margin: 0;
-}
+.form-fields { list-style: none; margin: 0; }
 
 /* line 58, sass/inuit.css/base/_forms.scss */
-.form-fields > li:last-child {
-  margin-bottom: 0;
-}
+.form-fields > li:last-child { margin-bottom: 0; }
 
-/**
- * Labels
- *
- * Define a `.label` class as well as a `label` element. This means we can apply
- * label-like styling to meta-labels for groups of options where a `label`
- * element is not suitable, e.g.:
- *
-   <li>
-       <span class=label>Select an option below:</span>
-       <ul class="multi-list  four-cols">
-           <li>
-               <input /> <label />
-           </li>
-           <li>
-               <input /> <label />
-           </li>
-           <li>
-               <input /> <label />
-           </li>
-           <li>
-               <input /> <label />
-           </li>
-       </ul>
-   </li>
- *
- */
+/** Labels  Define a `.label` class as well as a `label` element. This means we can apply label-like styling to meta-labels for groups of options where a `label` element is not suitable, e.g.:  <li> <span class=label>Select an option below:</span> <ul class="multi-list  four-cols"> <li> <input /> <label /> </li> <li> <input /> <label /> </li> <li> <input /> <label /> </li> <li> <input /> <label /> </li> </ul> </li>  */
 /* line 90, sass/inuit.css/base/_forms.scss */
-label,
-.label {
-  display: block;
-}
+label, .label { display: block; }
 
-/**
- * Extra help text in `label`s, e.g.:
- *
-   <label>Card number <small class=additional>No spaces</small></label>
- *
- */
+/** Extra help text in `label`s, e.g.:  <label>Card number <small class=additional>No spaces</small></label>  */
 /* line 99, sass/inuit.css/base/_forms.scss */
-.additional {
-  display: block;
-  font-weight: normal;
-}
+.additional { display: block; font-weight: normal; }
 
-/*
- * Groups of checkboxes and radios, e.g.:
- *
-   <li>
-       <ul class=check-list>
-           <li>
-               <input /> <label />
-           </li>
-           <li>
-               <input /> <label />
-           </li>
-       </ul>
-   </li>
- *
- */
+/* Groups of checkboxes and radios, e.g.:  <li> <ul class=check-list> <li> <input /> <label /> </li> <li> <input /> <label /> </li> </ul> </li>  */
 /* line 120, sass/inuit.css/base/_forms.scss */
-.check-list {
-  list-style: none;
-  margin: 0;
-}
+.check-list { list-style: none; margin: 0; }
 
-/*
- * Labels in check-lists
- */
+/* Labels in check-lists */
 /* line 129, sass/inuit.css/base/_forms.scss */
-.check-label,
-.check-list label,
-.check-list .label {
-  display: inline-block;
-}
+.check-label, .check-list label, .check-list .label { display: inline-block; }
 
-/**
- * Spoken forms are for forms that read like spoken word, e.g.:
- *
-   <li class=spoken-form>
-       Hello, my <label for=spoken-name>name</label> is
-       <input type=text class=text-input id=spoken-name>. My home
-       <label for=country>country</label> is
-       <select id=country>
-           <option>UK</option>
-           <option>US</option>
-           <option>Other</option>
-       </select>
-   </li>
- *
- */
+/** Spoken forms are for forms that read like spoken word, e.g.:  <li class=spoken-form> Hello, my <label for=spoken-name>name</label> is <input type=text class=text-input id=spoken-name>. My home <label for=country>country</label> is <select id=country> <option>UK</option> <option>US</option> <option>Other</option> </select> </li>  */
 /* line 149, sass/inuit.css/base/_forms.scss */
-.spoken-form label {
-  display: inline-block;
-  font: inherit;
-}
+.spoken-form label { display: inline-block; font: inherit; }
 
-/**
- * Extra help text displayed after a field when that field is in focus, e.g.:
- *
-   <label for=email>Email:</label>
-   <input type=email class=text-input id=email>
-   <small class=extra-help>.edu emails only</small>
- *
- * We leave the help text in the document flow and merely set it to
- * `visibility:hidden;`. This means that it won’t interfere with anything once
- * it reappears.
- *
- */
+/** Extra help text displayed after a field when that field is in focus, e.g.:  <label for=email>Email:</label> <input type=email class=text-input id=email> <small class=extra-help>.edu emails only</small>  We leave the help text in the document flow and merely set it to `visibility:hidden;`. This means that it won’t interfere with anything once it reappears.  */
 /*small*/
 /* line 167, sass/inuit.css/base/_forms.scss */
-.extra-help {
-  display: inline-block;
-  visibility: hidden;
-}
+.extra-help { display: inline-block; visibility: hidden; }
 
 /* line 172, sass/inuit.css/base/_forms.scss */
-.text-input:active + .extra-help,
-.text-input:focus + .extra-help {
-  visibility: visible;
-}
+.text-input:active + .extra-help, .text-input:focus + .extra-help { visibility: visible; }
 
-/**
- * Objects and abstractions
- *
- * Single-line comment (//) out any objects you do not need in your project.
- */
-/*------------------------------------*\
-    $GRIDS
+/** Objects and abstractions Single-line comment (//) out any objects you do not need in your project. */
+/*------------------------------------*\ $GRIDS
 \*------------------------------------*/
-/**
- * Fluid and nestable grid system, e.g.:
- *
-   <div class=gw>
-
-       <div class="g  one-third">
-           <p>One third grid</p>
-       </div>
-
-       <div class="g  two-thirds">
-           <p>Two thirds grid</p>
-       </div>
-
-       <div class="g  one-half">
-           <p>One half grid</p>
-       </div>
-
-       <div class="g  one-quarter">
-           <p>One quarter grid</p>
-       </div>
-
-       <div class="g  one-quarter">
-           <p>One quarter grid</p>
-       </div>
-
-   </div>
- *
- * Demo: jsfiddle.net/inuitcss/CLYUC
- *
- */
-/**
- * Grid wrapper
- *
- * Shorthand and verbose
- */
+/** Fluid and nestable grid system, e.g.:  <div class=gw>
+ <div class="g  one-third"> <p>One third grid</p> </div>
+ <div class="g  two-thirds"> <p>Two thirds grid</p> </div>
+ <div class="g  one-half"> <p>One half grid</p> </div>
+ <div class="g  one-quarter"> <p>One quarter grid</p> </div>
+ <div class="g  one-quarter"> <p>One quarter grid</p> </div>
+ </div>  Demo: jsfiddle.net/inuitcss/CLYUC  */
+/** Grid wrapper  Shorthand and verbose */
 /* line 42, sass/inuit.css/objects/_grids.scss */
-.gw,
-.grid-wrapper {
-  /**
-   * Negative margin to negate the padding on the first grid child.
-   */
-  margin-left: -30px;
-  /**
-   * The following declarations allow us to use the `.gw` class on lists.
-   */
-  list-style: none;
-  margin-bottom: 0;
-}
+.gw, .grid-wrapper { /** Negative margin to negate the padding on the first grid child. */ margin-left: -30px; /** The following declarations allow us to use the `.gw` class on lists. */ list-style: none; margin-bottom: 0; }
 
-/**
- * Reverse grid order
- *
-   <div class="gw  gw--rev">
-
-       <div class="g  one-third">
-           <p>Appears on the right</p>
-       </div>
-
-       <div class="g  two-thirds">
-           <p>Appears on the left</p>
-       </div>
-
-   </div>
- *
- */
+/** Reverse grid order  <div class="gw  gw--rev">
+ <div class="g  one-third"> <p>Appears on the right</p> </div>
+ <div class="g  two-thirds"> <p>Appears on the left</p> </div>
+ </div>  */
 /* line 73, sass/inuit.css/objects/_grids.scss */
-.gw--rev > .g,
-.grid-wrapper--rev > .grid {
-  float: right;
-}
+.gw--rev > .g, .grid-wrapper--rev > .grid { float: right; }
 
-/**
- * Very infrequently occuring grid wrappers as children of grid wrappers.
- */
+/** Very infrequently occuring grid wrappers as children of grid wrappers. */
 /* line 82, sass/inuit.css/objects/_grids.scss */
-.gw > .gw,
-.grid-wrapper > .grid-wrapper {
-  margin-left: 0;
-}
+.gw > .gw, .grid-wrapper > .grid-wrapper { margin-left: 0; }
 
-/**
- * Grid
- *
- * Shorthand and verbose
- */
+/** Grid  Shorthand and verbose */
 /* line 93, sass/inuit.css/objects/_grids.scss */
-.g,
-.grid {
-  float: left;
-  padding-left: 30px;
-}
+.g, .grid { float: left; padding-left: 30px; }
 
-/*------------------------------------*\
-    $NAV
+/*------------------------------------*\ $NAV
 \*------------------------------------*/
-/**
- * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
- * When used on an `ol` or `ul`, this class throws the list into horizontal mode
- * e.g.:
- *
-   <ul class=nav>
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- * Demo: jsfiddle.net/inuitcss/Vnph4
- *
- */
+/** Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction When used on an `ol` or `ul`, this class throws the list into horizontal mode e.g.:  <ul class=nav> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  Demo: jsfiddle.net/inuitcss/Vnph4  */
 /* line 19, sass/inuit.css/objects/_nav.scss */
-.nav {
-  list-style: none;
-  margin-left: 0;
-}
+.nav { list-style: none; margin-left: 0; }
 /* line 27, sass/inuit.css/objects/_nav.scss */
-.nav > li,
-.nav > li > a {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
+.nav > li, .nav > li > a { display: inline-block; *display: inline; zoom: 1; }
 
-/**
- * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
- *
-   <ul class="nav  nav--stacked">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
+/** `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:  <ul class="nav  nav--stacked"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
 /* line 49, sass/inuit.css/objects/_nav.scss */
-.nav--stacked > li {
-  display: list-item;
-}
+.nav--stacked > li { display: list-item; }
 /* line 52, sass/inuit.css/objects/_nav.scss */
-.nav--stacked > li > a {
-  display: block;
-}
+.nav--stacked > li > a { display: block; }
 
-/**
- * `.nav--banner` extends `.nav` and centres the list, e.g.:
- *
-   <ul class="nav  nav--banner">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
+/** `.nav--banner` extends `.nav` and centres the list, e.g.:  <ul class="nav  nav--banner"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
 /* line 70, sass/inuit.css/objects/_nav.scss */
-.nav--banner {
-  text-align: center;
-}
+.nav--banner { text-align: center; }
 
-/**
- * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
- *
-   <ul class="nav  nav--block">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
+/** Give nav links a big, blocky hit area. Extends `.nav`, e.g.:  <ul class="nav  nav--block"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  */
 /* line 86, sass/inuit.css/objects/_nav.scss */
-.nav--block {
-  line-height: 1;
-  /**
-   * Remove whitespace caused by `inline-block`.
-   */
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
-  white-space: nowrap;
-}
+.nav--block { line-height: 1; /** Remove whitespace caused by `inline-block`. */ letter-spacing: -0.31em; word-spacing: -0.43em; white-space: nowrap; }
 /* line 95, sass/inuit.css/objects/_nav.scss */
-.nav--block > li {
-  letter-spacing: normal;
-  word-spacing: normal;
-}
+.nav--block > li { letter-spacing: normal; word-spacing: normal; }
 /* line 99, sass/inuit.css/objects/_nav.scss */
-.nav--block > li > a {
-  padding: 15px;
-}
+.nav--block > li > a { padding: 15px; }
 
-/**
- * Force a nav to occupy 100% of the available width of its parent. Extends
- * `.nav`, e.g.:
- *
-   <ul class="nav  nav--fit">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- * Thanks to @pimpl for this idea!
- */
+/** Force a nav to occupy 100% of the available width of its parent. Extends `.nav`, e.g.:  <ul class="nav  nav--fit"> <li><a href=#>Home</a></li> <li><a href=#>About</a></li> <li><a href=#>Portfolio</a></li> <li><a href=#>Contact</a></li> </ul>  Thanks to @pimpl for this idea! */
 /* line 119, sass/inuit.css/objects/_nav.scss */
-.nav--fit {
-  display: table;
-  width: 100%;
-}
+.nav--fit { display: table; width: 100%; }
 /* line 123, sass/inuit.css/objects/_nav.scss */
-.nav--fit > li {
-  display: table-cell;
-}
+.nav--fit > li { display: table-cell; }
 /* line 126, sass/inuit.css/objects/_nav.scss */
-.nav--fit > li > a {
-  display: block;
-}
+.nav--fit > li > a { display: block; }
 
-/**
- * Make a list of keywords. Extends `.nav`, e.g.:
- *
-   `<ul class="nav  nav--keywords>`
- *
- */
+/** Make a list of keywords. Extends `.nav`, e.g.:  `<ul class="nav  nav--keywords>`  */
 /* line 143, sass/inuit.css/objects/_nav.scss */
-.nav--keywords > li:after {
-  content: ", ";
-}
+.nav--keywords > li:after { content: ", "; }
 /* line 147, sass/inuit.css/objects/_nav.scss */
-.nav--keywords > li:last-child:after {
-  display: none;
-}
+.nav--keywords > li:last-child:after { display: none; }
 
-/*------------------------------------*\
-    $PAGINATION
+/*------------------------------------*\ $PAGINATION
 \*------------------------------------*/
-/**
- * Basic pagination object, extends `.nav`.
- * Requires some funky commenting to collapse any white-space caused by the
- * `display:inline-block;` rules.
- *
-   <ol class="nav  pagination">
-       <li class=pagination__first>First</li>
-       <li class=pagination__prev>Previous</li>
-       <li><a href=/page/1>1</a></li>
-       <li><a href=/page/2>2</a></li>
-       <li class=current><a href=/page/3>3</a></li>
-       <li><a href=/page/4>4</a></li>
-       <li><a href=/page/5>5</a></li>
-       <li class=pagination__next><a href=/page/next>Next</a></li>
-       <li class=pagination__last><a href=/page/last>Last</a></li>
-   </ol>
- *
- * Demo: jsfiddle.net/inuitcss/9Y6PU
- *
- */
+/** Basic pagination object, extends `.nav`. Requires some funky commenting to collapse any white-space caused by the `display:inline-block;` rules.  <ol class="nav  pagination"> <li class=pagination__first>First</li> <li class=pagination__prev>Previous</li> <li><a href=/page/1>1</a></li> <li><a href=/page/2>2</a></li> <li class=current><a href=/page/3>3</a></li> <li><a href=/page/4>4</a></li> <li><a href=/page/5>5</a></li> <li class=pagination__next><a href=/page/next>Next</a></li> <li class=pagination__last><a href=/page/last>Last</a></li> </ol>  Demo: jsfiddle.net/inuitcss/9Y6PU  */
 /* line 24, sass/inuit.css/objects/_pagination.scss */
-.pagination {
-  text-align: center;
-  /**
-   * Remove whitespace caused by `inline-block`.
-   */
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
-}
+.pagination { text-align: center; /** Remove whitespace caused by `inline-block`. */ letter-spacing: -0.31em; word-spacing: -0.43em; }
 
 /* line 32, sass/inuit.css/objects/_pagination.scss */
-.pagination > li {
-  padding: 15px;
-  letter-spacing: normal;
-  word-spacing: normal;
-}
+.pagination > li { padding: 15px; letter-spacing: normal; word-spacing: normal; }
 
 /* line 37, sass/inuit.css/objects/_pagination.scss */
-.pagination > li > a {
-  padding: 15px;
-  margin: -15px;
-}
+.pagination > li > a { padding: 15px; margin: -15px; }
 
 /* line 41, sass/inuit.css/objects/_pagination.scss */
-.pagination__first a:before {
-  content: "« ";
-}
+.pagination__first a:before { content: "« "; }
 
 /* line 44, sass/inuit.css/objects/_pagination.scss */
-.pagination__last a:after {
-  content: " »";
-}
+.pagination__last a:after { content: " »"; }
 
-/*------------------------------------*\
-    $MEDIA
+/*------------------------------------*\ $MEDIA
 \*------------------------------------*/
-/**
- * Place any image- and text-like content side-by-side, as per:
- * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- * E.g.:
- *
-   <div class=media>
-       <img src=http://placekitten.com/200/300 alt="" class=media__img>
-       <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-   </div>
- *
- * Demo: jsfiddle.net/inuitcss/cf4Qs
- *
- */
+/** Place any image- and text-like content side-by-side, as per: stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code E.g.:  <div class=media> <img src=http://placekitten.com/200/300 alt="" class=media__img> <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> </div>  Demo: jsfiddle.net/inuitcss/cf4Qs  */
 /* line 18, sass/inuit.css/objects/_media.scss */
-.media {
-  display: block;
-}
+.media { display: block; }
 
 /* line 22, sass/inuit.css/objects/_media.scss */
-.media__img {
-  float: left;
-  margin-right: 30px;
-}
+.media__img { float: left; margin-right: 30px; }
 
-/**
- * Reversed image location (right instead of left).
- */
+/** Reversed image location (right instead of left). */
 /* line 29, sass/inuit.css/objects/_media.scss */
-.media__img--rev {
-  float: right;
-  margin-left: 30px;
-}
+.media__img--rev { float: right; margin-left: 30px; }
 
 /* line 35, sass/inuit.css/objects/_media.scss */
-.media__img img,
-.media__img--rev img {
-  display: block;
-}
+.media__img img, .media__img--rev img { display: block; }
 
 /* line 39, sass/inuit.css/objects/_media.scss */
-.media__body {
-  overflow: hidden;
-}
+.media__body { overflow: hidden; }
 
 /* line 43, sass/inuit.css/objects/_media.scss */
-.media__body,
-.media__body > :last-child {
-  margin-bottom: 0;
-}
+.media__body, .media__body > :last-child { margin-bottom: 0; }
 
-/**
- * `.img`s in `.islet`s need an appropriately sized margin.
- */
+/** `.img`s in `.islet`s need an appropriately sized margin. */
 /* line 51, sass/inuit.css/objects/_media.scss */
-.islet .media__img {
-  margin-right: 15px;
-}
+.islet .media__img { margin-right: 15px; }
 
 /* line 54, sass/inuit.css/objects/_media.scss */
-.islet .media__img--rev {
-  margin-left: 15px;
-}
+.islet .media__img--rev { margin-left: 15px; }
 
-/*------------------------------------*\
-    $ICON-TEXT
+/** Style trumps; helper and brand classes */
+/*------------------------------------*\ $WIDTHS
 \*------------------------------------*/
-/**
- * For text-links etc that have an icon with them. Sometimes whitespace would
- * suffice in creating a gap between the icon and text, for example:
- *
-   <a href=#>
-       <i class="s  s--help"></i> Help &amp; support
-   </a>
- *
- * However we will sometimes want a larger, explicity set gap:
-   <a href=# class=icon-text>
-       <i class="icon-text__icon  s  s--help"></i>Help &amp; support
-   </a>
- *
- * Demo: jsfiddle.net/inuitcss/Q6Lbf
- *
- */
-/* line 20, sass/inuit.css/objects/_icon-text.scss */
-.icon-text > .icon-text__icon {
-  margin-right: 7.5px;
-}
-
-/**
- * We can also reverse the direction of the margin for icons that appear to the
- * right of the text content, thus:
- *
-   <a href=# class=icon-text--rev>
-       Help &amp; support<i class="icon-text__icon  s  s--help"></i>
-   </a>
- *
- */
-/* line 34, sass/inuit.css/objects/_icon-text.scss */
-.icon-text--rev > .icon-text__icon {
-  margin-left: 7.5px;
-}
-
-/**
- * Style trumps; helper and brand classes
- */
-/*------------------------------------*\
-    $WIDTHS
-\*------------------------------------*/
-/**
- * Sizes in human readable format. These are used in conjunction with other
- * objects and abstractions found in inuit.css, most commonly the grid system
- * and faux flexbox.
- *
- * We have a mixin to generate our widths and their breakpoint-specific
- * variations.
- */
+/** Sizes in human readable format. These are used in conjunction with other objects and abstractions found in inuit.css, most commonly the grid system and faux flexbox.  We have a mixin to generate our widths and their breakpoint-specific variations. */
 /**
 * Whole
 */
 /* line 17, sass/inuit.css/generic/_widths.scss */
-.one-whole {
-  width: 100%;
-}
+.one-whole { width: 100%; }
 
 /**
 * Halves
 */
 /* line 23, sass/inuit.css/generic/_widths.scss */
-.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
-  width: 50%;
-}
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths { width: 50%; }
 
 /**
 * Thirds
 */
 /* line 29, sass/inuit.css/generic/_widths.scss */
-.one-third, .two-sixths, .four-twelfths {
-  width: 33.333%;
-}
+.one-third, .two-sixths, .four-twelfths { width: 33.333%; }
 
 /* line 30, sass/inuit.css/generic/_widths.scss */
-.two-thirds, .four-sixths, .eight-twelfths {
-  width: 66.666%;
-}
+.two-thirds, .four-sixths, .eight-twelfths { width: 66.666%; }
 
 /**
 * Quarters
 */
 /* line 36, sass/inuit.css/generic/_widths.scss */
-.one-quarter, .two-eighths, .three-twelfths {
-  width: 25%;
-}
+.one-quarter, .two-eighths, .three-twelfths { width: 25%; }
 
 /* line 38, sass/inuit.css/generic/_widths.scss */
-.three-quarters, .six-eighths, .nine-twelfths {
-  width: 75%;
-}
+.three-quarters, .six-eighths, .nine-twelfths { width: 75%; }
 
 /**
 * Fifths
 */
 /* line 44, sass/inuit.css/generic/_widths.scss */
-.one-fifth, .two-tenths {
-  width: 20%;
-}
+.one-fifth, .two-tenths { width: 20%; }
 
 /* line 45, sass/inuit.css/generic/_widths.scss */
-.two-fifths, .four-tenths {
-  width: 40%;
-}
+.two-fifths, .four-tenths { width: 40%; }
 
 /* line 46, sass/inuit.css/generic/_widths.scss */
-.three-fifths, .six-tenths {
-  width: 60%;
-}
+.three-fifths, .six-tenths { width: 60%; }
 
 /* line 47, sass/inuit.css/generic/_widths.scss */
-.four-fifths, .eight-tenths {
-  width: 80%;
-}
+.four-fifths, .eight-tenths { width: 80%; }
 
 /**
 * Sixths
 */
 /* line 53, sass/inuit.css/generic/_widths.scss */
-.one-sixth, .two-twelfths {
-  width: 16.666%;
-}
+.one-sixth, .two-twelfths { width: 16.666%; }
 
 /* line 57, sass/inuit.css/generic/_widths.scss */
-.five-sixths, .ten-twelfths {
-  width: 83.333%;
-}
+.five-sixths, .ten-twelfths { width: 83.333%; }
 
 /**
 * Eighths
 */
 /* line 63, sass/inuit.css/generic/_widths.scss */
-.one-eighth {
-  width: 12.5%;
-}
+.one-eighth { width: 12.5%; }
 
 /* line 65, sass/inuit.css/generic/_widths.scss */
-.three-eighths {
-  width: 37.5%;
-}
+.three-eighths { width: 37.5%; }
 
 /* line 67, sass/inuit.css/generic/_widths.scss */
-.five-eighths {
-  width: 62.5%;
-}
+.five-eighths { width: 62.5%; }
 
 /* line 69, sass/inuit.css/generic/_widths.scss */
-.seven-eighths {
-  width: 87.5%;
-}
+.seven-eighths { width: 87.5%; }
 
 /**
 * Tenths
 */
 /* line 75, sass/inuit.css/generic/_widths.scss */
-.one-tenth {
-  width: 10%;
-}
+.one-tenth { width: 10%; }
 
 /* line 77, sass/inuit.css/generic/_widths.scss */
-.three-tenths {
-  width: 30%;
-}
+.three-tenths { width: 30%; }
 
 /* line 81, sass/inuit.css/generic/_widths.scss */
-.seven-tenths {
-  width: 70%;
-}
+.seven-tenths { width: 70%; }
 
 /* line 83, sass/inuit.css/generic/_widths.scss */
-.nine-tenths {
-  width: 90%;
-}
+.nine-tenths { width: 90%; }
 
 /**
 * Twelfths
 */
 /* line 89, sass/inuit.css/generic/_widths.scss */
-.one-twelfth {
-  width: 8.333%;
-}
+.one-twelfth { width: 8.333%; }
 
 /* line 93, sass/inuit.css/generic/_widths.scss */
-.five-twelfths {
-  width: 41.666%;
-}
+.five-twelfths { width: 41.666%; }
 
 /* line 95, sass/inuit.css/generic/_widths.scss */
-.seven-twelfths {
-  width: 58.333%;
-}
+.seven-twelfths { width: 58.333%; }
 
 /* line 99, sass/inuit.css/generic/_widths.scss */
-.eleven-twelfths {
-  width: 91.666%;
-}
+.eleven-twelfths { width: 91.666%; }
 
-/**
- * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
- * access to these classes. You can define at which breakpoint you’d like an
- * element to be a certain size, e.g.:
- *
- * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
- *
- * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
- * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
- * at ‘mobile’ sizes.
- *
- * Demo: jsfiddle.net/inuitcss/WS4Ge
- *
- */
-@media only screen and (max-width: 699px) {
-  /**
-  * Whole
-  */
+/** If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have access to these classes. You can define at which breakpoint you’d like an element to be a certain size, e.g.:  `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`  This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the horizontal space, a half of that space at ‘tablet’ sizes, and goes full width at ‘mobile’ sizes.  Demo: jsfiddle.net/inuitcss/WS4Ge  */
+@media only screen and (max-width: 699px) { /** Whole */
   /* line 17, sass/inuit.css/generic/_widths.scss */
-  .palm-one-whole {
-    width: 100%;
-  }
-
-  /**
-  * Halves
-  */
+  .palm-one-whole { width: 100%; }
+  /** Halves */
   /* line 23, sass/inuit.css/generic/_widths.scss */
-  .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
-    width: 50%;
-  }
-
-  /**
-  * Thirds
-  */
+  .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths { width: 50%; }
+  /** Thirds */
   /* line 29, sass/inuit.css/generic/_widths.scss */
-  .palm-one-third, .palm-two-sixths, .palm-four-twelfths {
-    width: 33.333%;
-  }
-
+  .palm-one-third, .palm-two-sixths, .palm-four-twelfths { width: 33.333%; }
   /* line 30, sass/inuit.css/generic/_widths.scss */
-  .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths {
-    width: 66.666%;
-  }
-
-  /**
-  * Quarters
-  */
+  .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths { width: 66.666%; }
+  /** Quarters */
   /* line 36, sass/inuit.css/generic/_widths.scss */
-  .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
-    width: 25%;
-  }
-
+  .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths { width: 25%; }
   /* line 38, sass/inuit.css/generic/_widths.scss */
-  .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
-    width: 75%;
-  }
-
-  /**
-  * Fifths
-  */
+  .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths { width: 75%; }
+  /** Fifths */
   /* line 44, sass/inuit.css/generic/_widths.scss */
-  .palm-one-fifth, .palm-two-tenths {
-    width: 20%;
-  }
-
+  .palm-one-fifth, .palm-two-tenths { width: 20%; }
   /* line 45, sass/inuit.css/generic/_widths.scss */
-  .palm-two-fifths, .palm-four-tenths {
-    width: 40%;
-  }
-
+  .palm-two-fifths, .palm-four-tenths { width: 40%; }
   /* line 46, sass/inuit.css/generic/_widths.scss */
-  .palm-three-fifths, .palm-six-tenths {
-    width: 60%;
-  }
-
+  .palm-three-fifths, .palm-six-tenths { width: 60%; }
   /* line 47, sass/inuit.css/generic/_widths.scss */
-  .palm-four-fifths, .palm-eight-tenths {
-    width: 80%;
-  }
-
-  /**
-  * Sixths
-  */
+  .palm-four-fifths, .palm-eight-tenths { width: 80%; }
+  /** Sixths */
   /* line 53, sass/inuit.css/generic/_widths.scss */
-  .palm-one-sixth, .palm-two-twelfths {
-    width: 16.666%;
-  }
-
+  .palm-one-sixth, .palm-two-twelfths { width: 16.666%; }
   /* line 57, sass/inuit.css/generic/_widths.scss */
-  .palm-five-sixths, .palm-ten-twelfths {
-    width: 83.333%;
-  }
-
-  /**
-  * Eighths
-  */
+  .palm-five-sixths, .palm-ten-twelfths { width: 83.333%; }
+  /** Eighths */
   /* line 63, sass/inuit.css/generic/_widths.scss */
-  .palm-one-eighth {
-    width: 12.5%;
-  }
-
+  .palm-one-eighth { width: 12.5%; }
   /* line 65, sass/inuit.css/generic/_widths.scss */
-  .palm-three-eighths {
-    width: 37.5%;
-  }
-
+  .palm-three-eighths { width: 37.5%; }
   /* line 67, sass/inuit.css/generic/_widths.scss */
-  .palm-five-eighths {
-    width: 62.5%;
-  }
-
+  .palm-five-eighths { width: 62.5%; }
   /* line 69, sass/inuit.css/generic/_widths.scss */
-  .palm-seven-eighths {
-    width: 87.5%;
-  }
-
-  /**
-  * Tenths
-  */
+  .palm-seven-eighths { width: 87.5%; }
+  /** Tenths */
   /* line 75, sass/inuit.css/generic/_widths.scss */
-  .palm-one-tenth {
-    width: 10%;
-  }
-
+  .palm-one-tenth { width: 10%; }
   /* line 77, sass/inuit.css/generic/_widths.scss */
-  .palm-three-tenths {
-    width: 30%;
-  }
-
+  .palm-three-tenths { width: 30%; }
   /* line 81, sass/inuit.css/generic/_widths.scss */
-  .palm-seven-tenths {
-    width: 70%;
-  }
-
+  .palm-seven-tenths { width: 70%; }
   /* line 83, sass/inuit.css/generic/_widths.scss */
-  .palm-nine-tenths {
-    width: 90%;
-  }
-
-  /**
-  * Twelfths
-  */
+  .palm-nine-tenths { width: 90%; }
+  /** Twelfths */
   /* line 89, sass/inuit.css/generic/_widths.scss */
-  .palm-one-twelfth {
-    width: 8.333%;
-  }
-
+  .palm-one-twelfth { width: 8.333%; }
   /* line 93, sass/inuit.css/generic/_widths.scss */
-  .palm-five-twelfths {
-    width: 41.666%;
-  }
-
+  .palm-five-twelfths { width: 41.666%; }
   /* line 95, sass/inuit.css/generic/_widths.scss */
-  .palm-seven-twelfths {
-    width: 58.333%;
-  }
-
+  .palm-seven-twelfths { width: 58.333%; }
   /* line 99, sass/inuit.css/generic/_widths.scss */
-  .palm-eleven-twelfths {
-    width: 91.666%;
-  }
-}
-@media only screen and (min-width: 700px) and (max-width: 939px) {
-  /**
-  * Whole
-  */
+  .palm-eleven-twelfths { width: 91.666%; } }
+@media only screen and (min-width: 700px) and (max-width: 939px) { /** Whole */
   /* line 17, sass/inuit.css/generic/_widths.scss */
-  .lap-one-whole {
-    width: 100%;
-  }
-
-  /**
-  * Halves
-  */
+  .lap-one-whole { width: 100%; }
+  /** Halves */
   /* line 23, sass/inuit.css/generic/_widths.scss */
-  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
-    width: 50%;
-  }
-
-  /**
-  * Thirds
-  */
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths { width: 50%; }
+  /** Thirds */
   /* line 29, sass/inuit.css/generic/_widths.scss */
-  .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
-    width: 33.333%;
-  }
-
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths { width: 33.333%; }
   /* line 30, sass/inuit.css/generic/_widths.scss */
-  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
-    width: 66.666%;
-  }
-
-  /**
-  * Quarters
-  */
+  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths { width: 66.666%; }
+  /** Quarters */
   /* line 36, sass/inuit.css/generic/_widths.scss */
-  .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
-    width: 25%;
-  }
-
+  .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths { width: 25%; }
   /* line 38, sass/inuit.css/generic/_widths.scss */
-  .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
-    width: 75%;
-  }
-
-  /**
-  * Fifths
-  */
+  .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths { width: 75%; }
+  /** Fifths */
   /* line 44, sass/inuit.css/generic/_widths.scss */
-  .lap-one-fifth, .lap-two-tenths {
-    width: 20%;
-  }
-
+  .lap-one-fifth, .lap-two-tenths { width: 20%; }
   /* line 45, sass/inuit.css/generic/_widths.scss */
-  .lap-two-fifths, .lap-four-tenths {
-    width: 40%;
-  }
-
+  .lap-two-fifths, .lap-four-tenths { width: 40%; }
   /* line 46, sass/inuit.css/generic/_widths.scss */
-  .lap-three-fifths, .lap-six-tenths {
-    width: 60%;
-  }
-
+  .lap-three-fifths, .lap-six-tenths { width: 60%; }
   /* line 47, sass/inuit.css/generic/_widths.scss */
-  .lap-four-fifths, .lap-eight-tenths {
-    width: 80%;
-  }
-
-  /**
-  * Sixths
-  */
+  .lap-four-fifths, .lap-eight-tenths { width: 80%; }
+  /** Sixths */
   /* line 53, sass/inuit.css/generic/_widths.scss */
-  .lap-one-sixth, .lap-two-twelfths {
-    width: 16.666%;
-  }
-
+  .lap-one-sixth, .lap-two-twelfths { width: 16.666%; }
   /* line 57, sass/inuit.css/generic/_widths.scss */
-  .lap-five-sixths, .lap-ten-twelfths {
-    width: 83.333%;
-  }
-
-  /**
-  * Eighths
-  */
+  .lap-five-sixths, .lap-ten-twelfths { width: 83.333%; }
+  /** Eighths */
   /* line 63, sass/inuit.css/generic/_widths.scss */
-  .lap-one-eighth {
-    width: 12.5%;
-  }
-
+  .lap-one-eighth { width: 12.5%; }
   /* line 65, sass/inuit.css/generic/_widths.scss */
-  .lap-three-eighths {
-    width: 37.5%;
-  }
-
+  .lap-three-eighths { width: 37.5%; }
   /* line 67, sass/inuit.css/generic/_widths.scss */
-  .lap-five-eighths {
-    width: 62.5%;
-  }
-
+  .lap-five-eighths { width: 62.5%; }
   /* line 69, sass/inuit.css/generic/_widths.scss */
-  .lap-seven-eighths {
-    width: 87.5%;
-  }
-
-  /**
-  * Tenths
-  */
+  .lap-seven-eighths { width: 87.5%; }
+  /** Tenths */
   /* line 75, sass/inuit.css/generic/_widths.scss */
-  .lap-one-tenth {
-    width: 10%;
-  }
-
+  .lap-one-tenth { width: 10%; }
   /* line 77, sass/inuit.css/generic/_widths.scss */
-  .lap-three-tenths {
-    width: 30%;
-  }
-
+  .lap-three-tenths { width: 30%; }
   /* line 81, sass/inuit.css/generic/_widths.scss */
-  .lap-seven-tenths {
-    width: 70%;
-  }
-
+  .lap-seven-tenths { width: 70%; }
   /* line 83, sass/inuit.css/generic/_widths.scss */
-  .lap-nine-tenths {
-    width: 90%;
-  }
-
-  /**
-  * Twelfths
-  */
+  .lap-nine-tenths { width: 90%; }
+  /** Twelfths */
   /* line 89, sass/inuit.css/generic/_widths.scss */
-  .lap-one-twelfth {
-    width: 8.333%;
-  }
-
+  .lap-one-twelfth { width: 8.333%; }
   /* line 93, sass/inuit.css/generic/_widths.scss */
-  .lap-five-twelfths {
-    width: 41.666%;
-  }
-
+  .lap-five-twelfths { width: 41.666%; }
   /* line 95, sass/inuit.css/generic/_widths.scss */
-  .lap-seven-twelfths {
-    width: 58.333%;
-  }
-
+  .lap-seven-twelfths { width: 58.333%; }
   /* line 99, sass/inuit.css/generic/_widths.scss */
-  .lap-eleven-twelfths {
-    width: 91.666%;
-  }
-}
-@media only screen and (max-width: 939px) {
-  /**
-  * Whole
-  */
+  .lap-eleven-twelfths { width: 91.666%; } }
+@media only screen and (max-width: 939px) { /** Whole */
   /* line 17, sass/inuit.css/generic/_widths.scss */
-  .portable-one-whole {
-    width: 100%;
-  }
-
-  /**
-  * Halves
-  */
+  .portable-one-whole { width: 100%; }
+  /** Halves */
   /* line 23, sass/inuit.css/generic/_widths.scss */
-  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
-    width: 50%;
-  }
-
-  /**
-  * Thirds
-  */
+  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths { width: 50%; }
+  /** Thirds */
   /* line 29, sass/inuit.css/generic/_widths.scss */
-  .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
-    width: 33.333%;
-  }
-
+  .portable-one-third, .portable-two-sixths, .portable-four-twelfths { width: 33.333%; }
   /* line 30, sass/inuit.css/generic/_widths.scss */
-  .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
-    width: 66.666%;
-  }
-
-  /**
-  * Quarters
-  */
+  .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths { width: 66.666%; }
+  /** Quarters */
   /* line 36, sass/inuit.css/generic/_widths.scss */
-  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
-    width: 25%;
-  }
-
+  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths { width: 25%; }
   /* line 38, sass/inuit.css/generic/_widths.scss */
-  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
-    width: 75%;
-  }
-
-  /**
-  * Fifths
-  */
+  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths { width: 75%; }
+  /** Fifths */
   /* line 44, sass/inuit.css/generic/_widths.scss */
-  .portable-one-fifth, .portable-two-tenths {
-    width: 20%;
-  }
-
+  .portable-one-fifth, .portable-two-tenths { width: 20%; }
   /* line 45, sass/inuit.css/generic/_widths.scss */
-  .portable-two-fifths, .portable-four-tenths {
-    width: 40%;
-  }
-
+  .portable-two-fifths, .portable-four-tenths { width: 40%; }
   /* line 46, sass/inuit.css/generic/_widths.scss */
-  .portable-three-fifths, .portable-six-tenths {
-    width: 60%;
-  }
-
+  .portable-three-fifths, .portable-six-tenths { width: 60%; }
   /* line 47, sass/inuit.css/generic/_widths.scss */
-  .portable-four-fifths, .portable-eight-tenths {
-    width: 80%;
-  }
-
-  /**
-  * Sixths
-  */
+  .portable-four-fifths, .portable-eight-tenths { width: 80%; }
+  /** Sixths */
   /* line 53, sass/inuit.css/generic/_widths.scss */
-  .portable-one-sixth, .portable-two-twelfths {
-    width: 16.666%;
-  }
-
+  .portable-one-sixth, .portable-two-twelfths { width: 16.666%; }
   /* line 57, sass/inuit.css/generic/_widths.scss */
-  .portable-five-sixths, .portable-ten-twelfths {
-    width: 83.333%;
-  }
-
-  /**
-  * Eighths
-  */
+  .portable-five-sixths, .portable-ten-twelfths { width: 83.333%; }
+  /** Eighths */
   /* line 63, sass/inuit.css/generic/_widths.scss */
-  .portable-one-eighth {
-    width: 12.5%;
-  }
-
+  .portable-one-eighth { width: 12.5%; }
   /* line 65, sass/inuit.css/generic/_widths.scss */
-  .portable-three-eighths {
-    width: 37.5%;
-  }
-
+  .portable-three-eighths { width: 37.5%; }
   /* line 67, sass/inuit.css/generic/_widths.scss */
-  .portable-five-eighths {
-    width: 62.5%;
-  }
-
+  .portable-five-eighths { width: 62.5%; }
   /* line 69, sass/inuit.css/generic/_widths.scss */
-  .portable-seven-eighths {
-    width: 87.5%;
-  }
-
-  /**
-  * Tenths
-  */
+  .portable-seven-eighths { width: 87.5%; }
+  /** Tenths */
   /* line 75, sass/inuit.css/generic/_widths.scss */
-  .portable-one-tenth {
-    width: 10%;
-  }
-
+  .portable-one-tenth { width: 10%; }
   /* line 77, sass/inuit.css/generic/_widths.scss */
-  .portable-three-tenths {
-    width: 30%;
-  }
-
+  .portable-three-tenths { width: 30%; }
   /* line 81, sass/inuit.css/generic/_widths.scss */
-  .portable-seven-tenths {
-    width: 70%;
-  }
-
+  .portable-seven-tenths { width: 70%; }
   /* line 83, sass/inuit.css/generic/_widths.scss */
-  .portable-nine-tenths {
-    width: 90%;
-  }
-
-  /**
-  * Twelfths
-  */
+  .portable-nine-tenths { width: 90%; }
+  /** Twelfths */
   /* line 89, sass/inuit.css/generic/_widths.scss */
-  .portable-one-twelfth {
-    width: 8.333%;
-  }
-
+  .portable-one-twelfth { width: 8.333%; }
   /* line 93, sass/inuit.css/generic/_widths.scss */
-  .portable-five-twelfths {
-    width: 41.666%;
-  }
-
+  .portable-five-twelfths { width: 41.666%; }
   /* line 95, sass/inuit.css/generic/_widths.scss */
-  .portable-seven-twelfths {
-    width: 58.333%;
-  }
-
+  .portable-seven-twelfths { width: 58.333%; }
   /* line 99, sass/inuit.css/generic/_widths.scss */
-  .portable-eleven-twelfths {
-    width: 91.666%;
-  }
-}
-@media only screen and (min-width: 940px) {
-  /**
-  * Whole
-  */
+  .portable-eleven-twelfths { width: 91.666%; } }
+@media only screen and (min-width: 940px) { /** Whole */
   /* line 17, sass/inuit.css/generic/_widths.scss */
-  .desk-one-whole {
-    width: 100%;
-  }
-
-  /**
-  * Halves
-  */
+  .desk-one-whole { width: 100%; }
+  /** Halves */
   /* line 23, sass/inuit.css/generic/_widths.scss */
-  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
-    width: 50%;
-  }
-
-  /**
-  * Thirds
-  */
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths { width: 50%; }
+  /** Thirds */
   /* line 29, sass/inuit.css/generic/_widths.scss */
-  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
-    width: 33.333%;
-  }
-
+  .desk-one-third, .desk-two-sixths, .desk-four-twelfths { width: 33.333%; }
   /* line 30, sass/inuit.css/generic/_widths.scss */
-  .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
-    width: 66.666%;
-  }
-
-  /**
-  * Quarters
-  */
+  .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths { width: 66.666%; }
+  /** Quarters */
   /* line 36, sass/inuit.css/generic/_widths.scss */
-  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
-    width: 25%;
-  }
-
+  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths { width: 25%; }
   /* line 38, sass/inuit.css/generic/_widths.scss */
-  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
-    width: 75%;
-  }
-
-  /**
-  * Fifths
-  */
+  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths { width: 75%; }
+  /** Fifths */
   /* line 44, sass/inuit.css/generic/_widths.scss */
-  .desk-one-fifth, .desk-two-tenths {
-    width: 20%;
-  }
-
+  .desk-one-fifth, .desk-two-tenths { width: 20%; }
   /* line 45, sass/inuit.css/generic/_widths.scss */
-  .desk-two-fifths, .desk-four-tenths {
-    width: 40%;
-  }
-
+  .desk-two-fifths, .desk-four-tenths { width: 40%; }
   /* line 46, sass/inuit.css/generic/_widths.scss */
-  .desk-three-fifths, .desk-six-tenths {
-    width: 60%;
-  }
-
+  .desk-three-fifths, .desk-six-tenths { width: 60%; }
   /* line 47, sass/inuit.css/generic/_widths.scss */
-  .desk-four-fifths, .desk-eight-tenths {
-    width: 80%;
-  }
-
-  /**
-  * Sixths
-  */
+  .desk-four-fifths, .desk-eight-tenths { width: 80%; }
+  /** Sixths */
   /* line 53, sass/inuit.css/generic/_widths.scss */
-  .desk-one-sixth, .desk-two-twelfths {
-    width: 16.666%;
-  }
-
+  .desk-one-sixth, .desk-two-twelfths { width: 16.666%; }
   /* line 57, sass/inuit.css/generic/_widths.scss */
-  .desk-five-sixths, .desk-ten-twelfths {
-    width: 83.333%;
-  }
-
-  /**
-  * Eighths
-  */
+  .desk-five-sixths, .desk-ten-twelfths { width: 83.333%; }
+  /** Eighths */
   /* line 63, sass/inuit.css/generic/_widths.scss */
-  .desk-one-eighth {
-    width: 12.5%;
-  }
-
+  .desk-one-eighth { width: 12.5%; }
   /* line 65, sass/inuit.css/generic/_widths.scss */
-  .desk-three-eighths {
-    width: 37.5%;
-  }
-
+  .desk-three-eighths { width: 37.5%; }
   /* line 67, sass/inuit.css/generic/_widths.scss */
-  .desk-five-eighths {
-    width: 62.5%;
-  }
-
+  .desk-five-eighths { width: 62.5%; }
   /* line 69, sass/inuit.css/generic/_widths.scss */
-  .desk-seven-eighths {
-    width: 87.5%;
-  }
-
-  /**
-  * Tenths
-  */
+  .desk-seven-eighths { width: 87.5%; }
+  /** Tenths */
   /* line 75, sass/inuit.css/generic/_widths.scss */
-  .desk-one-tenth {
-    width: 10%;
-  }
-
+  .desk-one-tenth { width: 10%; }
   /* line 77, sass/inuit.css/generic/_widths.scss */
-  .desk-three-tenths {
-    width: 30%;
-  }
-
+  .desk-three-tenths { width: 30%; }
   /* line 81, sass/inuit.css/generic/_widths.scss */
-  .desk-seven-tenths {
-    width: 70%;
-  }
-
+  .desk-seven-tenths { width: 70%; }
   /* line 83, sass/inuit.css/generic/_widths.scss */
-  .desk-nine-tenths {
-    width: 90%;
-  }
-
-  /**
-  * Twelfths
-  */
+  .desk-nine-tenths { width: 90%; }
+  /** Twelfths */
   /* line 89, sass/inuit.css/generic/_widths.scss */
-  .desk-one-twelfth {
-    width: 8.333%;
-  }
-
+  .desk-one-twelfth { width: 8.333%; }
   /* line 93, sass/inuit.css/generic/_widths.scss */
-  .desk-five-twelfths {
-    width: 41.666%;
-  }
-
+  .desk-five-twelfths { width: 41.666%; }
   /* line 95, sass/inuit.css/generic/_widths.scss */
-  .desk-seven-twelfths {
-    width: 58.333%;
-  }
-
+  .desk-seven-twelfths { width: 58.333%; }
   /* line 99, sass/inuit.css/generic/_widths.scss */
-  .desk-eleven-twelfths {
-    width: 91.666%;
-  }
-}
-/**
- * If you have set the additional `$responsive-extra` variable to ‘true’ in
- * `_vars.scss` then you now have access to the following class available to
- * accomodate much larger screen resolutions.
- */
+  .desk-eleven-twelfths { width: 91.666%; } }
+/** If you have set the additional `$responsive-extra` variable to ‘true’ in `_vars.scss` then you now have access to the following class available to accomodate much larger screen resolutions. */
 /* endif */
-/*------------------------------------*\
-    BASE
+/*------------------------------------*\ $HELPER
+\*------------------------------------*/
+/** A series of helper classes to use arbitrarily. Only use a helper class if an element/component doesn’t already have a class to which you could apply this styling, e.g. if you need to float `.main-nav` left then add `float:left;` to that ruleset as opposed to adding the `.float--left` class to the markup.  A lot of these classes carry `!important` as you will always want them to win out over other selectors. */
+/* line 13, sass/inuit.css/generic/_helper.scss */
+.float--right { float: right!important; }
+
+/* line 14, sass/inuit.css/generic/_helper.scss */
+.float--left { float: left !important; }
+
+/* line 16, sass/inuit.css/generic/_helper.scss */
+.text--left { text-align: left  !important; }
+
+/* line 17, sass/inuit.css/generic/_helper.scss */
+.text--center { text-align: center!important; }
+
+/* line 18, sass/inuit.css/generic/_helper.scss */
+.text--right { text-align: right !important; }
+
+/* line 20, sass/inuit.css/generic/_helper.scss */
+.flush { margin: 0!important; }
+
+/* line 21, sass/inuit.css/generic/_helper.scss */
+.flush--top { margin-top: 0!important; }
+
+/* line 22, sass/inuit.css/generic/_helper.scss */
+.flush--right { margin-right: 0!important; }
+
+/* line 23, sass/inuit.css/generic/_helper.scss */
+.flush--bottom { margin-bottom: 0!important; }
+
+/* line 24, sass/inuit.css/generic/_helper.scss */
+.flush--left { margin-left: 0!important; }
+
+/* line 25, sass/inuit.css/generic/_helper.scss */
+.flush--ends { margin-top: 0!important; margin-bottom: 0!important; }
+
+/* line 26, sass/inuit.css/generic/_helper.scss */
+.flush--sides { margin-right: 0!important; margin-left: 0!important; }
+
+/** Pull items full width of `.island` parents. */
+/* line 32, sass/inuit.css/generic/_helper.scss */
+.full-bleed { margin-right: -30px !important; margin-left: -30px !important; }
+/* line 36, sass/inuit.css/generic/_helper.scss */
+.islet .full-bleed { margin-right: -15px !important; margin-left: -15px !important; }
+
+/** Add a help cursor to any element that gives the user extra information on `:hover`. */
+/* line 47, sass/inuit.css/generic/_helper.scss */
+.informative { cursor: help; }
+
+/** Mute an object by reducing its opacity. */
+/* line 55, sass/inuit.css/generic/_helper.scss */
+.muted { opacity: 0.5; filter: alpha(opacity=50); }
+
+/** Align items to the right where they imply progression/movement forward, e.g.:  <p class=proceed><a href=#>Read more...</a></p>  */
+/* line 67, sass/inuit.css/generic/_helper.scss */
+.proceed { text-align: right; }
+
+/** Add a right-angled quote to links that imply movement, e.g.:  <a href=# class=go>Read more</a>  */
+/* line 78, sass/inuit.css/generic/_helper.scss */
+.go:after { content: " »"; }
+
+/** Apply capital case to an element (usually a `strong`). */
+/* line 86, sass/inuit.css/generic/_helper.scss */
+.caps { text-transform: uppercase; }
+
+/** Hide content off-screen without resorting to `display:none;` */
+/* line 94, sass/inuit.css/generic/_helper.scss */
+.accessibility { position: absolute; left: -99999px; }
+
+/* line 95, sass/inuit.css/generic/_helper.scss */
+[dir=rtl] .accessibility { left: auto; right: -99999px; }
+
+/** Hide content based on breakpoint */
+/* line 101, sass/inuit.css/generic/_helper.scss */
+.hide { position: absolute; left: -9999px; }
+
+@media only screen and (max-width: 699px) { /* line 107, sass/inuit.css/generic/_helper.scss */
+  .hide--palm { position: absolute; left: -9999px; } }
+@media only screen and (min-width: 700px) and (max-width: 939px) { /* line 107, sass/inuit.css/generic/_helper.scss */
+  .hide--lap { position: absolute; left: -9999px; } }
+@media only screen and (min-width: 700px) { /* line 107, sass/inuit.css/generic/_helper.scss */
+  .hide--lap-and-up { position: absolute; left: -9999px; } }
+@media only screen and (max-width: 939px) { /* line 107, sass/inuit.css/generic/_helper.scss */
+  .hide--portable { position: absolute; left: -9999px; } }
+@media only screen and (min-width: 940px) { /* line 107, sass/inuit.css/generic/_helper.scss */
+  .hide--desk { position: absolute; left: -9999px; } }
+@media only screen and (min-width: 1200px) { /* line 107, sass/inuit.css/generic/_helper.scss */
+  .hide--desk-wide { position: absolute; left: -9999px; } }
+/*------------------------------------*\ BASE
 \*------------------------------------*/
 /* line 5, sass/UI/_base.scss */
-body {
-  background-color: #fff;
-  color: #222;
-  font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
-}
+body { background-color: #fff; color: #222; font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif; }
 
 /* line 11, sass/UI/_base.scss */
-img {
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-}
+img { max-width: 100%; height: auto; width: 10%; }
 
 /* line 17, sass/UI/_base.scss */
-article {
-  clear: both;
-  margin: 30px 0;
-}
+article { clear: both; margin: 30px 0; }
 
 /* line 22, sass/UI/_base.scss */
-pre {
-  background: #111;
-  color: #fff;
-  padding: 30px;
-  font-size: 20px;
-}
+pre { background: #111; color: #fff; padding: 30px; font-size: 20px; }
 
 /* line 29, sass/UI/_base.scss */
-blockquote p {
-  font-style: italic;
-}
-@media only screen and (min-width: 700px) {
-  /* line 29, sass/UI/_base.scss */
-  blockquote p {
-    padding: 0 2em;
-  }
-}
+blockquote p { font-style: italic; }
+@media only screen and (min-width: 700px) { /* line 29, sass/UI/_base.scss */
+  blockquote p { padding: 0 2em; } }
 
-/*------------------------------------*\
-    Headers. 
-    Also see inuit/headers
+/*------------------------------------*\ Headers.  Also see inuit/headers
 \*------------------------------------*/
 /* line 45, sass/UI/_base.scss */
-h1, h2, h4 {
-  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
-  font-weight: normal;
-  line-height: 1.25;
-}
+h1, h2, h4 { font-family: "adelle", "Helvetica Neue", helvetica, sans-serif; font-weight: normal; line-height: 1.25; }
 
 /* line 51, sass/UI/_base.scss */
-h3, h5, h6 {
-  font-family: "Helvetica Neue", helvetica, sans-serif;
-  font-weight: normal;
-}
+h3, h5, h6 { font-family: "Helvetica Neue", helvetica, sans-serif; font-weight: normal; }
 
 /* line 58, sass/UI/_base.scss */
-time {
-  color: #777777;
-  font-size: 14px;
-}
+time { color: #777777; font-size: 14px; }
 
 /* line 63, sass/UI/_base.scss */
-.accessibility {
-  display: none;
-}
+.accessibility { display: none; }
 
-/*------------------------------------*\
-    Media Queries for Base Rules
+/*------------------------------------*\ Media Queries for Base Rules
 \*------------------------------------*/
-@media only screen and (max-width: 699px) {
-  /* line 72, sass/UI/_base.scss */
-  code {
-    font-size: 16px;
-    font-size: 0.8rem;
-    line-height: 1.875;
-  }
-
+@media only screen and (max-width: 699px) { /* line 72, sass/UI/_base.scss */
+  code { font-size: 16px; font-size: 0.8rem; line-height: 1.875; }
   /* line 76, sass/UI/_base.scss */
-  h3 {
-    font-size: 24px;
-    font-size: 1.2rem;
-    line-height: 1.25;
-  }
-
+  h3 { font-size: 24px; font-size: 1.2rem; line-height: 1.25; }
   /* line 80, sass/UI/_base.scss */
-  ul, ol, dd {
-    margin-left: 30px;
-    margin-left: 1.5rem;
-  }
-}
-/* ———————————————————————————————————————————————————————————————
- * 
- *  Layout
- *  
- * ——————————————————————————————————————————————————————————————— */
+  ul, ol, dd { margin-left: 30px; margin-left: 1.5rem; } }
+/* ———————————————————————————————————————————————————————————————  Layout  ——————————————————————————————————————————————————————————————— */
 /* line 7, sass/UI/_layout.scss */
-.outer-wrapper {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 700px;
-  overflow: hidden;
-}
-@media only screen and (min-width: 700px) {
-  /* line 7, sass/UI/_layout.scss */
-  .outer-wrapper {
-    padding: 0 30px;
-  }
-}
+.outer-wrapper { margin: 0 auto; width: 100%; max-width: 700px; overflow: hidden; }
+@media only screen and (min-width: 700px) { /* line 7, sass/UI/_layout.scss */
+  .outer-wrapper { padding: 0 30px; } }
 
-@media only screen and (max-width: 699px) {
-  /* line 18, sass/UI/_layout.scss */
-  .paging-navigation,
-  .page-header {
-    width: 85%;
-    margin: 30px auto;
-  }
-}
+@media only screen and (max-width: 699px) { /* line 18, sass/UI/_layout.scss */
+  .paging-navigation, .page-header { width: 85%; margin: 30px auto; } }
 
-@media only screen and (max-width: 699px) {
-  /* line 26, sass/UI/_layout.scss */
-  article {
-    width: 85%;
-    margin: 30px auto;
-  }
-}
-/* ———————————————————————————————————————————————————————————————
- * 
- *  HELPERS
- *  
- *  Use this for general purpose classes, for example, a class
- *  that tightens margins or a class for hiding or showing something.
- *  
- * ——————————————————————————————————————————————————————————————— */
+@media only screen and (max-width: 699px) { /* line 26, sass/UI/_layout.scss */
+  article { width: 85%; margin: 30px auto; } }
+/* ———————————————————————————————————————————————————————————————  HELPERS  Use this for general purpose classes, for example, a class that tightens margins or a class for hiding or showing something.  ——————————————————————————————————————————————————————————————— */
 /* line 10, sass/UI/_helpers.scss */
-.tightest {
-  margin: 0;
-}
+.tightest { margin: 0; }
 
 /* line 14, sass/UI/_helpers.scss */
-.tight {
-  margin-bottom: 15px;
-}
+.tight { margin-bottom: 15px; }
 
 /* line 18, sass/UI/_helpers.scss */
-.lap-up {
-  display: none;
-}
-@media only screen and (min-width: 700px) {
-  /* line 18, sass/UI/_helpers.scss */
-  .lap-up {
-    display: block;
-  }
-}
+.lap-up { display: none; }
+@media only screen and (min-width: 700px) { /* line 18, sass/UI/_helpers.scss */
+  .lap-up { display: block; } }
 
 /* line 26, sass/UI/_helpers.scss */
-.lap-up-inline {
-  display: none;
-}
-@media only screen and (min-width: 700px) {
-  /* line 26, sass/UI/_helpers.scss */
-  .lap-up-inline {
-    display: inline;
-  }
-}
+.lap-up-inline { display: none; }
+@media only screen and (min-width: 700px) { /* line 26, sass/UI/_helpers.scss */
+  .lap-up-inline { display: inline; } }
 
-/* ———————————————————————————————————————————————————————————————
- * 
- *  MASTHEAD
- *  
- * ——————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————  MASTHEAD  ——————————————————————————————————————————————————————————————— */
 /* line 7, sass/UI/modules/_masthead.scss */
-.masthead-wrapper {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 700px;
-}
+.masthead-wrapper { margin: 0 auto; width: 100%; max-width: 700px; }
 /* line 11, sass/UI/modules/_masthead.scss */
-.masthead-wrapper header {
-  margin: 1em 0;
-}
-@media only screen and (min-width: 700px) {
-  /* line 7, sass/UI/modules/_masthead.scss */
-  .masthead-wrapper {
-    padding: 0 30px;
-  }
+.masthead-wrapper header { margin: 1em 0; }
+@media only screen and (min-width: 700px) { /* line 7, sass/UI/modules/_masthead.scss */
+  .masthead-wrapper { padding: 0 30px; }
   /* line 19, sass/UI/modules/_masthead.scss */
-  .masthead-wrapper header {
-    margin: 60px 0 30px;
-  }
-}
-@media only screen and (max-width: 699px) {
-  /* line 7, sass/UI/modules/_masthead.scss */
-  .masthead-wrapper {
-    width: 85%;
-  }
-}
+  .masthead-wrapper header { margin: 60px 0 30px; } }
+@media only screen and (max-width: 699px) { /* line 7, sass/UI/modules/_masthead.scss */
+  .masthead-wrapper { width: 85%; } }
 
-@media only screen and (min-width: 700px) {
-  /* line 29, sass/UI/modules/_masthead.scss */
-  .site-header {
-    border-bottom: 1px solid #dddddd;
-    padding-bottom: 15px;
-  }
-}
+@media only screen and (min-width: 700px) { /* line 29, sass/UI/modules/_masthead.scss */
+  .site-header { border-bottom: 1px solid #dddddd; padding-bottom: 15px; } }
 
 /* line 37, sass/UI/modules/_masthead.scss */
-.title-group {
-  float: left;
-}
+.title-group { float: left; }
 
 /* line 41, sass/UI/modules/_masthead.scss */
-.site-title {
-  line-height: 60px;
-  font-size: 20px;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-@media only screen and (min-width: 700px) {
-  /* line 41, sass/UI/modules/_masthead.scss */
-  .site-title {
-    line-height: 30px;
-  }
-}
+.site-title { line-height: 60px; font-size: 20px; font-size: 1rem; line-height: 1.5; }
+@media only screen and (min-width: 700px) { /* line 41, sass/UI/modules/_masthead.scss */
+  .site-title { line-height: 30px; } }
 /* line 49, sass/UI/modules/_masthead.scss */
-.site-title a {
-  color: #d12501;
-}
+.site-title a { color: #d12501; }
 /* line 53, sass/UI/modules/_masthead.scss */
-.site-title .site-description {
-  color: #333333;
-}
+.site-title .site-description { color: #333333; }
 
-/* ———————————————————————————————————————————————————————————————
- * 
- *  Hero
- *  
- * ——————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————  Hero  ——————————————————————————————————————————————————————————————— */
 /* line 7, sass/UI/modules/_hero.scss */
-.hero {
-  font-size: 1.125em;
-  width: 85%;
-  width: 85%;
-  margin: 0 auto;
-}
+.hero { font-size: 1.125em; width: 85%; width: 85%; margin: 0 auto; }
 /* line 12, sass/UI/modules/_hero.scss */
-.hero p {
-  color: #333333;
-  font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
-}
-@media only screen and (min-width: 700px) {
-  /* line 7, sass/UI/modules/_hero.scss */
-  .hero {
-    font-size: 2.1em;
-    margin-bottom: 60px;
-    width: 100%;
-  }
-}
+.hero p { color: #333333; font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif; }
+@media only screen and (min-width: 700px) { /* line 7, sass/UI/modules/_hero.scss */
+  .hero { font-size: 2.1em; margin-bottom: 60px; width: 100%; } }
 
-/*------------------------------------*\
-    Agg Pages Module
+/*------------------------------------*\ Agg Pages Module
 \*------------------------------------*/
-/**
- * 
- * Styles for portfolio aggregation content
- */
+/**  Styles for portfolio aggregation content */
 /* line 9, sass/UI/modules/_agg-pages.scss */
-.portfolio-agg-title {
-  font-size: 24px;
-  font-size: 1.2rem;
-  line-height: 1.25;
-}
+.portfolio-agg-title { font-size: 24px; font-size: 1.2rem; line-height: 1.25; }
 
 /* line 13, sass/UI/modules/_agg-pages.scss */
-.blog-agg-title {
-  font-size: 30px;
-  font-size: 1.5rem;
-  line-height: 1;
-}
+.blog-agg-title { font-size: 30px; font-size: 1.5rem; line-height: 1; }
 
-@media only screen and (max-width: 699px) {
-  /* line 18, sass/UI/modules/_agg-pages.scss */
-  .portfolio-agg-title,
-  .blog-agg-title {
-    font-size: 16px;
-    font-size: 0.8rem;
-    line-height: 1.875;
-    line-height: 1.5;
-  }
-}
+@media only screen and (max-width: 699px) { /* line 18, sass/UI/modules/_agg-pages.scss */
+  .portfolio-agg-title, .blog-agg-title { font-size: 16px; font-size: 0.8rem; line-height: 1.875; line-height: 1.5; } }
 
 /* line 28, sass/UI/modules/_agg-pages.scss */
-.kicker {
-  font-weight: bold;
-  color: #111;
-}
+.kicker { font-weight: bold; color: #111; }
 
 /* line 33, sass/UI/modules/_agg-pages.scss */
-.portfolio-article {
-  font-size: 0.9em;
-}
+.portfolio-article { font-size: 0.9em; }
 
-/* ———————————————————————————————————————————————————————————————
- * 
- *  POST PAGES MODULE
- *  
- * ——————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————  POST PAGES MODULE  ——————————————————————————————————————————————————————————————— */
 /* line 7, sass/UI/modules/_post-pages.scss */
-.page-title {
-  text-transform: capitalize;
-  padding-bottom: 30px;
-}
+.page-title { text-transform: capitalize; padding-bottom: 30px; }
 
 /* line 12, sass/UI/modules/_post-pages.scss */
-.post-date {
-  display: block;
-  margin-bottom: 15px;
-}
+.post-date { display: block; margin-bottom: 15px; }
 
-@media only screen and (min-width: 700px) {
-  /* line 19, sass/UI/modules/_post-pages.scss */
-  .kicker {
-    display: none;
-  }
-}
-@media only screen and (max-width: 699px) {
-  /* line 25, sass/UI/modules/_post-pages.scss */
-  .entry-title {
-    font-size: 1.5em;
-    line-height: 1.25;
-  }
-
+@media only screen and (min-width: 700px) { /* line 19, sass/UI/modules/_post-pages.scss */
+  .kicker { display: none; } }
+@media only screen and (max-width: 699px) { /* line 25, sass/UI/modules/_post-pages.scss */
+  .entry-title { font-size: 1.5em; line-height: 1.25; }
   /* line 29, sass/UI/modules/_post-pages.scss */
-  .entry-content {
-    font-size: 18px;
-  }
-
+  .entry-content { font-size: 18px; }
   /* line 32, sass/UI/modules/_post-pages.scss */
-  .page-title {
-    font-size: 40px;
-    font-size: 2rem;
-    line-height: 1.5;
-    padding-bottom: 0;
-  }
-}
-/* ———————————————————————————————————————————————————————————————
- * 
- *  NAVIGATION
- *
- *  For the mobile off-canvas navigation, see offcanvas.scss
- *  
- * ——————————————————————————————————————————————————————————————— */
+  .page-title { font-size: 40px; font-size: 2rem; line-height: 1.5; padding-bottom: 0; } }
+/* ———————————————————————————————————————————————————————————————  NAVIGATION  For the mobile off-canvas navigation, see offcanvas.scss  ——————————————————————————————————————————————————————————————— */
 /* line 9, sass/UI/modules/_main-navigation.scss */
-.main-navigation {
-  float: right;
-  font-family: "Helvetica Neue", helvetica, sans-serif;
-}
+.main-navigation { float: right; font-family: "Helvetica Neue", helvetica, sans-serif; }
 /* line 13, sass/UI/modules/_main-navigation.scss */
-.main-navigation a {
-  color: #bbbbbb;
-  padding-left: 15px;
-  font-weight: 100;
-}
+.main-navigation a { color: #bbbbbb; padding-left: 15px; font-weight: 100; }
 /* line 17, sass/UI/modules/_main-navigation.scss */
-.main-navigation a:hover {
-  color: #264673;
-}
+.main-navigation a:hover { color: #264673; }
 /* line 22, sass/UI/modules/_main-navigation.scss */
-.main-navigation .nav {
-  margin-bottom: 0;
-}
+.main-navigation .nav { margin-bottom: 0; }
 
 /* line 27, sass/UI/modules/_main-navigation.scss */
-.current-menu-item a {
-  cursor: default;
-}
+.current-menu-item a { cursor: default; }
 
 /* line 32, sass/UI/modules/_main-navigation.scss */
-#nav-below {
-  margin: 30px 0;
-  overflow: hidden;
-  font-size: 16px;
-  font-size: 0.8rem;
-  line-height: 1.875;
-}
+#nav-below { margin: 30px 0; overflow: hidden; font-size: 16px; font-size: 0.8rem; line-height: 1.875; }
 /* line 36, sass/UI/modules/_main-navigation.scss */
-#nav-below .nav-previous {
-  float: left;
-  width: 304px;
-}
+#nav-below .nav-previous { float: left; width: 304px; }
 /* line 40, sass/UI/modules/_main-navigation.scss */
-#nav-below .nav-next {
-  float: right;
-  text-align: right;
-  width: 304px;
-}
+#nav-below .nav-next { float: right; text-align: right; width: 304px; }
 
-/* ———————————————————————————————————————————————————————————————
- * 
- *  FOOTER
- *  
- * ——————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————  FOOTER  ——————————————————————————————————————————————————————————————— */
 /* line 6, sass/UI/modules/_footer.scss */
-.site-footer {
-  clear: both;
-  margin: 15px 0;
-  padding: 15px 0;
-  border-top: 1px solid #ddd;
-  text-align: center;
-}
+.site-footer { clear: both; margin: 15px 0; padding: 15px 0; border-top: 1px solid #ddd; text-align: center; }
 
-/* ———————————————————————————————————————————————————————————————
- * 
- *  TAGS MODULE
- *  
- * ——————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————  TAGS MODULE  ——————————————————————————————————————————————————————————————— */
 /* line 7, sass/UI/modules/_tags.scss */
-.tag-item a {
-  font-size: 16px;
-  font-size: 0.8rem;
-  line-height: 1.875;
-  border-radius: 0.1875em;
-  display: inline-block;
-  padding: 0.1875em 0.625em;
-  font-family: "Helvetica Neue", helvetica, sans-serif;
-  color: #fff;
-  background-color: #4075bf;
-  margin-right: 15px;
-}
+.tag-item a { font-size: 16px; font-size: 0.8rem; line-height: 1.875; border-radius: 0.1875em; display: inline-block; padding: 0.1875em 0.625em; font-family: "Helvetica Neue", helvetica, sans-serif; color: #fff; background-color: #4075bf; margin-right: 15px; }
 /* line 16, sass/UI/modules/_tags.scss */
-.tag-item a:hover {
-  background-color: #264673;
-  text-decoration: none;
-}
+.tag-item a:hover { background-color: #264673; text-decoration: none; }
 
 /* line 22, sass/UI/modules/_tags.scss */
-.tags-links {
-  color: #777777;
-}
+.tags-links { color: #777777; }
 
-/*------------------------------------*\
-    LINKS MODULE
+/*------------------------------------*\ LINKS MODULE
 \*------------------------------------*/
 /* line 5, sass/UI/modules/_links.scss */
-a {
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-  color: #4075bf;
-}
+a { -webkit-transition: 0.2s all linear; -moz-transition: 0.2s all linear; -o-transition: 0.2s all linear; transition: 0.2s all linear; color: #4075bf; }
 /* line 11, sass/UI/modules/_links.scss */
-a:hover, a:active, a:focus {
-  text-decoration: underline;
-}
+a:hover, a:active, a:focus { text-decoration: underline; }
 
 /* line 16, sass/UI/modules/_links.scss */
-.quiet-link {
-  color: #333333;
-}
+.quiet-link { color: #333333; }
 
 /* line 23, sass/UI/modules/_links.scss */
-.no-underline:hover, .no-underline:active, .no-underline:focus {
-  text-decoration: none;
-}
+.no-underline:hover, .no-underline:active, .no-underline:focus { text-decoration: none; }
 
-@font-face {
-  font-family: 'stratus';
-  src: url("fonts/stratus.eot");
-  src: url("fonts/stratus.eot?#iefix") format("embedded-opentype"), url("fonts/stratus.woff") format("woff"), url("fonts/stratus.ttf") format("truetype"), url("fonts/stratus.svg#stratus") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+@font-face { font-family: 'stratus'; src: url("fonts/stratus.eot"); src: url("fonts/stratus.eot?#iefix") format("embedded-opentype"), url("fonts/stratus.woff") format("woff"), url("fonts/stratus.ttf") format("truetype"), url("fonts/stratus.svg#stratus") format("svg"); font-weight: normal; font-style: normal; }
 
 /* Use the following CSS code if you want to have a class per icon */
 /*
@@ -3223,300 +1103,105 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 /* line 18, sass/UI/_fonts.scss */
-.icon-reorder:before, .icon-angle-right:before, .icon-angle-left:before {
-  font-family: 'stratus';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
+.icon-reorder:before, .icon-angle-right:before, .icon-angle-left:before { font-family: 'stratus'; speak: none; font-style: normal; font-weight: normal; line-height: 1; -webkit-font-smoothing: antialiased; }
 
 /* line 26, sass/UI/_fonts.scss */
-.icon-reorder:before {
-  content: "\e000";
-}
+.icon-reorder:before { content: "\e000"; }
 
 /* line 29, sass/UI/_fonts.scss */
-.icon-angle-right:before {
-  content: "\f105";
-}
+.icon-angle-right:before { content: "\f105"; }
 
 /* line 32, sass/UI/_fonts.scss */
-.icon-angle-left:before {
-  content: "\f104";
-}
+.icon-angle-left:before { content: "\f104"; }
 
 /* line 2, sass/UI/modules/_offcanvas.scss */
-[role="complementary"],
-[role="main"] {
-  width: 100%;
-  position: relative;
-  -webkit-transition: 0.2s all linear;
-  -moz-transition: 0.2s all linear;
-  -o-transition: 0.2s all linear;
-  transition: 0.2s all linear;
-}
+[role="complementary"], [role="main"] { width: 100%; position: relative; -webkit-transition: 0.2s all linear; -moz-transition: 0.2s all linear; -o-transition: 0.2s all linear; transition: 0.2s all linear; }
 
 /* line 8, sass/UI/modules/_offcanvas.scss */
-[role="complementary"] {
-  background-color: #25546f;
-  font-family: "adelle", "Helvetica Neue", helvetica, sans-serif;
-  font-size: 24px;
-  font-size: 1.2rem;
-  line-height: 1.25;
-  margin-right: -100%;
-  width: 80%;
-  float: right;
-}
+[role="complementary"] { background-color: #25546f; font-family: "adelle", "Helvetica Neue", helvetica, sans-serif; font-size: 24px; font-size: 1.2rem; line-height: 1.25; margin-right: -100%; width: 80%; float: right; }
 
 /* line 19, sass/UI/modules/_offcanvas.scss */
-.active [role="complementary"] {
-  margin-right: 0;
-}
+.active [role="complementary"] { margin-right: 0; }
 
 /* line 26, sass/UI/modules/_offcanvas.scss */
-.active [role="main"] {
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.25) inset;
-  background: -webkit-linear-gradient(left, white 96%, #dddddd 100%);
-  margin-left: -80%;
-}
+.active [role="main"] { box-shadow: -2px 0 10px rgba(0, 0, 0, 0.25) inset; background: -webkit-linear-gradient(left, white 96%, #dddddd 100%); margin-left: -80%; }
 
 /* line 33, sass/UI/modules/_offcanvas.scss */
-.hide-extras [role="complementary"] {
-  display: block;
-}
+.hide-extras [role="complementary"] { display: block; }
 
 /* line 37, sass/UI/modules/_offcanvas.scss */
-#sidebarButton {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 1em;
-  color: #222;
-  padding: 1em 1.5em;
-}
+#sidebarButton { position: absolute; top: 0; right: 0; font-size: 1em; color: #222; padding: 1em 1.5em; }
 
 /* line 49, sass/UI/modules/_offcanvas.scss */
-.nav--stacked > li > a {
-  border-bottom: 1px solid #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1.5em 30px;
-  color: #fff;
-}
+.nav--stacked > li > a { border-bottom: 1px solid #fff; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding: 1.5em 30px; color: #fff; }
 /* line 55, sass/UI/modules/_offcanvas.scss */
-.nav--stacked > li > a:hover {
-  background-color: #444;
-  background-color: rgba(0, 0, 0, 0.2);
-}
+.nav--stacked > li > a:hover { background-color: #444; background-color: rgba(0, 0, 0, 0.2); }
 
-@media only screen and (min-width: 700px) {
-  /* line 66, sass/UI/modules/_offcanvas.scss */
-  #menu-button, .sidebar-button {
-    display: none;
-  }
-
+@media only screen and (min-width: 700px) { /* line 66, sass/UI/modules/_offcanvas.scss */
+  #menu-button, .sidebar-button { display: none; }
   /* line 70, sass/UI/modules/_offcanvas.scss */
-  [role="complementary"] {
-    width: 20%;
-    margin-left: 0;
-    float: left;
-  }
-
+  [role="complementary"] { width: 20%; margin-left: 0; float: left; }
   /* line 76, sass/UI/modules/_offcanvas.scss */
-  [role="main"] {
-    width: 80%;
-  }
-
+  [role="main"] { width: 80%; }
   /* line 80, sass/UI/modules/_offcanvas.scss */
-  .hide-extras [role="main"] {
-    width: 100%;
-  }
-
+  .hide-extras [role="main"] { width: 100%; }
   /* line 82, sass/UI/modules/_offcanvas.scss */
-  .hide-extras [role="complementary"] {
-    display: none;
-  }
-}
-@media only screen and (max-width: 699px) {
-  /* line 90, sass/UI/modules/_offcanvas.scss */
-  [role="main"] {
-    margin-right: 0;
-    float: left;
-  }
-
+  .hide-extras [role="complementary"] { display: none; } }
+@media only screen and (max-width: 699px) { /* line 90, sass/UI/modules/_offcanvas.scss */
+  [role="main"] { margin-right: 0; float: left; }
   /* line 95, sass/UI/modules/_offcanvas.scss */
-  .hide-for-small {
-    display: none !important;
-  }
-
+  .hide-for-small { display: none !important; }
   /* line 99, sass/UI/modules/_offcanvas.scss */
-  .nav {
-    background-color: #3c8ab4;
-  }
-}
-/* ———————————————————————————————————————————————————————————————
- * 
- *  ASSETS
- *
- *  Use this for images, video, or other placed assets.
- *  For example: captions, placement of assets...
- *  
- * ——————————————————————————————————————————————————————————————— */
+  .nav { background-color: #3c8ab4; } }
+/* ———————————————————————————————————————————————————————————————  ASSETS  Use this for images, video, or other placed assets. For example: captions, placement of assets...  ——————————————————————————————————————————————————————————————— */
 /* line 10, sass/UI/modules/_assets.scss */
-.wp-caption-text {
-  font-family: "Helvetica Neue", helvetica, sans-serif;
-  font-size: 14px;
-  font-size: 0.7rem;
-  line-height: 2.14286;
-  color: #777;
-}
+.wp-caption-text { font-family: "Helvetica Neue", helvetica, sans-serif; font-size: 14px; font-size: 0.7rem; line-height: 2.14286; color: #777; }
 
-@media only screen and (min-width: 700px) {
-  /* line 18, sass/UI/modules/_assets.scss */
-  .alignright,
-  .alignleft {
-    float: left;
-    width: 304px;
-    margin-right: 30px;
-  }
-}
-/* ———————————————————————————————————————————————————————————————
- * 
- *  ADMIN
- *  
- *  
- * ——————————————————————————————————————————————————————————————— */
+@media only screen and (min-width: 700px) { /* line 18, sass/UI/modules/_assets.scss */
+  .alignright, .alignleft { float: left; width: 304px; margin-right: 30px; } }
+/* ———————————————————————————————————————————————————————————————  ADMIN   ——————————————————————————————————————————————————————————————— */
 /* line 9, sass/UI/modules/_admin.scss */
-.post-edit-link {
-  color: #e65c00;
-  display: block;
-  font-family: monospace;
-  margin: 30px 0;
-}
+.post-edit-link { color: #e65c00; display: block; font-family: monospace; margin: 30px 0; }
 
-/* ———————————————————————————————————————————————————————————————
- * 
- *  COMMENTS
- *  
- * ——————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————  COMMENTS  ——————————————————————————————————————————————————————————————— */
 /* line 7, sass/UI/modules/_comments.scss */
-.comments-area {
-  width: 85%;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 700px) {
-  /* line 7, sass/UI/modules/_comments.scss */
-  .comments-area {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 700px;
-  }
-}
+.comments-area { width: 85%; margin: 0 auto; }
+@media only screen and (min-width: 700px) { /* line 7, sass/UI/modules/_comments.scss */
+  .comments-area { margin: 0 auto; width: 100%; max-width: 700px; } }
 
-/* ———————————————————————————————————————————————————————————————
- * 
- *  Post Nav module
- *  For the next/previous navigation between posts
- *  
- * ——————————————————————————————————————————————————————————————— */
+/* ———————————————————————————————————————————————————————————————  Post Nav module For the next/previous navigation between posts  ——————————————————————————————————————————————————————————————— */
 /* line 8, sass/UI/modules/_post-nav.scss */
-#nav-below {
-  width: 85%;
-  margin: 0 auto;
-}
+#nav-below { width: 85%; margin: 0 auto; }
 
 /* line 16, sass/UI/modules/_post-nav.scss */
-.nav-previous a:hover {
-  color: #203a60;
-  text-decoration: none;
-}
+.nav-previous a:hover { color: #203a60; text-decoration: none; }
 
 /* line 22, sass/UI/modules/_post-nav.scss */
-.next-last-link {
-  display: none;
-}
+.next-last-link { display: none; }
 
-@media only screen and (min-width: 940px) {
-  /* line 29, sass/UI/modules/_post-nav.scss */
-  #nav-below {
-    width: 100%;
-  }
-
+@media only screen and (min-width: 940px) { /* line 29, sass/UI/modules/_post-nav.scss */
+  #nav-below { width: 100%; }
   /* line 33, sass/UI/modules/_post-nav.scss */
-  .next-last-link {
-    display: block;
-    position: fixed;
-    top: 45%;
-    font-size: 122px;
-    line-height: 1;
-  }
+  .next-last-link { display: block; position: fixed; top: 45%; font-size: 122px; line-height: 1; }
   /* line 39, sass/UI/modules/_post-nav.scss */
-  .next-last-link a {
-    display: block;
-    color: #ddd;
-  }
+  .next-last-link a { display: block; color: #ddd; }
   /* line 42, sass/UI/modules/_post-nav.scss */
-  .next-last-link a:hover {
-    color: #4075bf;
-  }
+  .next-last-link a:hover { color: #4075bf; }
   /* line 44, sass/UI/modules/_post-nav.scss */
-  .next-last-link a:hover .hidden-title {
-    display: block;
-  }
-
+  .next-last-link a:hover .hidden-title { display: block; }
   /* line 51, sass/UI/modules/_post-nav.scss */
-  .icon-angle-left,
-  .icon-angle-right {
-    position: absolute;
-    z-index: 500;
-  }
-
+  .icon-angle-left, .icon-angle-right { position: absolute; z-index: 500; }
   /* line 55, sass/UI/modules/_post-nav.scss */
-  .icon-angle-right {
-    right: 0;
-    padding-left: 90px;
-  }
-
+  .icon-angle-right { right: 0; padding-left: 90px; }
   /* line 59, sass/UI/modules/_post-nav.scss */
-  .icon-angle-left {
-    left: 0;
-    padding-right: 90px;
-  }
-
+  .icon-angle-left { left: 0; padding-right: 90px; }
   /* line 63, sass/UI/modules/_post-nav.scss */
-  .previous-fixed {
-    left: 15px;
-  }
-
+  .previous-fixed { left: 15px; }
   /* line 66, sass/UI/modules/_post-nav.scss */
-  .next-fixed {
-    right: 15px;
-  }
-
+  .next-fixed { right: 15px; }
   /* line 70, sass/UI/modules/_post-nav.scss */
-  .hidden-title {
-    display: none;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    padding: 2em 1em 2em 5em;
-    top: 18px;
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 20px;
-  }
+  .hidden-title { display: none; background: #fff; border-radius: 10px; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); position: absolute; padding: 2em 1em 2em 5em; top: 18px; width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 20px; }
   /* line 85, sass/UI/modules/_post-nav.scss */
-  .hidden-title.right {
-    left: -2em;
-  }
+  .hidden-title.right { left: -2em; }
   /* line 88, sass/UI/modules/_post-nav.scss */
-  .hidden-title.left {
-    right: -1em;
-    padding-right: 4em;
-    padding-left: 1.5em;
-  }
-}
+  .hidden-title.left { right: -1em; padding-right: 4em; padding-left: 1.5em; } }

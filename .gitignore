@@ -1,2 +1,6 @@
 # ignore these files and directories #
 .sass-cache/*
+.DS_Store
+sass/.DS_Store
+sass/UI/.DS_Store
+backup-functions.html

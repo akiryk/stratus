@@ -25,7 +25,12 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content('', FALSE, ''); ?>
+		<?php
+			if($post->post_excerpt):
+				the_excerpt(); 
+			else :
+				the_content('', FALSE, '');
+			endif; ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'stratus' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

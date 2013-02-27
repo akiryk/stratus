@@ -917,7 +917,7 @@ label, .label { display: block; }
 body { background-color: #fff; color: #222; font-family: "chaparral-pro", "proxima-nova", "Helvetica Neue", helvetica, sans-serif; }
 
 /* line 11, sass/UI/_base.scss */
-img { max-width: 100%; height: auto; width: 10%; }
+img { max-width: 100%; height: auto; width: 100%; }
 
 /* line 17, sass/UI/_base.scss */
 article { clear: both; margin: 30px 0; }

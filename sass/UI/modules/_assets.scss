@@ -13,6 +13,11 @@
 	color: #777;
 }
 
+.alignnone {
+	display: block;
+	margin: $base-spacing-unit 0;
+}
+
 @include media-query(lap-and-up){
 	.alignright,
 	.alignleft {

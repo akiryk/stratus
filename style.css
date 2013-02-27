@@ -1157,7 +1157,10 @@ you can use the generic selector below, but it's slower:
 /* line 10, sass/UI/modules/_assets.scss */
 .wp-caption-text { font-family: "Helvetica Neue", helvetica, sans-serif; font-size: 14px; font-size: 0.7rem; line-height: 2.14286; color: #777; }
 
-@media only screen and (min-width: 700px) { /* line 18, sass/UI/modules/_assets.scss */
+/* line 16, sass/UI/modules/_assets.scss */
+.alignnone { display: block; margin: 30px 0; }
+
+@media only screen and (min-width: 700px) { /* line 23, sass/UI/modules/_assets.scss */
   .alignright, .alignleft { float: left; width: 304px; margin-right: 30px; } }
 /* ———————————————————————————————————————————————————————————————  ADMIN   ——————————————————————————————————————————————————————————————— */
 /* line 9, sass/UI/modules/_admin.scss */

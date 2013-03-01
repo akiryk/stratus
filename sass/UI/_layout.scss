@@ -5,7 +5,7 @@
  * ——————————————————————————————————————————————————————————————— */
 
 .outer-wrapper {
-	@include desk-width();
+	@include desk-width(); // in _mixins
 	overflow: hidden;
 
 	@include media-query(lap-and-up){

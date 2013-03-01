@@ -105,8 +105,24 @@ function stratus_scripts() {
 
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '20120206', true );
 
-	wp_enqueue_script('fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js'
-    );
+	$dir = get_template_directory_uri();
+
+	wp_enqueue_script( 
+    'fitvids'
+    ,get_template_directory_uri() . '/js/jquery.fitvids.js'
+    ,array() // array of handles, defaults to array()
+    ,false // script version #, defaults to false
+    ,false // $in_footer 
+	);
+
+	wp_enqueue_script( 
+    'prettifyCode'
+    //,get_template_directory_uri() . '/js/google-code-prettify/run_prettify.js'
+    ,'https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sons-of-obsidian'
+    ,array() // array of handles, defaults to array()
+    ,false // script version #, defaults to false
+    ,true // $in_footer 
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -138,6 +154,13 @@ function set_home_post_types( $query ) {
 }
 
 add_filter( 'pre_get_posts', 'set_home_post_types' );
+
+/**
+ * Enable a higher quality jpeg
+ * This works, I'm just not sure it's necessary.
+ */
+// add_filter( 'jpeg_quality', 'jpeg_full_quality' );
+// function jpeg_full_quality( $quality ) { return 100; }
 
 /**
  * Set post types on archive pages

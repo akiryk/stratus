@@ -26,9 +26,6 @@
 		font-size: pem(30px);
 		line-height: 1.25;
 	}
-	.entry-content {
-		font-size: 18px;
-	}
 	.page-title {
 		@include font-size($h2-size);
 		padding-bottom: 0;

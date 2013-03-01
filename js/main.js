@@ -1,15 +1,17 @@
 (function (window, document, $) {
 
-	/**
+  /**
 	 * OFF CANVAS 
 	 * Manage when to show and hide the side navigation.
 	 * Handle window resize events
 	 */
 
-  var $selector = $('#sidebarButton'),
-    	$body = $( 'body' ),
-    	mobileWidth = 600,
-	    timeout = false;
+var $selector = $('#sidebarButton'),
+	$body = $( 'body' ),
+	mobileWidth = 600,
+	timeout = false;
+	whatever = 0;
+
 
   $('#sidebarButton').on('click', function (e) {
     e.preventDefault();

@@ -11,7 +11,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script type="text/javascript" src="//use.typekit.net/vdt8eam.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>

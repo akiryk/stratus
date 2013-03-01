@@ -2,7 +2,9 @@
     BASE
 \*------------------------------------*/
 
-body {
+body,
+.site-content,
+.site-footer {
 	background-color: #fff;
 	color: #222;
 	font-family: $body-face;
@@ -24,6 +26,7 @@ pre {
 	color: #fff;
 	padding: $base-spacing-unit;
 	font-size: $base-font-size;
+	white-space: pre;
 }
 
 blockquote p {

@@ -3,13 +3,25 @@
 \*------------------------------------*/
 
 a {
-	@include transition();
 	color: $link-color;
+}
 
-	&:hover,
-  &:active,
-  &:focus{
-    text-decoration: underline;
+@include media-query(lap-and-up) {
+  a {
+    @include transition();
+    &:hover,
+    &:active,
+    &:focus{
+      text-decoration: underline;
+    }
+  }
+
+  h1 > a,
+  .dotted-underline {
+    &:hover {
+      border-bottom: 1px dotted;
+      text-decoration: none;
+    }
   }
 }
 

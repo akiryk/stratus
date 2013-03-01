@@ -41,6 +41,10 @@
 	font-size: pem(20px);
 	color: #222;
 	padding: 1em 1.5em;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .nav--stacked{

@@ -13,9 +13,14 @@
 	color: #777;
 }
 
+// Give images/video some margin, but not if they are part of figure/caption markup
 .alignnone {
 	display: block;
 	margin: $base-spacing-unit 0;
+}
+
+.figure .alignnone {
+  margin-bottom: 0;
 }
 
 .alignright,
@@ -23,4 +28,12 @@
 		float: left;
 		width: $half-width;
 		margin-right: $base-spacing-unit;
-	}
+}
+
+.figcaption {
+  background-color: #eee;
+  color: #555;
+  font-family: $sans;
+  font-size: pem(13px);
+  padding: $base-spacing-unit/4 $half-spacing-unit;
+}

@@ -19,8 +19,12 @@
 	margin: $base-spacing-unit 0;
 }
 
+.figure {
+  margin: $base-spacing-unit 0;
+}
+
 .figure .alignnone {
-  margin-bottom: 0;
+  margin-bottom: 0; // clear margin off of images when they are in a figure, which gets margins
 }
 
 .alignright{

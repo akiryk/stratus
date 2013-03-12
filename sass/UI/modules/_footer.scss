@@ -3,10 +3,28 @@
  *  FOOTER
  *  
  * ——————————————————————————————————————————————————————————————— */
+ 
+ footer {
+  clear: both;
+  margin: $base-spacing-unit 0;
+ }
+
  .site-footer {
  	clear: both;
  	margin: $half-spacing-unit 0;
  	padding:$half-spacing-unit 0;
- 	border-top: 1px solid #ddd;
+ 	border-top: 1px solid $divider-line;
  	text-align: center;
+ }
+
+ .site-info {
+  font-size: pem(16px, 20px);
+  font-style: italic;
+
+  .contact {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: pem(13px, 16px);
+    font-style: normal;
+    color: #777;
+  }
  }

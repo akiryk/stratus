@@ -37,4 +37,7 @@
 		<?php endif; // End if $tags_list ?>
 		
 	</footer><!-- .entry-meta -->
+
+	<?php MRP_show_related_posts(); ?>
+	
 </article><!-- #post-<?php the_ID(); ?> -->

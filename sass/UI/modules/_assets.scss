@@ -23,11 +23,20 @@
   margin-bottom: 0;
 }
 
-.alignright,
+.alignright{
+  float: right;
+  width: $half-width;
+  margin-left: $base-spacing-unit;
+}
+
 .alignleft {
 		float: left;
 		width: $half-width;
 		margin-right: $base-spacing-unit;
+}
+
+.mini-image {
+  width: $third-width;
 }
 
 .figcaption {
@@ -36,4 +45,9 @@
   font-family: $sans;
   font-size: pem(13px);
   padding: $base-spacing-unit/4 $half-spacing-unit;
+}
+
+.figcaption--rev {
+  background-color: #222;
+  color: #ccc;
 }

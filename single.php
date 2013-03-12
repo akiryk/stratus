@@ -24,4 +24,5 @@ get_header(); ?>
 
 		</div><!-- #content .site-content -->
 	</div><!-- .grid-wrapper -->
+
 <?php get_footer(); ?>

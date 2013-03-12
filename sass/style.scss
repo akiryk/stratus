@@ -22,7 +22,6 @@
 @import "UI/layout";
 @import "UI/helpers";
 
-@import "UI/modules/masthead";
 @import "UI/modules/hero";
 @import "UI/modules/agg-pages";
 @import "UI/modules/post-pages";
@@ -30,6 +29,7 @@
 @import "UI/modules/footer";
 @import "UI/modules/tags";
 @import "UI/modules/links";
+@import "UI/modules/masthead";
 @import "UI/fonts";
 @import "UI/modules/offcanvas";
 @import "UI/modules/assets";
@@ -37,3 +37,4 @@
 @import "UI/modules/comments";
 @import "UI/modules/post-nav";
 @import "UI/modules/code";
+@import "UI/modules/related-content";

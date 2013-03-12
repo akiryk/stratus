@@ -16,7 +16,7 @@
 	<div class="grid one-whole">
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info milli">
-				Adam Kiryk, Web Design and Development
+				Adam Kiryk, Web Design and Development | <span class="contact">adamkiryk at gmail dot com</span>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon .site-footer -->
 	</div><!-- grid -->

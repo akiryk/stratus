@@ -15,7 +15,8 @@
         padding-left: $half-spacing-unit;
         font-weight: 100;  
         &:hover {
-        	color: $hover-color;
+            color: $hover-color;
+            text-decoration: none;
         } 
     }
 

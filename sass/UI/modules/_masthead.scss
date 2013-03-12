@@ -47,7 +47,10 @@
     }
 
     a {
-        color: $brand-color;
+      color: $brand-color;
+      &:hover {
+        border-bottom: none;
+      }
     }
 
     .site-description { 

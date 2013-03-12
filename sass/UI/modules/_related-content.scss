@@ -1,0 +1,36 @@
+.related-posts {
+
+  margin: 1em 0;
+  overflow: hidden;
+
+  h4 {
+    border-top: 1px solid $divider-line;
+    padding-top: $base-spacing-unit;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+    float: left;
+    padding: 0 $half-spacing-unit;
+    width: 33.3333%;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    font-size: pem(16px, 20px);
+    line-height: 1.25;
+  }
+  
+}

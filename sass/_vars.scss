@@ -125,6 +125,8 @@ $line-height-ratio: $base-line-height / $base-font-size;
 
 $small-width: 94%;
 $half-width: percentage(304/640);
+$third-width: 33.3333%;
+$quarter-width: 25%;
 
 /**
  * Fonts
@@ -136,6 +138,7 @@ $sans: 						  "Helvetica Neue", helvetica, sans-serif;
 
 $cyan: #22a5dc;
 $blue: #4075bf;
+$divider-line: #ddd; // pale line dividing one section from another
 $text-color: 	#333;
 $link-color: 	$blue;
 $hover-color: darken($blue, 20%);
